@@ -111,12 +111,15 @@ def run_cli(filepath, sensitivity):
             el    = g.get("end_line", "?")
             z     = g.get("modified_z_score", 0)
 
+            factors = g.get("risk_factors", [])
             fmt_line("-")
             print(f"  GAP #{g.get('id')}  |  {sev}  |  Score: {score}/100")
             print(f"  Duration   : {dur}")
             print(f"  From       : {start}  (line {sl})")
             print(f"  To         : {end}  (line {el})")
             print(f"  Z-score    : {z}")
+            if factors:
+                print(f"  Risk flags : {', '.join(factors)}")
 
     fmt_line("=")
     print()

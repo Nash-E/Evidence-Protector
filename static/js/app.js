@@ -156,6 +156,13 @@ function renderGapCard(gap, index) {
     const startTime = gap.start_time ? gap.start_time.replace('T', ' ') : '—';
     const endTime   = gap.end_time   ? gap.end_time.replace('T', ' ')   : '—';
 
+    const factors = gap.risk_factors || [];
+    const factorTags = factors.length > 0
+        ? `<div class="gap-factors-row">
+               ${factors.map(f => `<span class="gap-factor-tag">${f}</span>`).join('')}
+           </div>`
+        : '';
+
     return `
 <div class="gap-card ${gap.severity_label}" id="gap-card-${gap.id}">
     <div class="gap-header">
@@ -183,6 +190,7 @@ function renderGapCard(gap, index) {
             z-score: ${gap.modified_z_score}
         </span>
     </div>
+    ${factorTags}
 </div>`;
 }
 

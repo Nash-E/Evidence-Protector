@@ -22,6 +22,7 @@ class GapRecord:
     modified_z_score: float
     severity_score: float
     severity_label: str
+    risk_factors: list
 
 
 def format_duration(seconds: float) -> str:
@@ -127,33 +128,44 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
             if first_timestamp and last_timestamp else 0.0
         )
 
-        # Step 3: Classify gaps
-        gaps: List[GapRecord] = []
-        gap_id = 0
-
+        # Step 3: Classify gaps (first pass — identify which intervals are gaps)
+        raw_gaps = []
         for delta, from_line, to_line, from_ts, to_ts in intervals:
             modified_z = 0.6745 * (delta - median) / mad_scaled
             if modified_z > sensitivity and delta >= MIN_GAP_ABSOLUTE_SECONDS:
-                gap_id += 1
-                score = compute_severity_score(
-                    duration_seconds=delta,
-                    modified_z_score=modified_z,
-                    total_log_seconds=total_log_seconds,
-                    timestamps=all_timestamps,
-                    gap_start_ts=from_ts,
-                    gap_end_ts=to_ts,
-                )
-                gaps.append(GapRecord(
-                    id=gap_id,
-                    start_time=from_ts,
-                    end_time=to_ts,
-                    duration_seconds=delta,
-                    start_line=from_line,
-                    end_line=to_line,
-                    modified_z_score=round(modified_z, 2),
-                    severity_score=score,
-                    severity_label=severity_label(score),
-                ))
+                raw_gaps.append((delta, from_line, to_line, from_ts, to_ts, modified_z))
+
+        # Collect all gap start times for clustering (passed to scorer)
+        all_gap_starts = [g[3] for g in raw_gaps]
+
+        # Step 4: Score each gap with full context
+        gaps: List[GapRecord] = []
+        for gap_id, (delta, from_line, to_line, from_ts, to_ts, modified_z) in enumerate(raw_gaps, 1):
+            result = compute_severity_score(
+                duration_seconds=delta,
+                modified_z_score=modified_z,
+                total_log_seconds=total_log_seconds,
+                timestamps=all_timestamps,
+                gap_start_ts=from_ts,
+                gap_end_ts=to_ts,
+                log_start_ts=first_timestamp,
+                log_end_ts=last_timestamp,
+                all_gap_starts=all_gap_starts,
+            )
+            score   = result['score']
+            factors = result['factors']
+            gaps.append(GapRecord(
+                id=gap_id,
+                start_time=from_ts,
+                end_time=to_ts,
+                duration_seconds=delta,
+                start_line=from_line,
+                end_line=to_line,
+                modified_z_score=round(modified_z, 2),
+                severity_score=score,
+                severity_label=severity_label(score),
+                risk_factors=factors,
+            ))
 
     # Sort gaps by severity score descending
     gaps.sort(key=lambda g: g.severity_score, reverse=True)
@@ -185,6 +197,7 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
             'modified_z_score': g.modified_z_score,
             'severity_score': g.severity_score,
             'severity_label': g.severity_label,
+            'risk_factors': g.risk_factors,
         }
         for g in gaps
     ]

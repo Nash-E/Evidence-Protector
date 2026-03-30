@@ -37,11 +37,33 @@ function initUpload() {
   });
 
   // Sensitivity slider
-  const slider = document.getElementById('sensitivity-slider');
+  const slider     = document.getElementById('sensitivity-slider');
   const valDisplay = document.getElementById('sensitivity-value');
-  slider.addEventListener('input', () => {
-    valDisplay.textContent = parseFloat(slider.value).toFixed(1);
-  });
+  const bubble     = document.getElementById('slider-bubble');
+  const bubbleVal  = document.getElementById('bubble-val');
+  const bubbleLbl  = document.getElementById('bubble-label');
+
+  function sensitivityLabel(v) {
+    if (v <= 3)  return 'Very sensitive';
+    if (v <= 5)  return 'Balanced';
+    if (v <= 8)  return 'Conservative';
+    if (v <= 11) return 'Strict';
+    return 'Extreme only';
+  }
+
+  function updateSlider() {
+    const v = parseFloat(slider.value);
+    valDisplay.textContent = v.toFixed(1);
+    bubbleVal.textContent  = v.toFixed(1);
+    bubbleLbl.textContent  = sensitivityLabel(v);
+    // Position bubble over thumb
+    const pct = (v - parseFloat(slider.min)) / (parseFloat(slider.max) - parseFloat(slider.min));
+    const thumbX = pct * slider.offsetWidth;
+    bubble.style.left = thumbX + 'px';
+  }
+
+  slider.addEventListener('input', updateSlider);
+  updateSlider();
 }
 
 function uploadFile(file) {

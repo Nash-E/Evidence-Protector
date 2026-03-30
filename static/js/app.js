@@ -139,9 +139,7 @@ function renderSeverityPills(gaps) {
         .map(lv => `
             <span class="pill ${classMap[lv]}">
                 ${lv}
-                <span class="pill-count-badge" style="background:currentColor;color:white;
-                    border-radius:999px;padding:1px 8px;font-size:11px;font-weight:800;
-                    opacity:0.9;">${counts[lv]}</span>
+                <span class="pill-count-badge">${counts[lv]}</span>
             </span>
         `).join('');
 }
@@ -150,9 +148,9 @@ function renderSeverityPills(gaps) {
 // renderGapCard — single gap entry with left border + score bar
 // ============================================================
 function renderGapCard(gap, index) {
-    const colors   = { CRITICAL: '#ef4444', HIGH: '#f97316', MEDIUM: '#f59e0b', LOW: '#4f46e5' };
-    const bgColors = { CRITICAL: '#fee2e2', HIGH: '#ffedd5', MEDIUM: '#fef9c3', LOW: '#dbeafe' };
-    const color = colors[gap.severity_label]   || '#4f46e5';
+    const colors   = { CRITICAL: '#ef4444', HIGH: '#f97316', MEDIUM: '#f59e0b', LOW: '#0891b2' };
+    const bgColors = { CRITICAL: '#fee2e2', HIGH: '#ffedd5', MEDIUM: '#fef9c3', LOW: '#cffafe' };
+    const color = colors[gap.severity_label]   || '#0891b2';
     const bg    = bgColors[gap.severity_label] || '#dbeafe';
 
     const startTime = gap.start_time ? gap.start_time.replace('T', ' ') : '—';

@@ -3,10 +3,16 @@ from flask import Flask, render_template
 from api.upload import upload_bp
 from api.analyze import analyze_bp
 from api.export import export_bp
+import config as cfg
 
 def create_app():
     app = Flask(__name__)
-    app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(__file__), 'uploads')
+
+    upload_folder = cfg.UPLOAD_FOLDER
+    if not os.path.isabs(upload_folder):
+        upload_folder = os.path.join(os.path.dirname(__file__), upload_folder)
+
+    app.config['UPLOAD_FOLDER'] = upload_folder
     app.config['MAX_CONTENT_LENGTH'] = None
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
@@ -23,4 +29,4 @@ def create_app():
 app = create_app()
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=cfg.SERVER_DEBUG, port=cfg.SERVER_PORT)

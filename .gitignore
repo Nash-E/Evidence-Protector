@@ -12,6 +12,7 @@ venv/
 env/
 uploads/
 *.result.json
+config.toml
 *.log
 .DS_Store
 Thumbs.db

@@ -1,13 +1,20 @@
 """
 Evidence Protector — CLI
 Usage:
+<<<<<<< HEAD
+    python cli.py <logfile> [--sensitivity 5.0]
+=======
     python cli.py <logfile> [--sensitivity 5.0] [--config config.toml]
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
 
 Examples:
     python cli.py sample_logs/sensitivity_demo.log
     python cli.py sample_logs/apache_sample.log --sensitivity 3.0
     python cli.py /path/to/server.log --sensitivity 8.0
+<<<<<<< HEAD
+=======
     python cli.py /path/to/server.log --config my_settings.toml
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
 """
 
 import argparse
@@ -17,8 +24,13 @@ import os
 # Allow imports from the web app's core
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+<<<<<<< HEAD
+from core.detector import run_analysis
+from config import DEFAULT_SENSITIVITY
+=======
 import config as cfg
 from core.detector import run_analysis
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
 
 
 def fmt_line(char, width=60):
@@ -47,7 +59,11 @@ def run_cli(filepath, sensitivity):
     assessment = result.get("assessment", {})
     gaps       = result.get("gaps", [])
 
+<<<<<<< HEAD
+    # ── Summary ─────────────────────────────────────────────────
+=======
     # -- Summary ---------------------------------------------------------
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
     fmt_line("=")
     print("  SUMMARY")
     fmt_line("-")
@@ -66,7 +82,11 @@ def run_cli(filepath, sensitivity):
         print(f"  Median interval    : {mad.get('median_interval', 0):.2f}s")
         print(f"  MAD scaled         : {mad.get('mad_scaled', 0):.3f}s")
 
+<<<<<<< HEAD
+    # ── Integrity Score ─────────────────────────────────────────
+=======
     # -- Integrity Score -------------------------------------------------
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
     fmt_line("=")
     print("  LOG INTEGRITY SCORE")
     fmt_line("-")
@@ -84,7 +104,11 @@ def run_cli(filepath, sensitivity):
     print(f"  MEDIUM   : {counts.get('MEDIUM', 0)}")
     print(f"  LOW      : {counts.get('LOW', 0)}")
 
+<<<<<<< HEAD
+    # ── Findings ────────────────────────────────────────────────
+=======
     # -- Findings --------------------------------------------------------
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
     findings = assessment.get("findings", [])
     if findings:
         fmt_line("=")
@@ -93,7 +117,11 @@ def run_cli(filepath, sensitivity):
         for f in findings:
             print(f"  * {f}")
 
+<<<<<<< HEAD
+    # ── Gap Details ─────────────────────────────────────────────
+=======
     # -- Gap Details -----------------------------------------------------
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
     fmt_line("=")
     print(f"  GAPS DETECTED ({len(gaps)} total, sorted by severity)")
     fmt_line("=")
@@ -127,12 +155,24 @@ def run_cli(filepath, sensitivity):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
+<<<<<<< HEAD
+        description="Evidence Protector — forensic log gap analysis"
+=======
         description="Evidence Protector - forensic log gap analysis"
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847
     )
     parser.add_argument("logfile", help="Path to the log file to analyze")
     parser.add_argument(
         "--sensitivity", "-s",
         type=float,
+<<<<<<< HEAD
+        default=DEFAULT_SENSITIVITY,
+        help=f"MAD z-score threshold (default: {DEFAULT_SENSITIVITY}). "
+             "Lower = flag more gaps. Higher = only extreme gaps."
+    )
+    args = parser.parse_args()
+    run_cli(args.logfile, args.sensitivity)
+=======
         default=None,
         help="MAD z-score threshold (default: from config.toml or 5.0). "
              "Lower = flag more gaps. Higher = only extreme gaps."
@@ -157,3 +197,4 @@ if __name__ == "__main__":
     sensitivity = args.sensitivity if args.sensitivity is not None else cfg.DEFAULT_SENSITIVITY
 
     run_cli(args.logfile, sensitivity)
+>>>>>>> 53656c7bba573929ce1fa5de01eaf576fef99847

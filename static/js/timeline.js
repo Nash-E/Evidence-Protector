@@ -7,7 +7,7 @@ const SEV_COLORS = {
     CRITICAL: '#ef4444',
     HIGH:     '#f97316',
     MEDIUM:   '#f59e0b',
-    LOW:      '#4f46e5',
+    LOW:      '#0891b2',
 };
 
 /**

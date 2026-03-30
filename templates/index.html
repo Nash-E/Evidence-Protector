@@ -62,9 +62,25 @@
       <div class="sensitivity-control">
         <label for="sensitivity-slider">
           Detection Sensitivity
-          <span class="tooltip" title="Higher = only flag the most extreme gaps. Lower = flag more gaps.">?</span>
+          <span class="tooltip-wrap">
+            <span class="tooltip">?</span>
+            <div class="tooltip-popover">
+              <strong>Detection Sensitivity</strong>
+              <p>Controls the MAD z-score threshold for flagging gaps.</p>
+              <div class="tooltip-scale">
+                <span class="scale-low">2 — catches everything</span>
+                <span class="scale-high">15 — only extreme gaps</span>
+              </div>
+            </div>
+          </span>
         </label>
-        <input type="range" id="sensitivity-slider" min="2" max="15" step="0.5" value="5">
+        <div class="slider-wrap">
+          <input type="range" id="sensitivity-slider" min="2" max="15" step="0.5" value="5">
+          <div id="slider-bubble" class="slider-bubble">
+            <span id="bubble-val">5.0</span>
+            <span id="bubble-label">Balanced</span>
+          </div>
+        </div>
         <span id="sensitivity-value" class="sensitivity-val">5.0</span>
         <span class="sensitivity-hint">MAD z-score threshold</span>
       </div>

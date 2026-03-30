@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidence Protector — Log Integrity Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon-wrap">
+        <span class="logo-icon">🛡️</span>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-title">Evidence Protector</span>
+        <span class="logo-sub">Log Tampering Detection</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     MAIN
+     ============================================================ -->
+<main>
+
+  <!-- Upload Panel -->
+  <div class="upload-panel card">
+    <div class="upload-panel-title">
+      <h2>Analyze Log File</h2>
+      <p class="upload-panel-subtitle">Upload a log file to detect time gaps, tampering evidence, and integrity issues</p>
+    </div>
+
+    <div id="dropzone" class="dropzone">
+      <div class="dropzone-icon">📂</div>
+      <div class="dropzone-text">Drag &amp; drop a log file here</div>
+      <div class="dropzone-sub">or <span class="file-link">browse to upload</span></div>
+      <div class="dropzone-formats">Supports: HDFS · ISO 8601 · Apache/Nginx · Syslog · Unix Epoch · Any size</div>
+      <input type="file" id="file-input" accept=".log,.txt,.gz" style="display:none">
+    </div>
+
+    <div id="upload-progress" class="upload-progress hidden">
+      <div class="progress-label">
+        <span>Uploading…</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="sensitivity-control">
+        <label for="sensitivity-slider">
+          Detection Sensitivity
+          <span class="tooltip" title="Higher = only flag the most extreme gaps. Lower = flag more gaps.">?</span>
+        </label>
+        <input type="range" id="sensitivity-slider" min="2" max="15" step="0.5" value="5">
+        <span id="sensitivity-value" class="sensitivity-val">5.0</span>
+        <span class="sensitivity-hint">MAD z-score threshold</span>
+      </div>
+      <button id="analyze-btn" class="btn-primary" disabled>
+        <span>🔍</span> Analyze Log
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       RESULTS (hidden until analysis completes)
+       ============================================================ -->
+  <div id="results" class="hidden">
+
+    <!-- Top row: Gauge + 4 stat cards -->
+    <div class="top-row">
+
+      <!-- Integrity Gauge Card -->
+      <div class="card gauge-card">
+        <h3 class="gauge-title">Log Integrity Score</h3>
+        <div id="gauge-container"></div>
+        <div id="integrity-label" class="integrity-label"></div>
+      </div>
+
+      <!-- 4 Stat Cards -->
+      <div class="stats-row">
+        <div class="stat-card card" id="stat-gaps"></div>
+        <div class="stat-card card" id="stat-lines"></div>
+        <div class="stat-card card" id="stat-range"></div>
+        <div class="stat-card card" id="stat-format"></div>
+      </div>
+
+    </div>
+
+    <!-- Severity pills row -->
+    <div id="severity-pills" class="pills-row"></div>
+
+    <!-- Timeline card -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-header-title">
+          <span class="card-header-icon">📈</span>
+          Timeline View
+        </span>
+        <span id="timeline-badge" class="badge badge-blue"></span>
+      </div>
+      <div id="timeline-container"></div>
+    </div>
+
+    <!-- Gap list + export buttons -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-header-title">
+          <span class="card-header-icon">⚠️</span>
+          Detected Gaps
+        </span>
+        <div class="export-btns">
+          <button id="btn-export-html" class="btn-secondary" style="background:#4f46e5;color:white;border-color:#4f46e5">Export Report</button>
+          <button id="btn-export-csv" class="btn-secondary">Export CSV</button>
+          <button id="btn-export-json" class="btn-secondary">Export JSON</button>
+        </div>
+      </div>
+      <div id="gap-list"></div>
+    </div>
+
+    <!-- Analysis details card -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-header-title">
+          <span class="card-header-icon">📊</span>
+          Analysis Details
+        </span>
+      </div>
+      <div id="stats-grid" class="stats-grid"></div>
+    </div>
+
+    <!-- Out of order card (conditionally shown) -->
+    <div id="oot-card" class="card hidden">
+      <div class="card-header">
+        <span class="card-header-title">
+          <span class="card-header-icon">🔀</span>
+          Out-of-Order Timestamps
+        </span>
+        <span class="badge badge-warning">Warning</span>
+      </div>
+      <div id="oot-list" class="oot-list"></div>
+    </div>
+
+  </div>
+  <!-- /results -->
+
+  <!-- Error display -->
+  <div id="error-box" class="error-box hidden"></div>
+
+  <!-- Loading spinner -->
+  <div id="loading" class="loading hidden">
+    <div class="loading-inner">
+      <div class="spinner"></div>
+      <div class="loading-title">Analyzing Log File…</div>
+      <div class="loading-sub">Scanning for time gaps and integrity issues</div>
+    </div>
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+<script src="{{ url_for('static', filename='js/timeline.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

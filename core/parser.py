@@ -1,7 +1,6 @@
 import re
 from datetime import datetime
 from typing import Generator, Optional, Tuple, Callable
-
 def line_generator(filepath: str) -> Generator[Tuple[int, str], None, None]:
     with open(filepath, encoding='utf-8', errors='replace') as fh:
         for line_num, line in enumerate(fh, start=1):

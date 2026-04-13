@@ -32,7 +32,6 @@
       <h2>Analyze Log File</h2>
       <p class="upload-panel-subtitle">Upload a log file to detect time gaps, tampering evidence, and integrity issues</p>
     </div>
-
     <div id="dropzone" class="dropzone">
       <div class="dropzone-icon">📂</div>
       <div class="dropzone-text">Drag &amp; drop a log file here</div>
@@ -40,7 +39,6 @@
       <div class="dropzone-formats">Supports: HDFS · ISO 8601 · Apache/Nginx · Syslog · Unix Epoch · Any size</div>
       <input type="file" id="file-input" accept=".log,.txt,.gz" style="display:none">
     </div>
-
     <div id="upload-progress" class="upload-progress hidden">
       <div class="progress-label">
         <span>Uploading…</span>
@@ -50,7 +48,6 @@
         <div id="progress-bar" class="progress-bar"></div>
       </div>
     </div>
-
     <div class="controls-row">
       <div class="sensitivity-control">
         <label for="sensitivity-slider">
@@ -99,7 +96,6 @@
         <div class="stat-card card" id="stat-range"></div>
         <div class="stat-card card" id="stat-format"></div>
       </div>
-
     </div>
 
     <div id="severity-pills" class="pills-row"></div>
@@ -150,7 +146,6 @@
       </div>
       <div id="oot-list" class="oot-list"></div>
     </div>
-
   </div>
   <div id="error-box" class="error-box hidden"></div>
 
@@ -161,9 +156,7 @@
       <div class="loading-sub">Scanning for time gaps and integrity issues</div>
     </div>
   </div>
-
 </main>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
 <script src="{{ url_for('static', filename='js/upload.js') }}"></script>
 <script src="{{ url_for('static', filename='js/timeline.js') }}"></script>

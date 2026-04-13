@@ -21,9 +21,7 @@ function renderTimeline(gaps, metadata, containerId) {
     const LABEL_Y  = TRACK_Y + TRACK_H + 18;
     const MARGIN_X = 54;
     const USABLE_W = VB_W - MARGIN_X * 2;
-
-    const ns = 'http://www.w3.org/2000/svg';
-
+    const ns = 'http:
     const svg = document.createElementNS(ns, 'svg');
     svg.setAttribute('viewBox', `0 0 ${VB_W} ${VB_H}`);
     svg.setAttribute('xmlns', ns);
@@ -39,7 +37,6 @@ function renderTimeline(gaps, metadata, containerId) {
 
     const firstTs = metadata.first_timestamp ? new Date(metadata.first_timestamp).getTime() : null;
     const lastTs  = metadata.last_timestamp  ? new Date(metadata.last_timestamp).getTime()  : null;
-
     if (!firstTs || !lastTs || lastTs <= firstTs) {
         const text = document.createElementNS(ns, 'text');
         text.setAttribute('x',           VB_W / 2);
@@ -53,7 +50,6 @@ function renderTimeline(gaps, metadata, containerId) {
         container.appendChild(svg);
         return;
     }
-
     const totalMs = lastTs - firstTs;
 
     function timeToX(ts) {
@@ -89,15 +85,12 @@ function renderTimeline(gaps, metadata, containerId) {
         noGapText.setAttribute('font-family', 'Inter, system-ui, sans-serif');
         noGapText.textContent = '✓ No gaps detected — log appears continuous';
         svg.appendChild(noGapText);
-
     } else {
         const sortedGaps = [...gaps].sort(
             (a, b) => new Date(a.start_time) - new Date(b.start_time)
         );
-
         const segments = [];
         let segStart = firstTs;
-
         for (const g of sortedGaps) {
             const gs = new Date(g.start_time).getTime();
             const ge = new Date(g.end_time).getTime();
@@ -109,7 +102,6 @@ function renderTimeline(gaps, metadata, containerId) {
         if (segStart < lastTs) {
             segments.push([segStart, lastTs]);
         }
-
         for (const [s, e] of segments) {
             const x = timeToX(s);
             const w = Math.max(1, timeToX(e) - x);
@@ -128,10 +120,8 @@ function renderTimeline(gaps, metadata, containerId) {
         const sortedGaps = [...gaps].sort(
             (a, b) => new Date(a.start_time) - new Date(b.start_time)
         );
-
         const MIN_GAP_PX = 4;
         const MAX_GAP_H  = 36;
-
         for (const g of sortedGaps) {
             const gs    = new Date(g.start_time).getTime();
             const ge    = new Date(g.end_time).getTime();
@@ -179,7 +169,6 @@ function renderTimeline(gaps, metadata, containerId) {
             const titleEl = document.createElementNS(ns, 'title');
             titleEl.textContent = `Gap #${g.id} | ${g.severity_label} | ${g.duration_human} | Score: ${g.severity_score}`;
             rect.appendChild(titleEl);
-
             svg.appendChild(rect);
 
             if (w >= 20) {
@@ -191,6 +180,7 @@ function renderTimeline(gaps, metadata, containerId) {
                 lbl.setAttribute('font-size',   '9');
                 lbl.setAttribute('font-weight', '800');
                 lbl.setAttribute('font-family', 'Inter, system-ui, sans-serif');
+                lbl.textContent = g.severity_label.charAt(0);
                 lbl.textContent = g.severity_label.charAt(0);
                 svg.appendChild(lbl);
             }
@@ -209,10 +199,8 @@ function renderTimeline(gaps, metadata, containerId) {
             return isoStr;
         }
     }
-
     const labelFill   = '#374151';
     const labelFamily = 'Consolas, Menlo, monospace';
-
     const startLabel = document.createElementNS(ns, 'text');
     startLabel.setAttribute('x',           MARGIN_X);
     startLabel.setAttribute('y',           VB_H - 5);
@@ -222,7 +210,6 @@ function renderTimeline(gaps, metadata, containerId) {
     startLabel.setAttribute('font-family', labelFamily);
     startLabel.textContent = fmtTs(metadata.first_timestamp);
     svg.appendChild(startLabel);
-
     const endLabel = document.createElementNS(ns, 'text');
     endLabel.setAttribute('x',           MARGIN_X + USABLE_W);
     endLabel.setAttribute('y',           VB_H - 5);
@@ -232,6 +219,5 @@ function renderTimeline(gaps, metadata, containerId) {
     endLabel.setAttribute('font-family', labelFamily);
     endLabel.textContent = fmtTs(metadata.last_timestamp);
     svg.appendChild(endLabel);
-
     container.appendChild(svg);
 }

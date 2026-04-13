@@ -3,14 +3,11 @@ import time
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Tuple, Dict, Any, Optional
-
 from core.formats import detect_format
 from core.parser import line_generator, parse_line
 from core.scorer import compute_severity_score, severity_label
 from core.suggestions import overall_assessment
 from config import MIN_GAP_ABSOLUTE_SECONDS, DEFAULT_SENSITIVITY
-
-
 @dataclass
 class GapRecord:
     id: int
@@ -23,8 +20,6 @@ class GapRecord:
     severity_score: float
     severity_label: str
     risk_factors: list
-
-
 def format_duration(seconds: float) -> str:
     s = int(seconds)
     if s >= 3600:
@@ -40,8 +35,6 @@ def format_duration(seconds: float) -> str:
         rem = s % 60
         return f"{m}m {rem}s" if rem else f"{m}m"
     return f"{s}s"
-
-
 def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dict[str, Any]:
     t_start = time.time()
 
@@ -52,7 +45,6 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
 
     all_timestamps: List[datetime] = []
     out_of_order: List[dict] = []
-
     prev_time: Optional[datetime] = None
     prev_line_num: int = 0
     total_lines = 0
@@ -60,30 +52,22 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
     malformed_count = 0
     first_timestamp: Optional[datetime] = None
     last_timestamp: Optional[datetime] = None
-
     for line_num, line in line_generator(filepath):
         total_lines += 1
         curr_time = parse_line(line, compiled_rx, log_format.parse_fn)
-
         if curr_time is None:
             malformed_count += 1
             continue
-
         valid_lines += 1
         all_timestamps.append(curr_time)
-
         if first_timestamp is None:
             first_timestamp = curr_time
-
         last_timestamp = curr_time
-
         if prev_time is None:
             prev_time = curr_time
             prev_line_num = line_num
             continue
-
         delta = (curr_time - prev_time).total_seconds()
-
         if delta >= 0:
             intervals.append((delta, prev_line_num, line_num, prev_time, curr_time))
         else:
@@ -93,7 +77,6 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
                 'previous': prev_time.isoformat(),
                 'delta_seconds': delta,
             })
-
         prev_time = curr_time
         prev_line_num = line_num
 
@@ -104,17 +87,14 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
         values = sorted(iv[0] for iv in intervals)
         n = len(values)
         median = values[n // 2]
-
         abs_devs = sorted(abs(v - median) for v in values)
         mad = abs_devs[n // 2]
         mad_scaled = max(mad * 1.4826, 1.0)
-
         mad_stats = {
             'median_interval': round(median, 3),
             'mad': round(mad, 3),
             'mad_scaled': round(mad_scaled, 3),
         }
-
         total_log_seconds = (
             (last_timestamp - first_timestamp).total_seconds()
             if first_timestamp and last_timestamp else 0.0
@@ -157,9 +137,7 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
             ))
 
     gaps.sort(key=lambda g: g.severity_score, reverse=True)
-
     processing_time_ms = int((time.time() - t_start) * 1000)
-
     metadata = {
         'total_lines': total_lines,
         'valid_lines': valid_lines,
@@ -172,7 +150,6 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
         'processing_time_ms': processing_time_ms,
         'mad_stats': mad_stats if len(intervals) >= 2 else {},
     }
-
     gaps_serialized = [
         {
             'id': g.id,
@@ -189,9 +166,7 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
         }
         for g in gaps
     ]
-
     assessment = overall_assessment(gaps_serialized, metadata)
-
     return {
         'format_detected': log_format.display_name,
         'format_name': log_format.name,

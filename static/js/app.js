@@ -1,19 +1,16 @@
 'use strict';
-
 let currentAnalysisFileId = null;
 
 function calcIntegrityScore(gaps, metadata) {
     if (!gaps || gaps.length === 0) return 100;
     const totalSec = metadata.total_log_seconds;
     if (!totalSec || totalSec === 0) return 100;
-
     const gapTimeSec = gaps.reduce((s, g) => s + g.duration_seconds, 0);
     const timeRatio = Math.min(gapTimeSec / totalSec, 1.0);
 
     const criticalCount = gaps.filter(g => g.severity_label === 'CRITICAL').length;
     const highCount     = gaps.filter(g => g.severity_label === 'HIGH').length;
     const medCount      = gaps.filter(g => g.severity_label === 'MEDIUM').length;
-
     const penalty = (timeRatio * 50) + (criticalCount * 15) + (highCount * 8) + (medCount * 3);
     return Math.max(0, Math.round(100 - penalty));
 }
@@ -23,7 +20,6 @@ function renderGauge(score) {
                 : score >= 70 ? '#4f46e5'
                 : score >= 40 ? '#f59e0b'
                 : '#ef4444';
-
     const label = score >= 90 ? 'Highly Intact'
                 : score >= 70 ? 'Mostly Intact'
                 : score >= 40 ? 'Suspicious'
@@ -43,7 +39,6 @@ function renderGauge(score) {
         : `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 ${largeArc} 1 ${x} ${y}"
                  fill="none" stroke="${color}" stroke-width="${strokeWidth}"
                  stroke-linecap="round" style="transition: stroke-dashoffset 0.8s ease;"/>`;
-
     const svg = `
 <svg viewBox="0 0 240 130" width="240" height="130" xmlns="http://www.w3.org/2000/svg">
   <path d="M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${cx + r} ${cy}"
@@ -58,7 +53,6 @@ function renderGauge(score) {
         fill="#6b7280"
         font-family="Inter, system-ui, sans-serif">${label}</text>
 </svg>`;
-
     const container = document.getElementById('gauge-container');
     if (container) {
         container.innerHTML = svg;
@@ -89,12 +83,10 @@ function renderStatCard(id, icon, number, label) {
 function renderSeverityPills(gaps) {
     const container = document.getElementById('severity-pills');
     if (!container) return;
-
     const counts = { CRITICAL: 0, HIGH: 0, MEDIUM: 0, LOW: 0 };
     gaps.forEach(g => {
         if (counts[g.severity_label] !== undefined) counts[g.severity_label]++;
     });
-
     if (gaps.length === 0) {
         container.innerHTML = `
             <span class="pill pill-ok">
@@ -103,7 +95,6 @@ function renderSeverityPills(gaps) {
         `;
         return;
     }
-
     const order = ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW'];
     const classMap = {
         CRITICAL: 'pill-critical',
@@ -111,7 +102,6 @@ function renderSeverityPills(gaps) {
         MEDIUM:   'pill-medium',
         LOW:      'pill-low',
     };
-
     container.innerHTML = order
         .filter(lv => counts[lv] > 0)
         .map(lv => `
@@ -127,17 +117,14 @@ function renderGapCard(gap, index) {
     const bgColors = { CRITICAL: '#fee2e2', HIGH: '#ffedd5', MEDIUM: '#fef9c3', LOW: '#cffafe' };
     const color = colors[gap.severity_label]   || '#0891b2';
     const bg    = bgColors[gap.severity_label] || '#dbeafe';
-
     const startTime = gap.start_time ? gap.start_time.replace('T', ' ') : '—';
     const endTime   = gap.end_time   ? gap.end_time.replace('T', ' ')   : '—';
-
     const factors = gap.risk_factors || [];
     const factorTags = factors.length > 0
         ? `<div class="gap-factors-row">
                ${factors.map(f => `<span class="gap-factor-tag">${f}</span>`).join('')}
            </div>`
         : '';
-
     return `
 <div class="gap-card ${gap.severity_label}" id="gap-card-${gap.id}">
     <div class="gap-header">
@@ -173,7 +160,6 @@ function formatTimeRange(metadata) {
     const first = metadata.first_timestamp;
     const last  = metadata.last_timestamp;
     if (!first || !last) return 'N/A';
-
     const totalSec = metadata.total_log_seconds || 0;
     if (totalSec > 0) return humanDuration(totalSec);
 
@@ -191,11 +177,9 @@ function formatTimeRange(metadata) {
 function runAnalysis(fileId) {
     const slider      = document.getElementById('sensitivity-slider');
     const sensitivity = parseFloat(slider.value);
-
     showLoading(true);
     hideError();
     hideResults();
-
     fetch('/api/analyze', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -220,7 +204,6 @@ function runAnalysis(fileId) {
 function renderResults(data) {
     const resultsEl = document.getElementById('results');
     if (resultsEl) resultsEl.classList.remove('hidden');
-
     const gaps   = data.gaps     || [];
     const meta   = data.metadata || {};
     const fmt    = data.format_detected || 'Unknown';
@@ -232,7 +215,6 @@ function renderResults(data) {
     const criticalCount = gaps.filter(g => g.severity_label === 'CRITICAL').length;
     const totalGaps     = gaps.length;
     const gapsLabel     = totalGaps === 0 ? '0' : (criticalCount > 0 ? criticalCount + ' crit' : totalGaps + ' found');
-
     renderStatCard('stat-gaps',   '🔍', totalGaps,
                    totalGaps === 0 ? 'No Gaps Found' : 'Gaps Detected');
     renderStatCard('stat-lines',  '📄', (meta.valid_lines || 0).toLocaleString(),
@@ -320,9 +302,7 @@ function renderResults(data) {
 function renderStatsGrid(metadata, data) {
     const container = document.getElementById('stats-grid');
     if (!container) return;
-
     const mad = metadata.mad_stats || {};
-
     const items = [
         ['Total Lines',      (metadata.total_lines || 0).toLocaleString()],
         ['Valid Lines',      (metadata.valid_lines  || 0).toLocaleString()],
@@ -335,7 +315,6 @@ function renderStatsGrid(metadata, data) {
         ['Format Detected',  data.format_detected || '—'],
         ['Processing Time',  (metadata.processing_time_ms || 0) + 'ms'],
     ];
-
     container.innerHTML = items.map(([label, value]) => `
         <div class="stats-item">
             <span class="stats-item-label">${label}</span>
@@ -356,7 +335,6 @@ function humanDuration(seconds) {
     const m = Math.floor((s % 3600) / 60);
     return m ? `${h}h ${m}m` : `${h}h`;
 }
-
 function formatDateTime(isoStr) {
     if (!isoStr) return '—';
     try {
@@ -370,7 +348,6 @@ function formatDateTime(isoStr) {
         return isoStr;
     }
 }
-
 function formatShortDate(isoStr) {
     if (!isoStr) return '—';
     try {
@@ -389,7 +366,6 @@ function showLoading(visible) {
     const el = document.getElementById('loading');
     if (el) el.classList.toggle('hidden', !visible);
 }
-
 function showError(msg) {
     const el = document.getElementById('error-box');
     if (el) {
@@ -397,12 +373,10 @@ function showError(msg) {
         el.classList.remove('hidden');
     }
 }
-
 function hideError() {
     const el = document.getElementById('error-box');
     if (el) el.classList.add('hidden');
 }
-
 function hideResults() {
     const el = document.getElementById('results');
     if (el) el.classList.add('hidden');

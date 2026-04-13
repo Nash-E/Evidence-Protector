@@ -21,18 +21,14 @@ def _load_toml(path: str) -> dict:
         return {}
 
 def load_config(path: str = _CONFIG_PATH) -> None:
-    global DEFAULT_SENSITIVITY, MIN_GAP_ABSOLUTE_SECONDS
-    global SERVER_PORT, SERVER_DEBUG, UPLOAD_FOLDER
-
+    global DEFAULT_SENSITIVITY, MIN_GAP_ABSOLUTE_SECONDS, SERVER_PORT, SERVER_DEBUG, UPLOAD_FOLDER
     data = _load_toml(path)
-
-    analysis = data.get('analysis', {})
-    server   = data.get('server',   {})
-
-    DEFAULT_SENSITIVITY      = float(analysis.get('default_sensitivity',  DEFAULT_SENSITIVITY))
-    MIN_GAP_ABSOLUTE_SECONDS = int(analysis.get('min_gap_seconds',        MIN_GAP_ABSOLUTE_SECONDS))
-    SERVER_PORT              = int(server.get('port',                     SERVER_PORT))
-    SERVER_DEBUG             = bool(server.get('debug',                   SERVER_DEBUG))
-    UPLOAD_FOLDER            = str(server.get('upload_folder',            UPLOAD_FOLDER))
+    if not data:
+        return
+    DEFAULT_SENSITIVITY      = float(data.get('default_sensitivity',     DEFAULT_SENSITIVITY))
+    MIN_GAP_ABSOLUTE_SECONDS = int(data.get('min_gap_absolute_seconds',  MIN_GAP_ABSOLUTE_SECONDS))
+    SERVER_PORT              = int(data.get('server_port',               SERVER_PORT))
+    SERVER_DEBUG             = bool(data.get('server_debug',             SERVER_DEBUG))
+    UPLOAD_FOLDER            = str(data.get('upload_folder',             UPLOAD_FOLDER))
 
 load_config()

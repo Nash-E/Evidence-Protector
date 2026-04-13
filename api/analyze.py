@@ -3,7 +3,9 @@ import json
 from flask import Blueprint, request, jsonify, current_app
 from core.detector import run_analysis
 from config import DEFAULT_SENSITIVITY
+
 analyze_bp = Blueprint('analyze', __name__)
+
 @analyze_bp.route('/api/analyze', methods=['POST'])
 def analyze():
     data = request.get_json()
@@ -21,7 +23,6 @@ def analyze():
         return jsonify({'error': str(e)}), 422
     except Exception as e:
         return jsonify({'error': f'Analysis failed: {e}'}), 500
-
     cache_path = path + '.result.json'
     with open(cache_path, 'w', encoding='utf-8') as f:
         json.dump(result, f)

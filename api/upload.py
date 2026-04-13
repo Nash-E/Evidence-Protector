@@ -21,11 +21,9 @@ def _cleanup_old_uploads(folder: str, max_age_seconds: int = 3600):
 def upload():
     folder = current_app.config['UPLOAD_FOLDER']
     _cleanup_old_uploads(folder)
-
     filename = request.args.get('filename', 'upload.log')
     file_id = str(uuid.uuid4())
     dest = os.path.join(folder, file_id)
-
     size = 0
     with open(dest, 'wb') as out:
         while True:
@@ -34,7 +32,6 @@ def upload():
                 break
             out.write(chunk)
             size += len(chunk)
-
     return jsonify({
         'file_id': file_id,
         'filename': filename,

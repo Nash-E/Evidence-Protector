@@ -21,7 +21,7 @@ function renderTimeline(gaps, metadata, containerId) {
     const LABEL_Y  = TRACK_Y + TRACK_H + 18;
     const MARGIN_X = 54;
     const USABLE_W = VB_W - MARGIN_X * 2;
-    const ns = 'http:
+    const ns = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(ns, 'svg');
     svg.setAttribute('viewBox', `0 0 ${VB_W} ${VB_H}`);
     svg.setAttribute('xmlns', ns);
@@ -180,7 +180,6 @@ function renderTimeline(gaps, metadata, containerId) {
                 lbl.setAttribute('font-size',   '9');
                 lbl.setAttribute('font-weight', '800');
                 lbl.setAttribute('font-family', 'Inter, system-ui, sans-serif');
-                lbl.textContent = g.severity_label.charAt(0);
                 lbl.textContent = g.severity_label.charAt(0);
                 svg.appendChild(lbl);
             }

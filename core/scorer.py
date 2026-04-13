@@ -40,7 +40,6 @@ def compute_time_of_day_score(gap_start_ts) -> float:
     elif 18 <= hour < 22:  return 0.4
     else:                  return 0.8
 
-
 def compute_day_of_week_score(gap_start_ts) -> float:
     return 0.8 if gap_start_ts.weekday() >= 5 else 0.1
 def compute_position_score(gap_start_ts, log_start_ts, log_end_ts) -> float:

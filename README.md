@@ -2,13 +2,9 @@
 
 A forensic log analysis tool that detects temporal gaps in server logs. Available as a web app and a command-line tool.
 
-A forensic log analysis tool that detects temporal gaps in server logs. Available as a web app and a command-line tool.
-
 
 
 ## Overview
-
-When a hacker breaks into a system, one of their first actions is to delete log entries that reveal their activity. Removing entries from a continuous log creates a **temporal gap** , a jump in time. Evidence Protector detects these gaps using **Median Absolute Deviation (MAD) z-score** analysis, a statistically robust method that self-calibrates to each log file's natural rhythm.
 
 When a hacker breaks into a system, one of their first actions is to delete log entries that reveal their activity. Removing entries from a continuous log creates a **temporal gap** , a jump in time. Evidence Protector detects these gaps using **Median Absolute Deviation (MAD) z-score** analysis, a statistically robust method that self-calibrates to each log file's natural rhythm.
 
@@ -38,7 +34,6 @@ When a hacker breaks into a system, one of their first actions is to delete log 
 
 
 
-
 ## Requirements
 
 - Python 3.11+
@@ -47,7 +42,6 @@ When a hacker breaks into a system, one of their first actions is to delete log 
 ```bash
 pip install -r requirements.txt
 ```
-
 
 
 
@@ -64,7 +58,6 @@ pip install -r requirements.txt
 
 
 
-
 ## Running the Web App
 
 ```bash
@@ -78,7 +71,6 @@ Open `http://localhost:5000` in your browser.
 3. Click **Analyze**
 4. Review flagged gaps, risk factor tags, and the integrity score
 5. Export the report as HTML, CSV, or JSON
-
 
 
 
@@ -123,7 +115,6 @@ Settings in `config.toml` are loaded at startup. The CLI `--sensitivity` flag al
 
 
 
-
 ## How It Works
 
 1. The log file is read line-by-line (O(1) memory — no full-file load)
@@ -134,7 +125,6 @@ Settings in `config.toml` are loaded at startup. The CLI `--sensitivity` flag al
 6. Deltas exceeding the sensitivity threshold are flagged as gaps
 7. Each gap receives a composite severity score (0–100) using 8 contextual signals
 8. Results are returned as JSON and rendered in the UI or printed to the terminal
-
 
 
 
@@ -149,4 +139,5 @@ The `sample_logs/` directory includes ready-to-use test files:
 | `syslog_sample.log` | Syslog | Linux system log testing |
 | `iso8601_sample.log` | ISO 8601 | Standard timestamp testing |
 | `sensitivity_demo.log` | Apache | Demonstrates the sensitivity slider — gaps at z≈4 and z≈6 disappear as threshold increases |
+
 

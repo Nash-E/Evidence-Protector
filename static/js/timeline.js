@@ -1,30 +1,15 @@
-// timeline.js — SVG-based log gap timeline renderer (light theme)
-
 'use strict';
-
-// Severity colours — updated for light theme
 const SEV_COLORS = {
     CRITICAL: '#ef4444',
     HIGH:     '#f97316',
     MEDIUM:   '#f59e0b',
     LOW:      '#0891b2',
 };
-
-/**
- * Render an SVG timeline of log gaps.
- * @param {Array}  gaps        - Array of gap objects from API
- * @param {Object} metadata    - metadata from API response
- * @param {string} containerId - DOM element id to render into
- */
 function renderTimeline(gaps, metadata, containerId) {
     containerId = containerId || 'timeline-container';
     const container = document.getElementById(containerId);
     if (!container) return;
-
-    // Clear previous content
     container.innerHTML = '';
-
-    // Viewport dimensions
     const VB_W     = 900;
     const VB_H     = 120;
     const TRACK_Y  = 46;
@@ -32,27 +17,20 @@ function renderTimeline(gaps, metadata, containerId) {
     const LABEL_Y  = TRACK_Y + TRACK_H + 18;
     const MARGIN_X = 54;
     const USABLE_W = VB_W - MARGIN_X * 2;
-
-    const ns = 'http://www.w3.org/2000/svg';
-
+    const ns = 'http:
     const svg = document.createElementNS(ns, 'svg');
     svg.setAttribute('viewBox', `0 0 ${VB_W} ${VB_H}`);
     svg.setAttribute('xmlns', ns);
     svg.style.display = 'block';
     svg.style.width   = '100%';
-
-    // ---- Background (light) ----
     const bgRect = document.createElementNS(ns, 'rect');
     bgRect.setAttribute('width',  VB_W);
     bgRect.setAttribute('height', VB_H);
     bgRect.setAttribute('fill',   '#f9fafb');
     bgRect.setAttribute('rx',     '10');
     svg.appendChild(bgRect);
-
-    // ---- Check for valid timestamps ----
     const firstTs = metadata.first_timestamp ? new Date(metadata.first_timestamp).getTime() : null;
     const lastTs  = metadata.last_timestamp  ? new Date(metadata.last_timestamp).getTime()  : null;
-
     if (!firstTs || !lastTs || lastTs <= firstTs) {
         const text = document.createElementNS(ns, 'text');
         text.setAttribute('x',           VB_W / 2);
@@ -66,15 +44,10 @@ function renderTimeline(gaps, metadata, containerId) {
         container.appendChild(svg);
         return;
     }
-
     const totalMs = lastTs - firstTs;
-
-    // Helper: timestamp (ms) → x coordinate
     function timeToX(ts) {
         return MARGIN_X + ((ts - firstTs) / totalMs) * USABLE_W;
     }
-
-    // ---- Baseline track (light gray) ----
     const track = document.createElementNS(ns, 'rect');
     track.setAttribute('x',      MARGIN_X);
     track.setAttribute('y',      TRACK_Y);
@@ -83,10 +56,7 @@ function renderTimeline(gaps, metadata, containerId) {
     track.setAttribute('fill',   '#e5e7eb');
     track.setAttribute('rx',     '4');
     svg.appendChild(track);
-
-    // ---- Active log segments (indigo) ----
     if (gaps.length === 0) {
-        // Full continuous log — show full indigo bar
         const fullSeg = document.createElementNS(ns, 'rect');
         fullSeg.setAttribute('x',      MARGIN_X);
         fullSeg.setAttribute('y',      TRACK_Y);
@@ -95,8 +65,6 @@ function renderTimeline(gaps, metadata, containerId) {
         fullSeg.setAttribute('fill',   '#4f46e5');
         fullSeg.setAttribute('rx',     '4');
         svg.appendChild(fullSeg);
-
-        // "No gaps" label above track
         const noGapText = document.createElementNS(ns, 'text');
         noGapText.setAttribute('x',           VB_W / 2);
         noGapText.setAttribute('y',           TRACK_Y - 12);
@@ -107,16 +75,12 @@ function renderTimeline(gaps, metadata, containerId) {
         noGapText.setAttribute('font-family', 'Inter, system-ui, sans-serif');
         noGapText.textContent = '✓ No gaps detected — log appears continuous';
         svg.appendChild(noGapText);
-
     } else {
-        // Render segments between gaps as indigo blocks
         const sortedGaps = [...gaps].sort(
             (a, b) => new Date(a.start_time) - new Date(b.start_time)
         );
-
         const segments = [];
         let segStart = firstTs;
-
         for (const g of sortedGaps) {
             const gs = new Date(g.start_time).getTime();
             const ge = new Date(g.end_time).getTime();
@@ -128,7 +92,6 @@ function renderTimeline(gaps, metadata, containerId) {
         if (segStart < lastTs) {
             segments.push([segStart, lastTs]);
         }
-
         for (const [s, e] of segments) {
             const x = timeToX(s);
             const w = Math.max(1, timeToX(e) - x);
@@ -142,16 +105,12 @@ function renderTimeline(gaps, metadata, containerId) {
             svg.appendChild(seg);
         }
     }
-
-    // ---- Gap markers (colored by severity) ----
     if (gaps.length > 0) {
         const sortedGaps = [...gaps].sort(
             (a, b) => new Date(a.start_time) - new Date(b.start_time)
         );
-
         const MIN_GAP_PX = 4;
         const MAX_GAP_H  = 36;
-
         for (const g of sortedGaps) {
             const gs    = new Date(g.start_time).getTime();
             const ge    = new Date(g.end_time).getTime();
@@ -159,12 +118,8 @@ function renderTimeline(gaps, metadata, containerId) {
             const rawW  = timeToX(ge) - x;
             const w     = Math.max(MIN_GAP_PX, rawW);
             const color = SEV_COLORS[g.severity_label] || '#4f46e5';
-
-            // Height proportional to severity score (min 8px, max MAX_GAP_H)
             const barH = Math.max(8, Math.min(MAX_GAP_H, (g.severity_score / 100) * MAX_GAP_H));
             const barY = TRACK_Y + TRACK_H / 2 - barH / 2;
-
-            // Gap rect
             const rect = document.createElementNS(ns, 'rect');
             rect.setAttribute('x',       x);
             rect.setAttribute('y',       barY);
@@ -175,8 +130,6 @@ function renderTimeline(gaps, metadata, containerId) {
             rect.setAttribute('opacity', '0.92');
             rect.style.cursor     = 'pointer';
             rect.style.transition = 'opacity 0.15s';
-
-            // Hover effects
             rect.addEventListener('mouseenter', () => {
                 rect.setAttribute('opacity', '1');
                 rect.style.filter = 'brightness(1.1)';
@@ -185,8 +138,6 @@ function renderTimeline(gaps, metadata, containerId) {
                 rect.setAttribute('opacity', '0.92');
                 rect.style.filter = '';
             });
-
-            // Click: scroll to corresponding gap card
             rect.addEventListener('click', () => {
                 const card = document.getElementById('gap-card-' + g.id);
                 if (card) {
@@ -199,15 +150,10 @@ function renderTimeline(gaps, metadata, containerId) {
                     }, 1800);
                 }
             });
-
-            // Native SVG tooltip
             const titleEl = document.createElementNS(ns, 'title');
             titleEl.textContent = `Gap #${g.id} | ${g.severity_label} | ${g.duration_human} | Score: ${g.severity_score}`;
             rect.appendChild(titleEl);
-
             svg.appendChild(rect);
-
-            // Severity letter label below gap (only if gap is wide enough)
             if (w >= 20) {
                 const lbl = document.createElementNS(ns, 'text');
                 lbl.setAttribute('x',           x + w / 2);
@@ -217,13 +163,11 @@ function renderTimeline(gaps, metadata, containerId) {
                 lbl.setAttribute('font-size',   '9');
                 lbl.setAttribute('font-weight', '800');
                 lbl.setAttribute('font-family', 'Inter, system-ui, sans-serif');
-                lbl.textContent = g.severity_label.charAt(0);  // C / H / M / L
+                lbl.textContent = g.severity_label.charAt(0);
                 svg.appendChild(lbl);
             }
         }
     }
-
-    // ---- X-axis labels: start and end timestamps ----
     function fmtTs(isoStr) {
         try {
             const d = new Date(isoStr);
@@ -236,10 +180,8 @@ function renderTimeline(gaps, metadata, containerId) {
             return isoStr;
         }
     }
-
     const labelFill   = '#374151';
     const labelFamily = 'Consolas, Menlo, monospace';
-
     const startLabel = document.createElementNS(ns, 'text');
     startLabel.setAttribute('x',           MARGIN_X);
     startLabel.setAttribute('y',           VB_H - 5);
@@ -249,7 +191,6 @@ function renderTimeline(gaps, metadata, containerId) {
     startLabel.setAttribute('font-family', labelFamily);
     startLabel.textContent = fmtTs(metadata.first_timestamp);
     svg.appendChild(startLabel);
-
     const endLabel = document.createElementNS(ns, 'text');
     endLabel.setAttribute('x',           MARGIN_X + USABLE_W);
     endLabel.setAttribute('y',           VB_H - 5);
@@ -259,6 +200,5 @@ function renderTimeline(gaps, metadata, containerId) {
     endLabel.setAttribute('font-family', labelFamily);
     endLabel.textContent = fmtTs(metadata.last_timestamp);
     svg.appendChild(endLabel);
-
     container.appendChild(svg);
 }

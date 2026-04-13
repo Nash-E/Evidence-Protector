@@ -1,31 +1,15 @@
-"""
-Generate sample log files in every format supported by Evidence Protector.
-Each file has:
-  - ~500 lines
-  - 3 injected gaps (LOW, HIGH, CRITICAL)
-  - 5 malformed lines
-  - 1 out-of-order timestamp
-Run: python sample_logs/generate_all_samples.py
-"""
-
 import random
 import os
 from datetime import datetime, timedelta
-
 random.seed(99)
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# ── Shared gap/malform injection config ─────────────────────────────────────
-
-GAP_1_LINE   = 120   # ~120s  → LOW
-GAP_2_LINE   = 280   # ~1000s → HIGH
-GAP_3_LINE   = 400   # ~5000s → CRITICAL
+GAP_1_LINE   = 120
+GAP_2_LINE   = 280
+GAP_3_LINE   = 400
 OOT_LINE     = 350
 MALFORM_LINES = {30, 90, 175, 310, 460}
 TOTAL_LINES  = 500
 START_TIME   = datetime(2025, 3, 28, 8, 0, 0)
-
-
 def next_ts(ts, line_num):
     if line_num == GAP_1_LINE:
         return ts + timedelta(seconds=120)
@@ -34,10 +18,6 @@ def next_ts(ts, line_num):
     elif line_num == GAP_3_LINE:
         return ts + timedelta(seconds=5000)
     return ts + timedelta(seconds=random.randint(1, 4))
-
-
-# ── 1. HDFS format ──────────────────────────────────────────────────────────
-
 def gen_hdfs():
     components = ['dfs.DataNode', 'dfs.FSNamesystem', 'hdfs.StateChange']
     messages = [
@@ -47,7 +27,6 @@ def gen_hdfs():
         'BLOCK* replicate blk_{} to datanode',
     ]
     levels = ['INFO', 'INFO', 'WARN', 'ERROR']
-
     lines = []
     ts = START_TIME
     for i in range(1, TOTAL_LINES + 1):
@@ -67,12 +46,7 @@ def gen_hdfs():
             random.randint(10000, 99999), random.randint(512, 65536), random.randint(1, 254)
         )
         lines.append(f'{ts_str} {pid} {lvl} {comp}: {msg}')
-
     _write('hdfs_sample.log', lines)
-
-
-# ── 2. ISO 8601 (T separator) ────────────────────────────────────────────────
-
 def gen_iso8601():
     services = ['auth', 'api', 'worker', 'scheduler']
     levels   = ['INFO', 'INFO', 'WARN', 'ERROR', 'DEBUG']
@@ -83,7 +57,6 @@ def gen_iso8601():
         'Database query took {}ms',
         'Worker {} started processing job {}',
     ]
-
     lines = []
     ts = START_TIME
     for i in range(1, TOTAL_LINES + 1):
@@ -100,12 +73,7 @@ def gen_iso8601():
         svc  = random.choice(services)
         msg  = random.choice(msgs).format(random.randint(1, 500), random.randint(1000, 9999), random.randint(1, 100))
         lines.append(f'{ts_str} [{lvl}] {svc}: {msg}')
-
     _write('iso8601_sample.log', lines)
-
-
-# ── 3. ISO 8601 with space separator ────────────────────────────────────────
-
 def gen_iso_space():
     lines = []
     ts = START_TIME
@@ -121,18 +89,12 @@ def gen_iso_space():
             ts_str = ts.strftime('%Y-%m-%d %H:%M:%S')
         lvl = random.choice(['INFO', 'INFO', 'WARN', 'ERROR'])
         lines.append(f'{ts_str} {lvl} app.server: Handled request {random.randint(1, 9999)} in {random.randint(1, 200)}ms')
-
     _write('iso_space_sample.log', lines)
-
-
-# ── 4. Apache / Nginx access log ─────────────────────────────────────────────
-
 def gen_apache():
     ips     = [f'192.168.1.{i}' for i in range(1, 20)]
     paths   = ['/index.html', '/api/v1/users', '/api/v1/login', '/static/app.js', '/favicon.ico']
     methods = ['GET', 'GET', 'POST', 'GET', 'DELETE']
     codes   = [200, 200, 200, 301, 404, 500]
-
     lines = []
     ts = START_TIME
     for i in range(1, TOTAL_LINES + 1):
@@ -151,12 +113,7 @@ def gen_apache():
         code   = random.choice(codes)
         size   = random.randint(200, 50000)
         lines.append(f'{ip} - - [{ts_str} +0000] "{method} {path} HTTP/1.1" {code} {size}')
-
     _write('apache_sample.log', lines)
-
-
-# ── 5. Syslog ────────────────────────────────────────────────────────────────
-
 def gen_syslog():
     hosts    = ['webserver01', 'dbserver02', 'proxy03']
     procs    = ['sshd', 'cron', 'kernel', 'systemd', 'sudo']
@@ -167,7 +124,6 @@ def gen_syslog():
         'UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.{} DST=10.0.0.{} PROTO=TCP',
         'sudo: user{} : TTY=pts/{} ; PWD=/home ; USER=root ; COMMAND=/bin/ls',
     ]
-
     lines = []
     ts = START_TIME
     for i in range(1, TOTAL_LINES + 1):
@@ -177,7 +133,6 @@ def gen_syslog():
             continue
         if i == OOT_LINE:
             oot = ts - timedelta(seconds=12)
-            # Syslog format: "Mar 15 08:03:45" — no year
             ts_str = oot.strftime('%b %d %H:%M:%S')
         else:
             ts_str = ts.strftime('%b %d %H:%M:%S')
@@ -188,19 +143,12 @@ def gen_syslog():
             random.randint(1, 99), random.randint(1, 254), random.randint(1024, 65535)
         )
         lines.append(f'{ts_str} {host} {proc}[{pid}]: {msg}')
-
     _write('syslog_sample.log', lines)
-
-
-# ── helpers ──────────────────────────────────────────────────────────────────
-
 def _write(filename, lines):
     path = os.path.join(OUT_DIR, filename)
     with open(path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')
     print(f'  Created {filename} ({len(lines)} lines)')
-
-
 if __name__ == '__main__':
     print('Generating sample log files...')
     gen_hdfs()

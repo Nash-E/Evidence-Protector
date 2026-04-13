@@ -1,38 +1,23 @@
-"""
-Generate a large Apache access log for demo purposes.
-  - 500,000 lines (~35-40 MB)
-  - 8 injected gaps of varying severity
-  - 3 out-of-order timestamps (insertion attack)
-  - 50 malformed lines
-
-Run: python sample_logs/generate_large_demo.py
-"""
-
 import random
 import os
 from datetime import datetime, timedelta
-
 random.seed(42)
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
-
 TOTAL_LINES = 500_000
 START_TIME  = datetime(2025, 3, 1, 0, 0, 0)
-
 GAPS = [
     (30000,   180,   "LOW"),
     (80000,   450,   "MEDIUM"),
     (120000,  1200,  "HIGH"),
     (180000,  320,   "MEDIUM"),
-    (240000,  7200,  "CRITICAL"),   # 2-hour blackout
+    (240000,  7200,  "CRITICAL"),
     (310000,  600,   "HIGH"),
-    (400000,  14400, "CRITICAL"),   # 4-hour blackout
+    (400000,  14400, "CRITICAL"),
     (460000,  90,    "LOW"),
 ]
 GAP_LINES = {g[0]: g[1] for g in GAPS}
-
 OOT_LINES    = {150000, 275000, 420000}
 MALFORM_LINES = set(random.sample(range(1, TOTAL_LINES), 50))
-
 IPS = (
     [f"192.168.10.{i}" for i in range(1, 50)] +
     [f"10.0.0.{i}"     for i in range(1, 30)] +
@@ -61,8 +46,6 @@ MALFORM_POOL = [
     "last message repeated 5 times",
     "--- log rotation ---",
 ]
-
-
 def interval(ts):
     hour = ts.hour
     if 2 <= hour < 6:
@@ -71,8 +54,6 @@ def interval(ts):
         return random.randint(1, 3)
     else:
         return random.randint(1, 6)
-
-
 def make_line(ts):
     ts_str = ts.strftime("%d/%b/%Y:%H:%M:%S")
     return (
@@ -81,13 +62,10 @@ def make_line(ts):
         f"{random.choice(CODES)} {random.randint(150, 80000)} "
         f'"-" "{random.choice(UAS)}"'
     )
-
-
 if __name__ == "__main__":
     print(f"Generating {TOTAL_LINES:,} line Apache log...")
     filename = "large_demo_apache.log"
     path = os.path.join(OUT_DIR, filename)
-
     ts = START_TIME
     with open(path, "w", encoding="utf-8") as f:
         for i in range(1, TOTAL_LINES + 1):
@@ -95,17 +73,14 @@ if __name__ == "__main__":
                 ts += timedelta(seconds=GAP_LINES[i])
             else:
                 ts += timedelta(seconds=interval(ts))
-
             if i in MALFORM_LINES:
                 f.write(random.choice(MALFORM_POOL) + "\n")
             elif i in OOT_LINES:
                 f.write(make_line(ts - timedelta(seconds=random.randint(30, 120))) + "\n")
             else:
                 f.write(make_line(ts) + "\n")
-
             if i % 50000 == 0:
                 print(f"  {i:>7,} / {TOTAL_LINES:,} lines written...")
-
     size_mb = os.path.getsize(path) / (1024 * 1024)
     print(f"\nDone.")
     print(f"  File  : {filename}")

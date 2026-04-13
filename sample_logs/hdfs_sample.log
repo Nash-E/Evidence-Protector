@@ -1,0 +1,500 @@
+250328 080004 7238 INFO hdfs.StateChange: Served block blk_40180 to /10.0.0.16793
+250328 080005 5114 ERROR hdfs.StateChange: Received block blk_91778 of size 32577 from /10.0.0.52
+250328 080009 4550 WARN dfs.FSNamesystem: Served block blk_29959 to /10.0.0.30755
+250328 080011 6551 INFO hdfs.StateChange: Received block blk_71477 of size 21246 from /10.0.0.104
+250328 080012 5413 INFO dfs.FSNamesystem: Served block blk_57517 to /10.0.0.65364
+250328 080013 8570 INFO hdfs.StateChange: BLOCK* replicate blk_16726 to datanode
+250328 080015 3634 ERROR hdfs.StateChange: Served block blk_75954 to /10.0.0.43785
+250328 080016 2798 INFO dfs.DataNode: BLOCK* replicate blk_99635 to datanode
+250328 080017 7970 INFO dfs.DataNode: PacketResponder terminated for block blk_90922
+250328 080020 3225 ERROR dfs.DataNode: Received block blk_93942 of size 14368 from /10.0.0.114
+250328 080023 9936 ERROR dfs.DataNode: PacketResponder terminated for block blk_72409
+250328 080025 3464 ERROR dfs.DataNode: Received block blk_25560 of size 9927 from /10.0.0.76
+250328 080027 3910 ERROR dfs.DataNode: Served block blk_83526 to /10.0.0.21424
+250328 080031 4832 WARN dfs.DataNode: PacketResponder terminated for block blk_34373
+250328 080034 1182 INFO dfs.FSNamesystem: Served block blk_59410 to /10.0.0.26667
+250328 080038 7323 ERROR dfs.FSNamesystem: Received block blk_33753 of size 58155 from /10.0.0.10
+250328 080041 7530 ERROR dfs.DataNode: PacketResponder terminated for block blk_95764
+250328 080044 2732 WARN dfs.DataNode: Served block blk_60273 to /10.0.0.19935
+250328 080045 8173 ERROR dfs.FSNamesystem: Received block blk_75948 of size 19716 from /10.0.0.233
+250328 080048 8816 INFO dfs.FSNamesystem: BLOCK* replicate blk_48126 to datanode
+250328 080050 5625 ERROR hdfs.StateChange: BLOCK* replicate blk_35489 to datanode
+250328 080052 6658 INFO hdfs.StateChange: PacketResponder terminated for block blk_48718
+250328 080054 3812 WARN hdfs.StateChange: BLOCK* replicate blk_40308 to datanode
+250328 080057 7551 INFO dfs.DataNode: Served block blk_10169 to /10.0.0.34728
+250328 080059 9374 ERROR dfs.DataNode: PacketResponder terminated for block blk_64635
+250328 080102 4281 INFO dfs.DataNode: PacketResponder terminated for block blk_19905
+250328 080103 7828 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_35428
+250328 080107 7528 INFO dfs.FSNamesystem: BLOCK* replicate blk_53130 to datanode
+250328 080109 8316 ERROR dfs.FSNamesystem: Served block blk_57164 to /10.0.0.16906
+CORRUPTED ENTRY \x00\xff
+250328 080116 4009 ERROR hdfs.StateChange: BLOCK* replicate blk_97164 to datanode
+250328 080117 9710 INFO dfs.FSNamesystem: Received block blk_25055 of size 22122 from /10.0.0.204
+250328 080121 2182 WARN hdfs.StateChange: Received block blk_84660 of size 45117 from /10.0.0.137
+250328 080124 1196 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_31755
+250328 080125 7508 INFO dfs.DataNode: PacketResponder terminated for block blk_77021
+250328 080128 3597 ERROR dfs.DataNode: BLOCK* replicate blk_40094 to datanode
+250328 080129 8940 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_96093
+250328 080131 3844 WARN hdfs.StateChange: Received block blk_98850 of size 7954 from /10.0.0.186
+250328 080133 3243 INFO hdfs.StateChange: Received block blk_14336 of size 50265 from /10.0.0.132
+250328 080137 3728 WARN hdfs.StateChange: Served block blk_90607 to /10.0.0.40375
+250328 080139 6572 INFO dfs.FSNamesystem: BLOCK* replicate blk_34640 to datanode
+250328 080140 3401 ERROR hdfs.StateChange: Received block blk_40289 of size 25208 from /10.0.0.235
+250328 080141 4856 ERROR hdfs.StateChange: Received block blk_31159 of size 57884 from /10.0.0.228
+250328 080143 8273 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_87240
+250328 080147 1333 WARN dfs.DataNode: Served block blk_11479 to /10.0.0.58246
+250328 080150 5753 INFO dfs.FSNamesystem: BLOCK* replicate blk_19476 to datanode
+250328 080152 6199 WARN hdfs.StateChange: PacketResponder terminated for block blk_14530
+250328 080155 4713 INFO hdfs.StateChange: Received block blk_47850 of size 48939 from /10.0.0.103
+250328 080159 9393 INFO dfs.DataNode: BLOCK* replicate blk_17152 to datanode
+250328 080202 3684 INFO dfs.FSNamesystem: Received block blk_84129 of size 62352 from /10.0.0.8
+250328 080204 3158 INFO hdfs.StateChange: PacketResponder terminated for block blk_18030
+250328 080207 4002 ERROR dfs.DataNode: Received block blk_94354 of size 2845 from /10.0.0.129
+250328 080211 8311 INFO dfs.DataNode: Served block blk_54737 to /10.0.0.28998
+250328 080215 2490 WARN hdfs.StateChange: Served block blk_40490 to /10.0.0.48591
+250328 080219 4414 INFO dfs.FSNamesystem: Served block blk_32751 to /10.0.0.9334
+250328 080221 3824 WARN dfs.DataNode: Received block blk_40767 of size 16273 from /10.0.0.135
+250328 080223 7897 ERROR hdfs.StateChange: Received block blk_41669 of size 16928 from /10.0.0.83
+250328 080226 9121 INFO dfs.DataNode: Received block blk_15012 of size 29135 from /10.0.0.16
+250328 080229 4106 INFO hdfs.StateChange: PacketResponder terminated for block blk_34263
+250328 080232 1166 WARN dfs.DataNode: PacketResponder terminated for block blk_24952
+250328 080236 3331 WARN hdfs.StateChange: PacketResponder terminated for block blk_35967
+250328 080237 6815 INFO dfs.DataNode: Received block blk_59753 of size 1695 from /10.0.0.92
+250328 080240 7148 INFO hdfs.StateChange: Served block blk_19707 to /10.0.0.1923
+250328 080242 4471 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_19235
+250328 080246 2867 ERROR dfs.DataNode: PacketResponder terminated for block blk_75164
+250328 080250 5306 WARN hdfs.StateChange: PacketResponder terminated for block blk_25294
+250328 080252 2055 INFO dfs.DataNode: PacketResponder terminated for block blk_52737
+250328 080255 6026 INFO dfs.DataNode: BLOCK* replicate blk_97183 to datanode
+250328 080256 5291 INFO dfs.FSNamesystem: Received block blk_12320 of size 19012 from /10.0.0.127
+250328 080300 7976 WARN hdfs.StateChange: Served block blk_89294 to /10.0.0.45972
+250328 080301 5694 ERROR dfs.DataNode: Received block blk_87467 of size 61151 from /10.0.0.72
+250328 080305 9029 WARN hdfs.StateChange: Received block blk_12600 of size 3628 from /10.0.0.145
+250328 080306 3125 ERROR dfs.DataNode: BLOCK* replicate blk_96902 to datanode
+250328 080307 1320 INFO dfs.FSNamesystem: Served block blk_36696 to /10.0.0.44274
+250328 080308 1208 ERROR dfs.FSNamesystem: Served block blk_27673 to /10.0.0.54182
+250328 080311 3903 ERROR dfs.DataNode: PacketResponder terminated for block blk_34213
+250328 080315 2577 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_42793
+250328 080317 5491 INFO dfs.DataNode: Received block blk_42874 of size 31540 from /10.0.0.101
+250328 080319 5763 ERROR dfs.DataNode: PacketResponder terminated for block blk_68704
+250328 080322 4020 ERROR dfs.FSNamesystem: Served block blk_34946 to /10.0.0.22081
+250328 080324 9232 INFO hdfs.StateChange: PacketResponder terminated for block blk_88888
+250328 080326 8127 INFO hdfs.StateChange: Received block blk_54270 of size 48020 from /10.0.0.202
+250328 080330 2349 INFO dfs.FSNamesystem: Received block blk_65804 of size 30520 from /10.0.0.28
+250328 080331 1078 INFO dfs.DataNode: Served block blk_49153 to /10.0.0.13073
+250328 080333 5224 WARN dfs.DataNode: Served block blk_21665 to /10.0.0.40909
+250328 080336 1411 INFO dfs.FSNamesystem: BLOCK* replicate blk_53880 to datanode
+250328 080340 5097 ERROR hdfs.StateChange: PacketResponder terminated for block blk_38603
+250328 080341 6326 INFO dfs.DataNode: BLOCK* replicate blk_72417 to datanode
+250328 080344 3894 WARN dfs.DataNode: Received block blk_89415 of size 39406 from /10.0.0.89
+
+250328 080350 1750 INFO hdfs.StateChange: PacketResponder terminated for block blk_98291
+250328 080353 3834 WARN hdfs.StateChange: Received block blk_81984 of size 19883 from /10.0.0.9
+250328 080356 7940 INFO hdfs.StateChange: Served block blk_15276 to /10.0.0.12016
+250328 080357 8779 ERROR dfs.FSNamesystem: BLOCK* replicate blk_58840 to datanode
+250328 080401 5242 INFO dfs.DataNode: PacketResponder terminated for block blk_27644
+250328 080402 1073 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_87781
+250328 080403 5740 WARN dfs.FSNamesystem: Served block blk_27679 to /10.0.0.44223
+250328 080405 5704 INFO hdfs.StateChange: PacketResponder terminated for block blk_28666
+250328 080407 5343 WARN dfs.FSNamesystem: BLOCK* replicate blk_22120 to datanode
+250328 080410 1481 ERROR dfs.DataNode: BLOCK* replicate blk_95357 to datanode
+250328 080413 4959 INFO dfs.DataNode: BLOCK* replicate blk_19160 to datanode
+250328 080415 6820 INFO dfs.DataNode: Received block blk_38325 of size 47980 from /10.0.0.189
+250328 080416 8389 INFO hdfs.StateChange: BLOCK* replicate blk_75092 to datanode
+250328 080417 4549 INFO hdfs.StateChange: Served block blk_30403 to /10.0.0.65083
+250328 080421 4022 INFO hdfs.StateChange: BLOCK* replicate blk_47816 to datanode
+250328 080422 1534 WARN dfs.DataNode: Received block blk_99984 of size 16841 from /10.0.0.146
+250328 080426 7085 ERROR dfs.DataNode: PacketResponder terminated for block blk_85219
+250328 080428 1522 WARN hdfs.StateChange: PacketResponder terminated for block blk_80290
+250328 080432 5324 INFO hdfs.StateChange: PacketResponder terminated for block blk_72732
+250328 080436 7757 WARN hdfs.StateChange: PacketResponder terminated for block blk_72839
+250328 080438 1496 WARN dfs.DataNode: Served block blk_98386 to /10.0.0.57991
+250328 080439 3611 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_52187
+250328 080443 3643 WARN dfs.FSNamesystem: Served block blk_10792 to /10.0.0.10719
+250328 080447 8612 WARN hdfs.StateChange: BLOCK* replicate blk_92554 to datanode
+250328 080449 6369 INFO hdfs.StateChange: Received block blk_75978 of size 26657 from /10.0.0.143
+250328 080451 8652 INFO hdfs.StateChange: Received block blk_62005 of size 65089 from /10.0.0.85
+250328 080455 9715 WARN dfs.FSNamesystem: Served block blk_18438 to /10.0.0.6377
+250328 080457 7335 INFO dfs.DataNode: BLOCK* replicate blk_40156 to datanode
+250328 080459 1975 INFO dfs.DataNode: BLOCK* replicate blk_59775 to datanode
+250328 080659 5289 ERROR dfs.FSNamesystem: Received block blk_33919 of size 43268 from /10.0.0.143
+250328 080703 8119 WARN dfs.FSNamesystem: Served block blk_91654 to /10.0.0.61079
+250328 080707 7133 INFO dfs.FSNamesystem: BLOCK* replicate blk_70828 to datanode
+250328 080711 5914 ERROR hdfs.StateChange: BLOCK* replicate blk_22861 to datanode
+250328 080715 4158 INFO dfs.FSNamesystem: BLOCK* replicate blk_11520 to datanode
+250328 080718 1980 INFO dfs.DataNode: Received block blk_81801 of size 28669 from /10.0.0.244
+250328 080719 2851 INFO hdfs.StateChange: Served block blk_27542 to /10.0.0.63077
+250328 080722 1331 WARN hdfs.StateChange: Received block blk_15694 of size 50777 from /10.0.0.52
+250328 080723 4154 INFO hdfs.StateChange: Served block blk_37965 to /10.0.0.34398
+250328 080724 4013 ERROR dfs.FSNamesystem: BLOCK* replicate blk_56196 to datanode
+250328 080727 6532 INFO dfs.FSNamesystem: Received block blk_94625 of size 30125 from /10.0.0.27
+250328 080729 1673 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_58338
+250328 080733 6476 WARN hdfs.StateChange: BLOCK* replicate blk_94978 to datanode
+250328 080737 1469 WARN hdfs.StateChange: Received block blk_53512 of size 7595 from /10.0.0.252
+250328 080738 7958 WARN hdfs.StateChange: Received block blk_32926 of size 24935 from /10.0.0.92
+250328 080741 6555 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_61132
+250328 080743 6058 INFO dfs.DataNode: BLOCK* replicate blk_19445 to datanode
+250328 080745 2826 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_38949
+250328 080746 3174 WARN hdfs.StateChange: BLOCK* replicate blk_32004 to datanode
+250328 080747 6589 WARN dfs.DataNode: BLOCK* replicate blk_45202 to datanode
+250328 080749 3776 INFO hdfs.StateChange: Received block blk_30348 of size 2670 from /10.0.0.79
+250328 080752 8689 INFO dfs.DataNode: Served block blk_47697 to /10.0.0.43171
+250328 080755 5050 WARN dfs.DataNode: Received block blk_42555 of size 17114 from /10.0.0.111
+250328 080756 2374 INFO dfs.DataNode: Served block blk_51513 to /10.0.0.32600
+250328 080759 3289 INFO dfs.DataNode: BLOCK* replicate blk_76792 to datanode
+250328 080803 4220 ERROR dfs.DataNode: PacketResponder terminated for block blk_77971
+250328 080805 6570 ERROR hdfs.StateChange: Served block blk_23165 to /10.0.0.36799
+250328 080806 3862 INFO dfs.DataNode: PacketResponder terminated for block blk_67326
+250328 080807 3783 INFO dfs.DataNode: Received block blk_26165 of size 5395 from /10.0.0.18
+250328 080808 1311 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_32822
+250328 080809 8018 INFO dfs.FSNamesystem: Served block blk_77184 to /10.0.0.30862
+250328 080810 6807 INFO hdfs.StateChange: PacketResponder terminated for block blk_96424
+250328 080811 4545 INFO dfs.DataNode: PacketResponder terminated for block blk_95438
+250328 080815 2813 WARN hdfs.StateChange: BLOCK* replicate blk_37704 to datanode
+250328 080817 8872 INFO dfs.DataNode: Served block blk_27087 to /10.0.0.11735
+250328 080821 2268 WARN dfs.DataNode: Served block blk_37377 to /10.0.0.55112
+250328 080822 8220 ERROR hdfs.StateChange: PacketResponder terminated for block blk_85675
+250328 080826 3128 ERROR hdfs.StateChange: PacketResponder terminated for block blk_72682
+250328 080827 3214 INFO hdfs.StateChange: Received block blk_32463 of size 39982 from /10.0.0.61
+250328 080829 9576 ERROR hdfs.StateChange: PacketResponder terminated for block blk_12149
+250328 080831 6918 INFO dfs.DataNode: Served block blk_76731 to /10.0.0.49447
+250328 080834 3173 INFO hdfs.StateChange: BLOCK* replicate blk_55743 to datanode
+250328 080838 3758 WARN dfs.FSNamesystem: Served block blk_37491 to /10.0.0.44293
+250328 080841 4637 INFO hdfs.StateChange: BLOCK* replicate blk_85012 to datanode
+250328 080844 5212 ERROR dfs.DataNode: Served block blk_91584 to /10.0.0.20449
+250328 080845 9548 ERROR dfs.FSNamesystem: Received block blk_57783 of size 1446 from /10.0.0.198
+250328 080849 3088 WARN hdfs.StateChange: Received block blk_28223 of size 26013 from /10.0.0.195
+250328 080851 9799 WARN dfs.DataNode: Served block blk_13180 to /10.0.0.52548
+250328 080852 8894 INFO hdfs.StateChange: BLOCK* replicate blk_49976 to datanode
+250328 080856 9514 ERROR dfs.DataNode: Received block blk_69639 of size 38414 from /10.0.0.221
+250328 080859 5001 WARN dfs.FSNamesystem: Received block blk_98791 of size 2135 from /10.0.0.165
+250328 080900 3642 INFO hdfs.StateChange: PacketResponder terminated for block blk_83762
+250328 080902 8816 INFO dfs.FSNamesystem: Served block blk_60173 to /10.0.0.54181
+250328 080906 5183 INFO dfs.DataNode: Served block blk_87299 to /10.0.0.6193
+250328 080910 4016 ERROR hdfs.StateChange: Served block blk_37432 to /10.0.0.37805
+
+250328 080914 2122 WARN dfs.FSNamesystem: Served block blk_40414 to /10.0.0.54725
+250328 080915 2131 ERROR dfs.DataNode: PacketResponder terminated for block blk_72023
+250328 080918 8073 WARN hdfs.StateChange: Served block blk_68798 to /10.0.0.9413
+250328 080920 3322 ERROR dfs.FSNamesystem: BLOCK* replicate blk_43113 to datanode
+250328 080924 6745 INFO hdfs.StateChange: Received block blk_38022 of size 32674 from /10.0.0.134
+250328 080925 8245 ERROR hdfs.StateChange: Received block blk_98405 of size 14845 from /10.0.0.240
+250328 080926 8236 ERROR dfs.FSNamesystem: Received block blk_34582 of size 15257 from /10.0.0.20
+250328 080928 9729 ERROR dfs.DataNode: Served block blk_95026 to /10.0.0.15215
+250328 080932 6851 INFO hdfs.StateChange: BLOCK* replicate blk_14183 to datanode
+250328 080936 7616 INFO dfs.DataNode: PacketResponder terminated for block blk_80345
+250328 080939 6970 INFO dfs.DataNode: BLOCK* replicate blk_48763 to datanode
+250328 080943 3576 INFO dfs.DataNode: Received block blk_78542 of size 59970 from /10.0.0.233
+250328 080946 9207 WARN dfs.FSNamesystem: Received block blk_15938 of size 31485 from /10.0.0.48
+250328 080948 5716 ERROR dfs.FSNamesystem: Received block blk_35323 of size 44526 from /10.0.0.69
+250328 080952 7494 INFO dfs.DataNode: Received block blk_75354 of size 35251 from /10.0.0.40
+250328 080954 3680 ERROR dfs.FSNamesystem: Received block blk_71988 of size 33285 from /10.0.0.29
+250328 080958 3382 INFO hdfs.StateChange: Served block blk_61437 to /10.0.0.15528
+250328 081000 5161 INFO hdfs.StateChange: Served block blk_12786 to /10.0.0.17382
+250328 081003 8687 INFO dfs.FSNamesystem: BLOCK* replicate blk_84240 to datanode
+250328 081006 2577 ERROR hdfs.StateChange: Received block blk_98321 of size 24760 from /10.0.0.59
+250328 081008 6219 INFO dfs.DataNode: Served block blk_66591 to /10.0.0.34120
+250328 081011 9542 ERROR dfs.FSNamesystem: PacketResponder terminated for block blk_40055
+250328 081012 6652 INFO hdfs.StateChange: Served block blk_24177 to /10.0.0.53562
+250328 081015 7569 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_43770
+250328 081016 5010 INFO dfs.FSNamesystem: Received block blk_79725 of size 6028 from /10.0.0.158
+250328 081020 9544 INFO dfs.FSNamesystem: Received block blk_70606 of size 15120 from /10.0.0.40
+250328 081022 6919 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_66346
+250328 081026 4063 WARN hdfs.StateChange: PacketResponder terminated for block blk_73582
+250328 081027 1234 INFO hdfs.StateChange: Received block blk_18827 of size 57926 from /10.0.0.59
+250328 081030 9381 ERROR hdfs.StateChange: Served block blk_87302 to /10.0.0.42277
+250328 081034 8301 INFO dfs.DataNode: BLOCK* replicate blk_89177 to datanode
+250328 081038 3010 INFO hdfs.StateChange: Received block blk_54468 of size 26332 from /10.0.0.65
+250328 081040 5916 WARN hdfs.StateChange: Received block blk_26901 of size 38604 from /10.0.0.14
+250328 081041 6351 WARN hdfs.StateChange: Served block blk_33806 to /10.0.0.15419
+250328 081045 3818 INFO dfs.DataNode: Received block blk_10417 of size 21771 from /10.0.0.8
+250328 081049 8331 WARN hdfs.StateChange: PacketResponder terminated for block blk_35247
+250328 081053 5061 WARN hdfs.StateChange: Served block blk_24030 to /10.0.0.22569
+250328 081054 1028 INFO dfs.DataNode: Received block blk_96872 of size 26611 from /10.0.0.47
+250328 081056 9854 INFO hdfs.StateChange: Served block blk_55770 to /10.0.0.29451
+250328 081100 3051 WARN dfs.FSNamesystem: Served block blk_68746 to /10.0.0.20724
+250328 081104 5273 WARN dfs.FSNamesystem: Served block blk_73812 to /10.0.0.46286
+250328 081106 7111 INFO hdfs.StateChange: BLOCK* replicate blk_96989 to datanode
+250328 081110 9549 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_56938
+250328 081112 5715 INFO dfs.FSNamesystem: Received block blk_48766 of size 63160 from /10.0.0.110
+250328 081114 8351 INFO dfs.FSNamesystem: Served block blk_61220 to /10.0.0.6835
+250328 081118 8548 INFO dfs.DataNode: Received block blk_83691 of size 32864 from /10.0.0.150
+250328 081120 1564 INFO dfs.DataNode: PacketResponder terminated for block blk_74489
+250328 081123 4955 WARN hdfs.StateChange: PacketResponder terminated for block blk_86225
+250328 081124 2598 INFO dfs.FSNamesystem: Served block blk_36726 to /10.0.0.36838
+250328 081125 3385 INFO hdfs.StateChange: PacketResponder terminated for block blk_29685
+250328 081126 7012 WARN dfs.FSNamesystem: Received block blk_18489 of size 13237 from /10.0.0.136
+250328 081129 5813 ERROR hdfs.StateChange: Served block blk_52495 to /10.0.0.19445
+250328 081132 9718 INFO hdfs.StateChange: BLOCK* replicate blk_94434 to datanode
+250328 081133 9177 INFO dfs.FSNamesystem: Served block blk_34206 to /10.0.0.55084
+250328 081137 8634 WARN dfs.DataNode: BLOCK* replicate blk_34278 to datanode
+250328 081141 6254 ERROR hdfs.StateChange: BLOCK* replicate blk_34672 to datanode
+250328 081144 2930 INFO hdfs.StateChange: Served block blk_74631 to /10.0.0.56536
+250328 081147 3773 ERROR hdfs.StateChange: BLOCK* replicate blk_25373 to datanode
+250328 081150 1673 INFO dfs.DataNode: Received block blk_16844 of size 28387 from /10.0.0.97
+250328 081153 6359 ERROR dfs.DataNode: Served block blk_67630 to /10.0.0.52212
+250328 081157 8410 INFO dfs.DataNode: Received block blk_73480 of size 563 from /10.0.0.225
+250328 081200 1622 INFO dfs.DataNode: BLOCK* replicate blk_32918 to datanode
+250328 081201 6288 INFO hdfs.StateChange: Served block blk_94070 to /10.0.0.23837
+250328 081204 2979 WARN hdfs.StateChange: Received block blk_17961 of size 22521 from /10.0.0.249
+250328 081206 6871 INFO dfs.FSNamesystem: BLOCK* replicate blk_87000 to datanode
+250328 081208 8478 INFO dfs.DataNode: Received block blk_61448 of size 18158 from /10.0.0.207
+250328 081210 2256 ERROR dfs.FSNamesystem: Served block blk_55822 to /10.0.0.56217
+250328 081211 3765 WARN dfs.DataNode: BLOCK* replicate blk_17479 to datanode
+250328 081212 9682 WARN hdfs.StateChange: Received block blk_15323 of size 10558 from /10.0.0.96
+250328 081215 5685 INFO dfs.FSNamesystem: Received block blk_23243 of size 9394 from /10.0.0.178
+250328 081219 5483 INFO hdfs.StateChange: Served block blk_46645 to /10.0.0.32275
+250328 081220 3111 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_52523
+250328 081222 9782 ERROR dfs.FSNamesystem: BLOCK* replicate blk_34759 to datanode
+250328 081225 8119 ERROR hdfs.StateChange: Received block blk_41944 of size 23458 from /10.0.0.103
+250328 081226 2786 WARN dfs.DataNode: Served block blk_88744 to /10.0.0.26304
+250328 081230 9317 ERROR dfs.DataNode: PacketResponder terminated for block blk_37300
+250328 081231 2869 INFO dfs.DataNode: PacketResponder terminated for block blk_11029
+250328 081233 5100 ERROR dfs.DataNode: BLOCK* replicate blk_38345 to datanode
+250328 081235 8029 INFO hdfs.StateChange: Served block blk_73610 to /10.0.0.23212
+250328 081239 6981 ERROR dfs.DataNode: Served block blk_27555 to /10.0.0.52352
+250328 081242 9020 WARN dfs.DataNode: Served block blk_97279 to /10.0.0.17706
+250328 081243 4913 ERROR dfs.DataNode: Received block blk_70169 of size 56107 from /10.0.0.52
+250328 081247 3364 INFO dfs.DataNode: BLOCK* replicate blk_19214 to datanode
+250328 081249 7094 WARN dfs.FSNamesystem: Received block blk_21410 of size 56772 from /10.0.0.44
+250328 081252 6300 INFO hdfs.StateChange: BLOCK* replicate blk_68578 to datanode
+250328 081256 5095 ERROR dfs.FSNamesystem: BLOCK* replicate blk_24551 to datanode
+250328 081257 3174 INFO dfs.DataNode: Served block blk_52400 to /10.0.0.46507
+250328 081300 1993 WARN dfs.DataNode: Served block blk_77838 to /10.0.0.16400
+250328 081301 1678 WARN dfs.FSNamesystem: BLOCK* replicate blk_31560 to datanode
+250328 081305 4126 WARN hdfs.StateChange: PacketResponder terminated for block blk_19679
+250328 081306 4490 ERROR dfs.FSNamesystem: PacketResponder terminated for block blk_12184
+250328 081310 7366 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_15549
+250328 081314 4437 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_11924
+250328 081317 7108 ERROR dfs.FSNamesystem: Served block blk_36030 to /10.0.0.27641
+250328 081321 2044 WARN dfs.FSNamesystem: BLOCK* replicate blk_32364 to datanode
+250328 081324 6983 ERROR dfs.DataNode: Received block blk_29462 of size 2712 from /10.0.0.236
+250328 081327 4920 ERROR dfs.DataNode: PacketResponder terminated for block blk_19523
+250328 081328 1625 WARN dfs.DataNode: PacketResponder terminated for block blk_91838
+250328 081329 8340 WARN dfs.DataNode: BLOCK* replicate blk_81110 to datanode
+250328 081331 1811 WARN dfs.FSNamesystem: Served block blk_24439 to /10.0.0.16869
+250328 081335 1142 INFO hdfs.StateChange: PacketResponder terminated for block blk_94196
+250328 081336 1863 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_82930
+250328 081338 5846 INFO hdfs.StateChange: Received block blk_44406 of size 30041 from /10.0.0.213
+250328 081339 4198 INFO hdfs.StateChange: Served block blk_20882 to /10.0.0.24156
+250328 083019 1732 INFO dfs.DataNode: BLOCK* replicate blk_13802 to datanode
+250328 083022 7344 INFO dfs.FSNamesystem: Received block blk_49250 of size 6764 from /10.0.0.211
+250328 083023 8581 INFO dfs.FSNamesystem: Served block blk_98562 to /10.0.0.14986
+250328 083026 4079 INFO hdfs.StateChange: Received block blk_48753 of size 34619 from /10.0.0.58
+250328 083028 8914 ERROR hdfs.StateChange: Received block blk_94890 of size 53912 from /10.0.0.165
+250328 083029 6712 INFO dfs.DataNode: PacketResponder terminated for block blk_64409
+250328 083031 2844 INFO hdfs.StateChange: PacketResponder terminated for block blk_21862
+250328 083033 9574 WARN hdfs.StateChange: PacketResponder terminated for block blk_49304
+250328 083034 3565 INFO dfs.DataNode: Served block blk_87672 to /10.0.0.44828
+250328 083037 4847 INFO hdfs.StateChange: Served block blk_62013 to /10.0.0.57107
+250328 083041 5727 WARN dfs.FSNamesystem: BLOCK* replicate blk_43928 to datanode
+250328 083045 9955 WARN hdfs.StateChange: PacketResponder terminated for block blk_87785
+250328 083047 5159 ERROR dfs.DataNode: BLOCK* replicate blk_45692 to datanode
+250328 083051 1141 INFO dfs.FSNamesystem: Served block blk_64471 to /10.0.0.36812
+250328 083055 9359 WARN dfs.FSNamesystem: BLOCK* replicate blk_67251 to datanode
+250328 083058 6850 INFO dfs.DataNode: Served block blk_80269 to /10.0.0.25389
+250328 083102 9544 INFO dfs.FSNamesystem: Received block blk_32685 of size 37029 from /10.0.0.114
+250328 083105 2757 INFO dfs.FSNamesystem: BLOCK* replicate blk_94976 to datanode
+250328 083109 9590 ERROR dfs.DataNode: Served block blk_45545 to /10.0.0.5091
+250328 083111 6352 WARN dfs.FSNamesystem: Served block blk_12953 to /10.0.0.61975
+250328 083113 3377 ERROR dfs.DataNode: PacketResponder terminated for block blk_51907
+250328 083115 3040 INFO dfs.FSNamesystem: BLOCK* replicate blk_51535 to datanode
+250328 083116 7963 WARN dfs.DataNode: Received block blk_45536 of size 21125 from /10.0.0.51
+250328 083117 5831 INFO hdfs.StateChange: BLOCK* replicate blk_87680 to datanode
+250328 083118 9167 INFO hdfs.StateChange: Served block blk_24915 to /10.0.0.25845
+250328 083119 3982 INFO dfs.FSNamesystem: Received block blk_29438 of size 31099 from /10.0.0.134
+250328 083122 9628 WARN hdfs.StateChange: BLOCK* replicate blk_66998 to datanode
+250328 083126 4278 INFO dfs.DataNode: BLOCK* replicate blk_79479 to datanode
+250328 083127 4591 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_72082
+250328 083129 5796 INFO hdfs.StateChange: BLOCK* replicate blk_71254 to datanode
+CORRUPTED ENTRY \x00\xff
+250328 083132 2852 ERROR dfs.DataNode: Served block blk_60700 to /10.0.0.52106
+250328 083134 8521 ERROR hdfs.StateChange: PacketResponder terminated for block blk_93175
+250328 083136 8716 INFO dfs.DataNode: Served block blk_25243 to /10.0.0.34726
+250328 083138 3107 WARN hdfs.StateChange: PacketResponder terminated for block blk_91249
+250328 083142 5379 WARN dfs.FSNamesystem: Served block blk_95534 to /10.0.0.33117
+250328 083144 3942 WARN hdfs.StateChange: BLOCK* replicate blk_21460 to datanode
+250328 083148 9763 INFO hdfs.StateChange: Served block blk_41044 to /10.0.0.32736
+250328 083151 4960 ERROR dfs.DataNode: BLOCK* replicate blk_35943 to datanode
+250328 083152 5074 INFO dfs.DataNode: Received block blk_23592 of size 30177 from /10.0.0.217
+250328 083154 7738 ERROR hdfs.StateChange: Received block blk_18280 of size 6250 from /10.0.0.27
+250328 083155 8290 WARN dfs.FSNamesystem: BLOCK* replicate blk_50142 to datanode
+250328 083158 7399 WARN hdfs.StateChange: BLOCK* replicate blk_68028 to datanode
+250328 083159 1992 INFO hdfs.StateChange: PacketResponder terminated for block blk_99899
+250328 083200 8679 INFO dfs.DataNode: Received block blk_81251 of size 47363 from /10.0.0.178
+250328 083201 4655 ERROR hdfs.StateChange: Received block blk_83920 of size 38021 from /10.0.0.85
+250328 083204 6674 ERROR dfs.DataNode: Served block blk_11300 to /10.0.0.10021
+250328 083205 6996 INFO hdfs.StateChange: BLOCK* replicate blk_93078 to datanode
+250328 083208 6857 INFO dfs.FSNamesystem: Received block blk_62300 of size 19987 from /10.0.0.48
+250328 083209 3305 INFO dfs.DataNode: BLOCK* replicate blk_17259 to datanode
+250328 083210 5774 ERROR dfs.FSNamesystem: Received block blk_97204 of size 15759 from /10.0.0.168
+250328 083211 2122 ERROR hdfs.StateChange: PacketResponder terminated for block blk_34576
+250328 083213 2933 WARN hdfs.StateChange: PacketResponder terminated for block blk_48973
+250328 083217 3627 INFO hdfs.StateChange: BLOCK* replicate blk_82891 to datanode
+250328 083218 4342 ERROR dfs.DataNode: Received block blk_53579 of size 20913 from /10.0.0.58
+250328 083221 1824 INFO dfs.DataNode: BLOCK* replicate blk_45875 to datanode
+250328 083225 3804 INFO dfs.DataNode: Served block blk_84219 to /10.0.0.38462
+250328 083226 8193 INFO dfs.DataNode: Received block blk_58019 of size 52792 from /10.0.0.238
+250328 083227 7571 INFO hdfs.StateChange: BLOCK* replicate blk_32834 to datanode
+250328 083228 2538 INFO dfs.FSNamesystem: Served block blk_18871 to /10.0.0.63844
+250328 083232 7813 INFO dfs.FSNamesystem: Served block blk_99346 to /10.0.0.59746
+250328 083234 2035 ERROR hdfs.StateChange: Received block blk_99542 of size 3180 from /10.0.0.194
+250328 083237 3858 WARN hdfs.StateChange: Served block blk_18849 to /10.0.0.17484
+250328 083241 3894 WARN hdfs.StateChange: Served block blk_48194 to /10.0.0.8526
+250328 083242 4858 ERROR hdfs.StateChange: BLOCK* replicate blk_96536 to datanode
+250328 083243 2227 INFO dfs.FSNamesystem: BLOCK* replicate blk_85646 to datanode
+250328 083244 5656 WARN dfs.DataNode: Received block blk_32932 of size 42137 from /10.0.0.184
+250328 083248 3442 ERROR dfs.DataNode: BLOCK* replicate blk_40939 to datanode
+250328 083251 3981 INFO dfs.FSNamesystem: BLOCK* replicate blk_76155 to datanode
+250328 083253 7257 INFO dfs.FSNamesystem: Served block blk_73697 to /10.0.0.38034
+250328 083234 6366 ERROR dfs.FSNamesystem: BLOCK* replicate blk_38061 to datanode
+250328 083258 3102 INFO dfs.DataNode: PacketResponder terminated for block blk_80369
+250328 083300 8152 ERROR hdfs.StateChange: Served block blk_10121 to /10.0.0.63362
+250328 083302 5399 INFO hdfs.StateChange: Received block blk_32507 of size 42310 from /10.0.0.239
+250328 083306 9258 ERROR dfs.DataNode: Received block blk_76406 of size 47325 from /10.0.0.86
+250328 083307 9702 INFO hdfs.StateChange: PacketResponder terminated for block blk_64725
+250328 083310 9237 INFO dfs.FSNamesystem: BLOCK* replicate blk_51250 to datanode
+250328 083313 5641 INFO dfs.FSNamesystem: Received block blk_79023 of size 14758 from /10.0.0.33
+250328 083316 2047 INFO dfs.DataNode: BLOCK* replicate blk_10993 to datanode
+250328 083317 9916 ERROR dfs.DataNode: Received block blk_94789 of size 24838 from /10.0.0.80
+250328 083321 7876 INFO dfs.DataNode: BLOCK* replicate blk_50714 to datanode
+250328 083323 2307 WARN dfs.FSNamesystem: Served block blk_25572 to /10.0.0.1852
+250328 083326 4300 INFO dfs.FSNamesystem: BLOCK* replicate blk_32380 to datanode
+250328 083328 4314 WARN hdfs.StateChange: BLOCK* replicate blk_72788 to datanode
+250328 083331 9634 INFO hdfs.StateChange: BLOCK* replicate blk_35889 to datanode
+250328 083332 1723 INFO dfs.DataNode: BLOCK* replicate blk_40642 to datanode
+250328 083336 5926 INFO hdfs.StateChange: Received block blk_43185 of size 15450 from /10.0.0.225
+250328 083338 3586 WARN dfs.DataNode: PacketResponder terminated for block blk_60571
+250328 083341 6069 WARN dfs.DataNode: BLOCK* replicate blk_78490 to datanode
+250328 083344 1343 ERROR dfs.FSNamesystem: BLOCK* replicate blk_59322 to datanode
+250328 083346 2078 ERROR dfs.FSNamesystem: PacketResponder terminated for block blk_15526
+250328 083350 6186 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_49734
+250328 083353 4765 WARN dfs.DataNode: Received block blk_25417 of size 57164 from /10.0.0.64
+250328 083355 1946 ERROR dfs.FSNamesystem: BLOCK* replicate blk_66772 to datanode
+250328 083358 7117 INFO hdfs.StateChange: BLOCK* replicate blk_72611 to datanode
+250328 083359 7674 INFO dfs.DataNode: Received block blk_89659 of size 13736 from /10.0.0.165
+250328 083402 6050 ERROR hdfs.StateChange: Received block blk_11614 of size 60022 from /10.0.0.2
+250328 083405 4312 ERROR dfs.FSNamesystem: Served block blk_88640 to /10.0.0.16256
+250328 083409 6622 INFO hdfs.StateChange: Received block blk_99473 of size 7690 from /10.0.0.162
+250328 083413 3555 ERROR hdfs.StateChange: PacketResponder terminated for block blk_45229
+250328 083414 2676 WARN hdfs.StateChange: Received block blk_34511 of size 46013 from /10.0.0.72
+250328 083416 7693 ERROR hdfs.StateChange: BLOCK* replicate blk_84011 to datanode
+250328 083420 2907 INFO hdfs.StateChange: BLOCK* replicate blk_41067 to datanode
+250328 083421 8560 ERROR dfs.FSNamesystem: Received block blk_37277 of size 24527 from /10.0.0.192
+250328 083422 7270 INFO dfs.FSNamesystem: Served block blk_82472 to /10.0.0.22302
+250328 083426 9353 WARN dfs.DataNode: Served block blk_25643 to /10.0.0.10796
+250328 083427 4854 INFO dfs.FSNamesystem: BLOCK* replicate blk_85641 to datanode
+250328 083428 2173 INFO hdfs.StateChange: PacketResponder terminated for block blk_53769
+250328 083430 9513 WARN hdfs.StateChange: PacketResponder terminated for block blk_74248
+250328 083433 1150 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_12443
+250328 083437 2749 WARN hdfs.StateChange: PacketResponder terminated for block blk_29173
+250328 083438 9750 INFO dfs.FSNamesystem: Served block blk_14970 to /10.0.0.51147
+250328 083439 4243 WARN hdfs.StateChange: PacketResponder terminated for block blk_34823
+250328 083442 3041 WARN dfs.DataNode: Received block blk_91565 of size 47405 from /10.0.0.165
+250328 083445 3818 INFO hdfs.StateChange: BLOCK* replicate blk_65796 to datanode
+250328 083447 6799 INFO hdfs.StateChange: BLOCK* replicate blk_60351 to datanode
+250328 083450 7408 INFO hdfs.StateChange: Received block blk_94255 of size 38397 from /10.0.0.94
+250328 083453 2434 INFO dfs.DataNode: BLOCK* replicate blk_77132 to datanode
+250328 083454 6139 INFO dfs.DataNode: PacketResponder terminated for block blk_14133
+250328 083458 9493 ERROR dfs.DataNode: PacketResponder terminated for block blk_76931
+250328 095818 7763 ERROR hdfs.StateChange: PacketResponder terminated for block blk_51316
+250328 095820 8280 INFO dfs.DataNode: Received block blk_14454 of size 52939 from /10.0.0.241
+250328 095824 8390 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_16353
+250328 095826 4697 INFO hdfs.StateChange: PacketResponder terminated for block blk_67649
+250328 095828 6097 ERROR hdfs.StateChange: PacketResponder terminated for block blk_55231
+250328 095830 9718 ERROR dfs.DataNode: BLOCK* replicate blk_22617 to datanode
+250328 095834 8086 WARN dfs.DataNode: PacketResponder terminated for block blk_37302
+250328 095837 8869 INFO hdfs.StateChange: BLOCK* replicate blk_13956 to datanode
+250328 095838 1614 INFO dfs.DataNode: Served block blk_66717 to /10.0.0.25528
+250328 095842 8459 WARN hdfs.StateChange: PacketResponder terminated for block blk_73897
+250328 095843 8316 ERROR dfs.DataNode: Served block blk_78876 to /10.0.0.64811
+250328 095844 6373 INFO dfs.DataNode: Served block blk_60720 to /10.0.0.26368
+250328 095846 5227 INFO dfs.DataNode: PacketResponder terminated for block blk_42047
+250328 095848 8443 WARN hdfs.StateChange: PacketResponder terminated for block blk_87694
+250328 095851 2395 ERROR hdfs.StateChange: Received block blk_25152 of size 4701 from /10.0.0.193
+250328 095853 1294 WARN dfs.FSNamesystem: Served block blk_41359 to /10.0.0.8686
+250328 095854 8801 ERROR hdfs.StateChange: Received block blk_24139 of size 37927 from /10.0.0.15
+250328 095857 4512 WARN dfs.FSNamesystem: Received block blk_79164 of size 42699 from /10.0.0.149
+250328 095858 6368 WARN dfs.FSNamesystem: Received block blk_57606 of size 3130 from /10.0.0.212
+250328 095902 8709 ERROR dfs.FSNamesystem: PacketResponder terminated for block blk_87817
+250328 095903 3541 WARN hdfs.StateChange: BLOCK* replicate blk_46740 to datanode
+250328 095904 2737 ERROR hdfs.StateChange: Served block blk_30813 to /10.0.0.29893
+250328 095906 9928 WARN hdfs.StateChange: Received block blk_29553 of size 34156 from /10.0.0.62
+250328 095907 5320 ERROR hdfs.StateChange: BLOCK* replicate blk_95772 to datanode
+250328 095911 7078 INFO hdfs.StateChange: BLOCK* replicate blk_32412 to datanode
+250328 095915 4070 ERROR hdfs.StateChange: Served block blk_89706 to /10.0.0.9673
+250328 095919 1904 WARN dfs.DataNode: BLOCK* replicate blk_45286 to datanode
+250328 095920 4529 ERROR hdfs.StateChange: Received block blk_86284 of size 37292 from /10.0.0.223
+250328 095922 6639 ERROR dfs.DataNode: Served block blk_32008 to /10.0.0.64147
+250328 095925 3239 WARN hdfs.StateChange: PacketResponder terminated for block blk_47352
+250328 095929 9514 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_88157
+250328 095933 5337 INFO hdfs.StateChange: Received block blk_34655 of size 6438 from /10.0.0.191
+250328 095937 1867 WARN hdfs.StateChange: PacketResponder terminated for block blk_77916
+250328 095940 6059 WARN dfs.FSNamesystem: Received block blk_56074 of size 7285 from /10.0.0.56
+250328 095941 3821 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_84156
+250328 095944 6081 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_73974
+250328 095947 7939 WARN hdfs.StateChange: PacketResponder terminated for block blk_44728
+250328 095951 4627 ERROR dfs.DataNode: BLOCK* replicate blk_56697 to datanode
+250328 095953 7946 WARN dfs.FSNamesystem: Served block blk_73045 to /10.0.0.2759
+250328 095955 4159 ERROR dfs.DataNode: BLOCK* replicate blk_55183 to datanode
+250328 095959 3263 WARN dfs.DataNode: PacketResponder terminated for block blk_60244
+250328 100003 3750 INFO hdfs.StateChange: Received block blk_72938 of size 60481 from /10.0.0.176
+250328 100004 2838 INFO dfs.FSNamesystem: BLOCK* replicate blk_78266 to datanode
+250328 100008 7717 WARN dfs.FSNamesystem: Served block blk_93006 to /10.0.0.61696
+250328 100012 8458 INFO dfs.FSNamesystem: Received block blk_24735 of size 25835 from /10.0.0.169
+250328 100015 9687 ERROR hdfs.StateChange: BLOCK* replicate blk_34520 to datanode
+250328 100019 5291 INFO dfs.DataNode: Received block blk_43215 of size 24417 from /10.0.0.60
+250328 100021 7986 INFO hdfs.StateChange: Received block blk_72811 of size 20224 from /10.0.0.221
+250328 100022 9645 INFO dfs.DataNode: PacketResponder terminated for block blk_96500
+250328 100025 3776 WARN dfs.DataNode: PacketResponder terminated for block blk_29620
+250328 100026 3813 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_44996
+250328 100027 3557 ERROR dfs.FSNamesystem: Received block blk_15765 of size 14199 from /10.0.0.188
+250328 100029 9799 INFO dfs.DataNode: BLOCK* replicate blk_46042 to datanode
+250328 100030 9424 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_43373
+250328 100034 7235 INFO dfs.FSNamesystem: Served block blk_37258 to /10.0.0.4444
+250328 100037 6417 INFO hdfs.StateChange: PacketResponder terminated for block blk_76541
+250328 100041 8632 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_38982
+250328 100044 2656 INFO dfs.FSNamesystem: BLOCK* replicate blk_74942 to datanode
+250328 100046 8300 INFO hdfs.StateChange: PacketResponder terminated for block blk_64857
+250328 100047 4614 ERROR dfs.FSNamesystem: PacketResponder terminated for block blk_34247
+PacketResponder block_missing
+250328 100055 8338 INFO dfs.FSNamesystem: Received block blk_29962 of size 35680 from /10.0.0.221
+250328 100059 8933 INFO dfs.DataNode: Served block blk_53622 to /10.0.0.18537
+250328 100102 4612 INFO hdfs.StateChange: Served block blk_92291 to /10.0.0.34345
+250328 100105 6718 WARN hdfs.StateChange: Served block blk_82652 to /10.0.0.59711
+250328 100109 1210 INFO dfs.DataNode: BLOCK* replicate blk_52114 to datanode
+250328 100112 4588 WARN dfs.DataNode: Served block blk_94163 to /10.0.0.39412
+250328 100116 3770 ERROR dfs.DataNode: PacketResponder terminated for block blk_63352
+250328 100119 7408 ERROR hdfs.StateChange: Received block blk_35204 of size 5278 from /10.0.0.92
+250328 100123 9915 INFO dfs.DataNode: Received block blk_49293 of size 27035 from /10.0.0.15
+250328 100125 4641 INFO dfs.DataNode: Received block blk_72089 of size 8409 from /10.0.0.195
+250328 100126 2248 INFO hdfs.StateChange: Received block blk_35499 of size 28131 from /10.0.0.209
+250328 100129 6758 INFO dfs.FSNamesystem: Served block blk_48606 to /10.0.0.20989
+250328 100131 6607 ERROR dfs.FSNamesystem: Received block blk_11567 of size 58388 from /10.0.0.221
+250328 100133 4064 INFO dfs.DataNode: PacketResponder terminated for block blk_85985
+250328 100137 9853 INFO hdfs.StateChange: BLOCK* replicate blk_46673 to datanode
+250328 100138 7459 WARN dfs.DataNode: Received block blk_44585 of size 31390 from /10.0.0.181
+250328 100139 8276 INFO dfs.FSNamesystem: PacketResponder terminated for block blk_62620
+250328 100140 9840 INFO hdfs.StateChange: PacketResponder terminated for block blk_57959
+250328 100141 2327 ERROR hdfs.StateChange: BLOCK* replicate blk_50788 to datanode
+250328 100143 7418 INFO dfs.DataNode: BLOCK* replicate blk_27113 to datanode
+250328 100146 3006 INFO hdfs.StateChange: Served block blk_42278 to /10.0.0.58071
+250328 100150 9718 ERROR dfs.DataNode: Received block blk_10974 of size 24234 from /10.0.0.68
+250328 100151 2956 INFO dfs.DataNode: PacketResponder terminated for block blk_60387
+250328 100154 7016 WARN dfs.FSNamesystem: Served block blk_80098 to /10.0.0.33111
+250328 100158 5434 INFO dfs.DataNode: Received block blk_66533 of size 21806 from /10.0.0.6
+250328 100202 7049 INFO dfs.FSNamesystem: Served block blk_46115 to /10.0.0.29224
+250328 100204 1253 INFO dfs.DataNode: Served block blk_69861 to /10.0.0.62012
+250328 100206 7183 INFO dfs.DataNode: Served block blk_11133 to /10.0.0.11086
+250328 100208 6768 INFO dfs.DataNode: BLOCK* replicate blk_28138 to datanode
+250328 100210 8377 INFO hdfs.StateChange: PacketResponder terminated for block blk_96416
+250328 100213 9933 INFO dfs.DataNode: PacketResponder terminated for block blk_55331
+250328 100214 5069 WARN dfs.FSNamesystem: PacketResponder terminated for block blk_61153
+250328 100218 6481 ERROR hdfs.StateChange: BLOCK* replicate blk_33982 to datanode
+250328 100222 4789 INFO dfs.FSNamesystem: Served block blk_36649 to /10.0.0.18838
+250328 100224 7825 INFO hdfs.StateChange: Served block blk_24456 to /10.0.0.18665
+250328 100227 2886 ERROR hdfs.StateChange: Served block blk_73324 to /10.0.0.43261
+250328 100231 3318 INFO hdfs.StateChange: Served block blk_48780 to /10.0.0.12473
+250328 100235 4673 ERROR hdfs.StateChange: BLOCK* replicate blk_79842 to datanode
+250328 100238 6927 WARN dfs.FSNamesystem: BLOCK* replicate blk_89014 to datanode
+250328 100242 3884 WARN dfs.FSNamesystem: Received block blk_21562 of size 19687 from /10.0.0.246

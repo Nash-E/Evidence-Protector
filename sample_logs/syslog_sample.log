@@ -1,0 +1,500 @@
+Mar 28 08:00:01 proxy03 systemd[6512]: sudo: user27 : TTY=pts/162 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:00:04 dbserver02 kernel[857]: Accepted publickey for user79 from 10.0.0.167 port 12313
+Mar 28 08:00:07 proxy03 kernel[3587]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.16 DST=10.0.0.195 PROTO=TCP
+Mar 28 08:00:09 proxy03 kernel[8746]: Accepted publickey for user63 from 10.0.0.204 port 49873
+Mar 28 08:00:11 proxy03 systemd[7701]: sudo: user2 : TTY=pts/243 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:00:13 dbserver02 sudo[5072]: pam_unix(sshd:session): session opened for user71
+Mar 28 08:00:15 dbserver02 sshd[8455]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.35 DST=10.0.0.45 PROTO=TCP
+Mar 28 08:00:16 dbserver02 kernel[4499]: pam_unix(sshd:session): session opened for user30
+Mar 28 08:00:17 proxy03 kernel[6791]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.85 DST=10.0.0.208 PROTO=TCP
+Mar 28 08:00:20 proxy03 sshd[1880]: CRON[12]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:00:22 dbserver02 systemd[6652]: Accepted publickey for user14 from 10.0.0.127 port 48624
+Mar 28 08:00:24 webserver01 systemd[7528]: sudo: user90 : TTY=pts/54 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:00:28 dbserver02 sshd[9077]: sudo: user19 : TTY=pts/202 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:00:29 dbserver02 kernel[1114]: pam_unix(sshd:session): session opened for user5
+Mar 28 08:00:30 webserver01 sshd[3987]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.85 DST=10.0.0.232 PROTO=TCP
+Mar 28 08:00:32 proxy03 cron[1127]: CRON[86]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:00:33 webserver01 sudo[1298]: sudo: user39 : TTY=pts/127 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:00:37 proxy03 systemd[7147]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.47 DST=10.0.0.51 PROTO=TCP
+Mar 28 08:00:40 proxy03 sshd[7289]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.8 DST=10.0.0.169 PROTO=TCP
+Mar 28 08:00:41 dbserver02 sshd[7806]: sudo: user55 : TTY=pts/223 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:00:44 webserver01 sshd[4961]: pam_unix(sshd:session): session opened for user9
+Mar 28 08:00:47 webserver01 kernel[5274]: Accepted publickey for user21 from 10.0.0.87 port 10295
+Mar 28 08:00:51 proxy03 sudo[7771]: CRON[13]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:00:52 webserver01 sshd[8670]: pam_unix(sshd:session): session opened for user94
+Mar 28 08:00:53 webserver01 kernel[2399]: Accepted publickey for user58 from 10.0.0.5 port 7728
+Mar 28 08:00:54 proxy03 kernel[6883]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.88 DST=10.0.0.63 PROTO=TCP
+Mar 28 08:00:56 proxy03 systemd[6248]: Accepted publickey for user66 from 10.0.0.133 port 13984
+Mar 28 08:00:58 dbserver02 sshd[1115]: sudo: user2 : TTY=pts/169 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:01:01 proxy03 systemd[9527]: Accepted publickey for user87 from 10.0.0.10 port 48500
+
+Mar 28 08:01:05 dbserver02 sshd[2933]: pam_unix(sshd:session): session opened for user76
+Mar 28 08:01:08 proxy03 systemd[620]: CRON[38]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:01:12 dbserver02 kernel[8416]: CRON[99]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:01:14 webserver01 systemd[9131]: Accepted publickey for user81 from 10.0.0.134 port 17109
+Mar 28 08:01:18 proxy03 kernel[8863]: sudo: user73 : TTY=pts/136 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:01:19 proxy03 cron[9019]: Accepted publickey for user6 from 10.0.0.71 port 45985
+Mar 28 08:01:21 proxy03 kernel[1585]: CRON[98]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:01:25 dbserver02 sudo[1281]: pam_unix(sshd:session): session opened for user41
+Mar 28 08:01:27 webserver01 sudo[4438]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.49 DST=10.0.0.33 PROTO=TCP
+Mar 28 08:01:29 dbserver02 kernel[8646]: CRON[95]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:01:30 dbserver02 sudo[2099]: CRON[84]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:01:32 webserver01 sshd[9422]: CRON[76]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:01:36 dbserver02 systemd[9816]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.74 DST=10.0.0.34 PROTO=TCP
+Mar 28 08:01:40 proxy03 systemd[1000]: pam_unix(sshd:session): session opened for user32
+Mar 28 08:01:44 dbserver02 cron[2799]: Accepted publickey for user55 from 10.0.0.168 port 18643
+Mar 28 08:01:45 proxy03 systemd[7800]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.56 DST=10.0.0.203 PROTO=TCP
+Mar 28 08:01:48 webserver01 sshd[9376]: Accepted publickey for user49 from 10.0.0.112 port 25132
+Mar 28 08:01:51 dbserver02 cron[6765]: pam_unix(sshd:session): session opened for user7
+Mar 28 08:01:54 proxy03 kernel[8302]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.47 DST=10.0.0.88 PROTO=TCP
+Mar 28 08:01:57 webserver01 kernel[9295]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.92 DST=10.0.0.21 PROTO=TCP
+Mar 28 08:01:58 proxy03 sudo[5267]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.90 DST=10.0.0.110 PROTO=TCP
+Mar 28 08:02:00 proxy03 systemd[4076]: sudo: user90 : TTY=pts/15 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:02:01 proxy03 cron[5122]: pam_unix(sshd:session): session opened for user95
+Mar 28 08:02:02 dbserver02 kernel[5010]: sudo: user85 : TTY=pts/221 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:02:04 dbserver02 sshd[7529]: Accepted publickey for user55 from 10.0.0.1 port 31683
+Mar 28 08:02:05 proxy03 sshd[7323]: Accepted publickey for user18 from 10.0.0.66 port 42315
+Mar 28 08:02:07 dbserver02 systemd[9045]: pam_unix(sshd:session): session opened for user78
+Mar 28 08:02:08 proxy03 systemd[2483]: CRON[88]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:02:12 webserver01 kernel[5667]: pam_unix(sshd:session): session opened for user1
+Mar 28 08:02:16 proxy03 systemd[4311]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.54 DST=10.0.0.30 PROTO=TCP
+Mar 28 08:02:17 proxy03 sudo[8704]: Accepted publickey for user84 from 10.0.0.5 port 17720
+Mar 28 08:02:19 dbserver02 sshd[8364]: CRON[95]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:02:20 webserver01 sudo[3927]: sudo: user52 : TTY=pts/85 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:02:22 webserver01 cron[9183]: CRON[19]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:02:25 dbserver02 sudo[8320]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.86 DST=10.0.0.191 PROTO=TCP
+Mar 28 08:02:26 dbserver02 sshd[4342]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.88 DST=10.0.0.94 PROTO=TCP
+Mar 28 08:02:29 proxy03 sudo[7287]: Accepted publickey for user16 from 10.0.0.151 port 28296
+Mar 28 08:02:32 webserver01 systemd[9439]: CRON[78]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:02:36 proxy03 sshd[9604]: Accepted publickey for user37 from 10.0.0.99 port 49803
+Mar 28 08:02:37 webserver01 systemd[310]: Accepted publickey for user17 from 10.0.0.230 port 25951
+Mar 28 08:02:39 dbserver02 kernel[5873]: pam_unix(sshd:session): session opened for user82
+Mar 28 08:02:41 proxy03 sshd[4764]: Accepted publickey for user85 from 10.0.0.234 port 41291
+Mar 28 08:02:45 dbserver02 systemd[2928]: Accepted publickey for user69 from 10.0.0.206 port 51642
+Mar 28 08:02:47 dbserver02 kernel[9457]: sudo: user35 : TTY=pts/122 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:02:50 dbserver02 sshd[5023]: sudo: user33 : TTY=pts/195 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:02:52 proxy03 cron[9652]: CRON[8]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:02:56 webserver01 kernel[1455]: sudo: user81 : TTY=pts/106 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:02:59 webserver01 cron[9280]: Accepted publickey for user81 from 10.0.0.30 port 45174
+Mar 28 08:03:02 webserver01 sshd[2726]: pam_unix(sshd:session): session opened for user82
+Mar 28 08:03:05 dbserver02 cron[5367]: Accepted publickey for user6 from 10.0.0.68 port 42199
+Mar 28 08:03:08 webserver01 systemd[3415]: pam_unix(sshd:session): session opened for user82
+Mar 28 08:03:11 webserver01 cron[2610]: sudo: user34 : TTY=pts/130 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:03:13 proxy03 sshd[448]: sudo: user65 : TTY=pts/189 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:03:15 proxy03 kernel[9792]: Accepted publickey for user82 from 10.0.0.103 port 18550
+Mar 28 08:03:19 proxy03 systemd[6888]: CRON[67]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:03:21 webserver01 cron[8121]: Accepted publickey for user74 from 10.0.0.9 port 42339
+Mar 28 08:03:24 webserver01 systemd[3273]: pam_unix(sshd:session): session opened for user92
+Mar 28 08:03:25 proxy03 sshd[8986]: sudo: user87 : TTY=pts/10 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:03:29 dbserver02 cron[1639]: pam_unix(sshd:session): session opened for user92
+kernel: [    0.000000] BIOS-provided physical RAM
+Mar 28 08:03:36 proxy03 cron[766]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.51 DST=10.0.0.34 PROTO=TCP
+Mar 28 08:03:40 webserver01 sshd[9245]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.61 DST=10.0.0.5 PROTO=TCP
+Mar 28 08:03:43 webserver01 cron[3615]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.73 DST=10.0.0.183 PROTO=TCP
+Mar 28 08:03:44 dbserver02 sshd[3942]: CRON[93]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:03:46 webserver01 cron[4007]: pam_unix(sshd:session): session opened for user88
+Mar 28 08:03:49 dbserver02 sudo[3470]: sudo: user37 : TTY=pts/75 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:03:52 proxy03 sshd[9954]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.74 DST=10.0.0.30 PROTO=TCP
+Mar 28 08:03:55 webserver01 systemd[7141]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.72 DST=10.0.0.50 PROTO=TCP
+Mar 28 08:03:59 proxy03 systemd[7123]: pam_unix(sshd:session): session opened for user69
+Mar 28 08:04:03 webserver01 kernel[5790]: Accepted publickey for user87 from 10.0.0.47 port 27889
+Mar 28 08:04:05 proxy03 sudo[3658]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.18 DST=10.0.0.89 PROTO=TCP
+Mar 28 08:04:06 webserver01 sshd[3402]: sudo: user29 : TTY=pts/154 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:04:10 webserver01 cron[6672]: Accepted publickey for user10 from 10.0.0.162 port 3564
+Mar 28 08:04:12 proxy03 kernel[448]: Accepted publickey for user80 from 10.0.0.109 port 26577
+Mar 28 08:04:15 webserver01 sshd[7475]: Accepted publickey for user30 from 10.0.0.227 port 56977
+Mar 28 08:04:16 webserver01 systemd[9781]: Accepted publickey for user58 from 10.0.0.206 port 6585
+Mar 28 08:04:18 dbserver02 sudo[5951]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.16 DST=10.0.0.156 PROTO=TCP
+Mar 28 08:04:21 dbserver02 sudo[4099]: Accepted publickey for user96 from 10.0.0.24 port 55506
+Mar 28 08:04:24 webserver01 systemd[2893]: Accepted publickey for user41 from 10.0.0.145 port 44025
+Mar 28 08:04:27 webserver01 cron[5247]: Accepted publickey for user52 from 10.0.0.95 port 10173
+Mar 28 08:04:28 dbserver02 systemd[4599]: CRON[83]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:04:29 dbserver02 sshd[5700]: sudo: user89 : TTY=pts/223 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:04:31 webserver01 sudo[3465]: Accepted publickey for user64 from 10.0.0.54 port 58751
+Mar 28 08:04:33 proxy03 sshd[533]: sudo: user63 : TTY=pts/154 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:04:35 webserver01 systemd[9337]: sudo: user51 : TTY=pts/139 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:04:36 proxy03 systemd[3640]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.62 DST=10.0.0.114 PROTO=TCP
+Mar 28 08:04:38 proxy03 systemd[8145]: sudo: user13 : TTY=pts/70 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:04:39 dbserver02 sudo[1979]: sudo: user61 : TTY=pts/131 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:04:40 proxy03 kernel[1812]: Accepted publickey for user80 from 10.0.0.102 port 64836
+Mar 28 08:06:40 webserver01 cron[4457]: pam_unix(sshd:session): session opened for user8
+Mar 28 08:06:41 proxy03 cron[1268]: sudo: user76 : TTY=pts/3 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:06:43 dbserver02 kernel[3389]: Accepted publickey for user83 from 10.0.0.223 port 9602
+Mar 28 08:06:46 webserver01 sudo[2906]: CRON[42]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:06:47 webserver01 sshd[7676]: CRON[52]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:06:50 dbserver02 sudo[8275]: CRON[49]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:06:54 dbserver02 kernel[7578]: pam_unix(sshd:session): session opened for user76
+Mar 28 08:06:56 webserver01 cron[5168]: sudo: user11 : TTY=pts/168 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:07:00 webserver01 kernel[2059]: CRON[33]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:07:02 webserver01 sshd[7358]: CRON[27]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:07:04 dbserver02 sudo[2263]: sudo: user91 : TTY=pts/232 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:07:08 webserver01 systemd[9959]: Accepted publickey for user90 from 10.0.0.59 port 63068
+Mar 28 08:07:11 proxy03 systemd[7553]: CRON[78]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:07:14 dbserver02 kernel[6717]: pam_unix(sshd:session): session opened for user28
+Mar 28 08:07:17 dbserver02 sshd[5385]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.79 DST=10.0.0.108 PROTO=TCP
+Mar 28 08:07:18 webserver01 sshd[1835]: pam_unix(sshd:session): session opened for user91
+Mar 28 08:07:21 webserver01 cron[7607]: pam_unix(sshd:session): session opened for user78
+Mar 28 08:07:24 webserver01 cron[8924]: CRON[70]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:07:26 webserver01 kernel[7709]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.68 DST=10.0.0.64 PROTO=TCP
+Mar 28 08:07:30 proxy03 kernel[2697]: pam_unix(sshd:session): session opened for user13
+Mar 28 08:07:32 proxy03 kernel[497]: pam_unix(sshd:session): session opened for user17
+Mar 28 08:07:35 dbserver02 systemd[4355]: pam_unix(sshd:session): session opened for user4
+Mar 28 08:07:39 proxy03 kernel[5701]: pam_unix(sshd:session): session opened for user3
+Mar 28 08:07:43 proxy03 systemd[267]: sudo: user38 : TTY=pts/55 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:07:45 dbserver02 cron[7021]: CRON[26]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:07:47 webserver01 systemd[2863]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.51 DST=10.0.0.79 PROTO=TCP
+Mar 28 08:07:51 dbserver02 cron[4451]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.97 DST=10.0.0.66 PROTO=TCP
+Mar 28 08:07:52 webserver01 kernel[6488]: sudo: user74 : TTY=pts/117 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:07:56 webserver01 sshd[4767]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.87 DST=10.0.0.161 PROTO=TCP
+Mar 28 08:07:57 proxy03 sudo[6935]: pam_unix(sshd:session): session opened for user36
+Mar 28 08:08:01 proxy03 kernel[1254]: Accepted publickey for user69 from 10.0.0.178 port 30447
+Mar 28 08:08:02 dbserver02 systemd[4893]: CRON[12]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:08:03 proxy03 sudo[9912]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.90 DST=10.0.0.177 PROTO=TCP
+Mar 28 08:08:06 dbserver02 systemd[3029]: CRON[17]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:08:10 webserver01 systemd[5929]: CRON[62]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:08:12 proxy03 sshd[3643]: Accepted publickey for user75 from 10.0.0.57 port 62098
+Mar 28 08:08:16 dbserver02 systemd[983]: sudo: user92 : TTY=pts/157 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:08:19 webserver01 sshd[3349]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.71 DST=10.0.0.164 PROTO=TCP
+Mar 28 08:08:22 proxy03 sudo[4463]: pam_unix(sshd:session): session opened for user97
+Mar 28 08:08:25 dbserver02 sudo[7545]: sudo: user88 : TTY=pts/8 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:08:29 proxy03 cron[8309]: pam_unix(sshd:session): session opened for user21
+Mar 28 08:08:33 dbserver02 cron[7222]: CRON[92]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:08:34 dbserver02 systemd[3845]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.85 DST=10.0.0.15 PROTO=TCP
+Mar 28 08:08:36 dbserver02 systemd[798]: CRON[24]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:08:40 webserver01 sshd[1481]: Accepted publickey for user82 from 10.0.0.210 port 21036
+Mar 28 08:08:44 dbserver02 kernel[3124]: Accepted publickey for user37 from 10.0.0.224 port 60905
+Mar 28 08:08:48 dbserver02 kernel[2212]: Accepted publickey for user57 from 10.0.0.201 port 51402
+Mar 28 08:08:51 dbserver02 cron[8396]: sudo: user9 : TTY=pts/89 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:08:54 proxy03 sudo[166]: sudo: user68 : TTY=pts/86 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:08:55 proxy03 sshd[2946]: pam_unix(sshd:session): session opened for user50
+Mar 28 08:08:59 dbserver02 sudo[7096]: pam_unix(sshd:session): session opened for user99
+Mar 28 08:09:01 webserver01 systemd[6395]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.11 DST=10.0.0.106 PROTO=TCP
+Mar 28 08:09:05 webserver01 kernel[4742]: CRON[99]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:09:09 proxy03 systemd[5729]: pam_unix(sshd:session): session opened for user3
+Mar 28 08:09:11 webserver01 kernel[5555]: pam_unix(sshd:session): session opened for user74
+kernel: [    0.000000] BIOS-provided physical RAM
+Mar 28 08:09:15 dbserver02 cron[5359]: sudo: user17 : TTY=pts/207 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:09:16 proxy03 systemd[2351]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.26 DST=10.0.0.147 PROTO=TCP
+Mar 28 08:09:18 webserver01 sshd[2387]: CRON[61]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:09:19 webserver01 sudo[7967]: pam_unix(sshd:session): session opened for user77
+Mar 28 08:09:20 proxy03 cron[2513]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.47 DST=10.0.0.29 PROTO=TCP
+Mar 28 08:09:22 proxy03 kernel[6273]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.24 DST=10.0.0.117 PROTO=TCP
+Mar 28 08:09:26 webserver01 kernel[5601]: pam_unix(sshd:session): session opened for user96
+Mar 28 08:09:27 webserver01 kernel[5621]: Accepted publickey for user33 from 10.0.0.132 port 60691
+Mar 28 08:09:29 dbserver02 systemd[5833]: pam_unix(sshd:session): session opened for user53
+Mar 28 08:09:30 dbserver02 cron[9696]: pam_unix(sshd:session): session opened for user1
+Mar 28 08:09:32 webserver01 systemd[6714]: CRON[30]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:09:34 dbserver02 sshd[6310]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.58 DST=10.0.0.15 PROTO=TCP
+Mar 28 08:09:35 dbserver02 cron[2308]: sudo: user4 : TTY=pts/107 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:09:36 proxy03 systemd[6563]: Accepted publickey for user62 from 10.0.0.117 port 34168
+Mar 28 08:09:38 webserver01 systemd[1197]: Accepted publickey for user22 from 10.0.0.234 port 35650
+Mar 28 08:09:40 dbserver02 sshd[1975]: pam_unix(sshd:session): session opened for user67
+Mar 28 08:09:42 proxy03 sshd[4292]: pam_unix(sshd:session): session opened for user2
+Mar 28 08:09:45 dbserver02 systemd[2635]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.70 DST=10.0.0.25 PROTO=TCP
+Mar 28 08:09:48 proxy03 cron[1609]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.60 DST=10.0.0.74 PROTO=TCP
+Mar 28 08:09:51 dbserver02 sudo[6731]: Accepted publickey for user45 from 10.0.0.39 port 21319
+Mar 28 08:09:55 dbserver02 sudo[7650]: Accepted publickey for user28 from 10.0.0.97 port 31383
+Mar 28 08:09:59 dbserver02 sudo[587]: pam_unix(sshd:session): session opened for user20
+Mar 28 08:10:01 proxy03 sudo[8924]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.13 DST=10.0.0.147 PROTO=TCP
+Mar 28 08:10:04 webserver01 systemd[9471]: CRON[45]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:10:05 proxy03 systemd[7687]: Accepted publickey for user88 from 10.0.0.90 port 14009
+Mar 28 08:10:07 dbserver02 cron[4529]: CRON[97]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:10:11 proxy03 kernel[8739]: sudo: user69 : TTY=pts/181 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:10:14 proxy03 sudo[2471]: pam_unix(sshd:session): session opened for user88
+Mar 28 08:10:16 dbserver02 systemd[4449]: Accepted publickey for user90 from 10.0.0.88 port 15456
+Mar 28 08:10:19 proxy03 kernel[6322]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.47 DST=10.0.0.116 PROTO=TCP
+Mar 28 08:10:21 webserver01 cron[6872]: pam_unix(sshd:session): session opened for user27
+Mar 28 08:10:24 proxy03 sudo[2522]: sudo: user64 : TTY=pts/145 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:10:28 webserver01 kernel[6377]: pam_unix(sshd:session): session opened for user87
+Mar 28 08:10:32 proxy03 systemd[5776]: Accepted publickey for user48 from 10.0.0.128 port 44606
+Mar 28 08:10:35 webserver01 kernel[8940]: sudo: user93 : TTY=pts/195 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:10:38 webserver01 sshd[4017]: CRON[37]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:10:41 proxy03 systemd[6439]: CRON[30]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:10:42 dbserver02 systemd[2341]: sudo: user55 : TTY=pts/143 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:10:44 proxy03 cron[4549]: sudo: user8 : TTY=pts/161 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:10:47 proxy03 kernel[4785]: CRON[33]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:10:50 dbserver02 kernel[9194]: CRON[14]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:10:53 dbserver02 systemd[9896]: pam_unix(sshd:session): session opened for user83
+Mar 28 08:10:55 webserver01 systemd[8817]: pam_unix(sshd:session): session opened for user71
+Mar 28 08:10:59 proxy03 cron[7335]: pam_unix(sshd:session): session opened for user53
+Mar 28 08:11:01 proxy03 sudo[321]: CRON[50]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:11:03 dbserver02 sshd[2127]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.31 DST=10.0.0.138 PROTO=TCP
+Mar 28 08:11:07 webserver01 systemd[7574]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.26 DST=10.0.0.2 PROTO=TCP
+Mar 28 08:11:08 proxy03 sshd[9346]: CRON[52]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:11:10 proxy03 sudo[2270]: CRON[6]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:11:13 dbserver02 kernel[986]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.44 DST=10.0.0.78 PROTO=TCP
+Mar 28 08:11:16 proxy03 kernel[9509]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.83 DST=10.0.0.242 PROTO=TCP
+Mar 28 08:11:18 webserver01 cron[9494]: CRON[68]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:11:19 dbserver02 kernel[1229]: pam_unix(sshd:session): session opened for user32
+Mar 28 08:11:20 proxy03 sshd[8918]: pam_unix(sshd:session): session opened for user84
+Mar 28 08:11:23 dbserver02 cron[5046]: Accepted publickey for user61 from 10.0.0.202 port 36115
+Mar 28 08:11:25 webserver01 sudo[9585]: Accepted publickey for user30 from 10.0.0.5 port 32257
+Mar 28 08:11:26 proxy03 sshd[7425]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.86 DST=10.0.0.111 PROTO=TCP
+Mar 28 08:11:27 proxy03 systemd[9441]: Accepted publickey for user10 from 10.0.0.72 port 27218
+Mar 28 08:11:31 dbserver02 sshd[1464]: Accepted publickey for user48 from 10.0.0.215 port 22159
+Mar 28 08:11:33 webserver01 cron[6419]: pam_unix(sshd:session): session opened for user46
+Mar 28 08:11:36 proxy03 sudo[4515]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.13 DST=10.0.0.14 PROTO=TCP
+Mar 28 08:11:38 proxy03 sudo[7376]: CRON[20]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:11:40 webserver01 systemd[3397]: pam_unix(sshd:session): session opened for user7
+Mar 28 08:11:43 webserver01 systemd[1921]: CRON[35]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:11:45 dbserver02 systemd[1223]: pam_unix(sshd:session): session opened for user7
+Mar 28 08:11:49 proxy03 sudo[5203]: sudo: user86 : TTY=pts/107 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:11:52 webserver01 kernel[1327]: CRON[82]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:11:54 proxy03 cron[1543]: pam_unix(sshd:session): session opened for user25
+Mar 28 08:11:55 dbserver02 kernel[5577]: pam_unix(sshd:session): session opened for user1
+Mar 28 08:11:59 webserver01 kernel[7595]: sudo: user32 : TTY=pts/110 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:01 webserver01 cron[6513]: sudo: user9 : TTY=pts/93 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:03 dbserver02 kernel[5038]: Accepted publickey for user5 from 10.0.0.9 port 58360
+Mar 28 08:12:04 proxy03 cron[352]: CRON[12]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:12:06 proxy03 systemd[7026]: sudo: user81 : TTY=pts/142 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:07 webserver01 kernel[3586]: CRON[23]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:12:11 webserver01 systemd[5825]: sudo: user26 : TTY=pts/106 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:12 dbserver02 sudo[410]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.61 DST=10.0.0.168 PROTO=TCP
+Mar 28 08:12:14 webserver01 sshd[2105]: sudo: user41 : TTY=pts/98 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:16 dbserver02 systemd[2627]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.28 DST=10.0.0.74 PROTO=TCP
+Mar 28 08:12:20 proxy03 systemd[4114]: sudo: user29 : TTY=pts/103 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:24 webserver01 kernel[5634]: Accepted publickey for user3 from 10.0.0.112 port 7111
+Mar 28 08:12:26 dbserver02 sshd[5201]: CRON[6]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:12:28 webserver01 sshd[9549]: sudo: user53 : TTY=pts/37 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:32 webserver01 systemd[9899]: CRON[47]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:12:33 dbserver02 sudo[6797]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.4 DST=10.0.0.40 PROTO=TCP
+Mar 28 08:12:37 proxy03 systemd[4998]: sudo: user83 : TTY=pts/243 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:41 webserver01 cron[6649]: pam_unix(sshd:session): session opened for user57
+Mar 28 08:12:45 proxy03 sudo[168]: CRON[66]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:12:47 dbserver02 kernel[9907]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.33 DST=10.0.0.75 PROTO=TCP
+Mar 28 08:12:49 dbserver02 cron[7460]: CRON[97]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:12:51 proxy03 sudo[1035]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.4 DST=10.0.0.192 PROTO=TCP
+Mar 28 08:12:54 dbserver02 kernel[7630]: sudo: user11 : TTY=pts/104 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:12:56 dbserver02 systemd[9134]: pam_unix(sshd:session): session opened for user44
+Mar 28 08:12:59 webserver01 systemd[7885]: Accepted publickey for user1 from 10.0.0.7 port 24648
+Mar 28 08:13:03 dbserver02 systemd[5201]: Accepted publickey for user36 from 10.0.0.45 port 15218
+Mar 28 08:13:04 proxy03 sshd[5545]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.34 DST=10.0.0.204 PROTO=TCP
+Mar 28 08:13:08 webserver01 kernel[3279]: CRON[92]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:13:10 proxy03 sshd[672]: pam_unix(sshd:session): session opened for user72
+Mar 28 08:13:11 dbserver02 cron[621]: pam_unix(sshd:session): session opened for user50
+Mar 28 08:13:12 proxy03 cron[118]: pam_unix(sshd:session): session opened for user32
+Mar 28 08:13:15 webserver01 sudo[2936]: pam_unix(sshd:session): session opened for user6
+Mar 28 08:13:19 webserver01 kernel[5799]: Accepted publickey for user60 from 10.0.0.22 port 43190
+Mar 28 08:13:22 dbserver02 cron[6958]: CRON[71]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:13:23 webserver01 cron[1591]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.13 DST=10.0.0.64 PROTO=TCP
+Mar 28 08:30:03 dbserver02 sudo[7142]: pam_unix(sshd:session): session opened for user22
+Mar 28 08:30:04 dbserver02 sudo[9053]: CRON[7]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:30:07 webserver01 sshd[8889]: CRON[39]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:30:10 proxy03 cron[5048]: Accepted publickey for user63 from 10.0.0.71 port 11031
+Mar 28 08:30:13 proxy03 cron[5551]: sudo: user16 : TTY=pts/166 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:17 dbserver02 sudo[9131]: sudo: user55 : TTY=pts/67 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:18 dbserver02 cron[1995]: CRON[96]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:30:19 dbserver02 kernel[3176]: sudo: user93 : TTY=pts/30 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:22 proxy03 kernel[5670]: sudo: user85 : TTY=pts/199 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:23 webserver01 cron[132]: CRON[75]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:30:24 dbserver02 cron[5269]: sudo: user70 : TTY=pts/218 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:25 webserver01 cron[2131]: Accepted publickey for user38 from 10.0.0.142 port 29045
+Mar 28 08:30:29 webserver01 sshd[389]: sudo: user45 : TTY=pts/44 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:33 dbserver02 sudo[4272]: Accepted publickey for user67 from 10.0.0.116 port 61443
+Mar 28 08:30:34 proxy03 sshd[4606]: sudo: user94 : TTY=pts/236 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:37 proxy03 cron[6877]: sudo: user49 : TTY=pts/41 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:40 dbserver02 kernel[4257]: pam_unix(sshd:session): session opened for user50
+Mar 28 08:30:44 dbserver02 cron[1522]: sudo: user36 : TTY=pts/24 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:47 proxy03 systemd[6333]: sudo: user15 : TTY=pts/216 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:30:50 webserver01 sshd[9142]: CRON[77]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:30:54 proxy03 cron[7683]: CRON[99]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:30:57 proxy03 cron[8214]: CRON[8]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:31:00 webserver01 systemd[9633]: sudo: user67 : TTY=pts/51 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:01 webserver01 sudo[9409]: sudo: user52 : TTY=pts/116 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:02 dbserver02 systemd[778]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.80 DST=10.0.0.49 PROTO=TCP
+Mar 28 08:31:06 webserver01 cron[1249]: sudo: user28 : TTY=pts/63 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:09 webserver01 kernel[4363]: sudo: user25 : TTY=pts/211 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:11 proxy03 cron[6566]: sudo: user89 : TTY=pts/73 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:15 proxy03 systemd[1932]: pam_unix(sshd:session): session opened for user5
+Mar 28 08:31:19 dbserver02 sshd[494]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.81 DST=10.0.0.182 PROTO=TCP
+
+Mar 28 08:31:21 webserver01 sudo[5461]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.18 DST=10.0.0.249 PROTO=TCP
+Mar 28 08:31:25 dbserver02 sshd[7274]: CRON[88]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:31:27 webserver01 sudo[576]: pam_unix(sshd:session): session opened for user40
+Mar 28 08:31:31 proxy03 cron[7142]: CRON[37]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:31:35 dbserver02 sudo[6160]: pam_unix(sshd:session): session opened for user62
+Mar 28 08:31:36 proxy03 systemd[5662]: Accepted publickey for user61 from 10.0.0.42 port 4855
+Mar 28 08:31:37 webserver01 cron[2504]: sudo: user94 : TTY=pts/121 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:40 webserver01 kernel[8230]: sudo: user56 : TTY=pts/40 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:42 webserver01 cron[5321]: CRON[65]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:31:45 dbserver02 systemd[6534]: CRON[87]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:31:49 dbserver02 systemd[1104]: sudo: user16 : TTY=pts/200 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:31:50 proxy03 kernel[923]: CRON[2]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:31:54 proxy03 systemd[3229]: Accepted publickey for user84 from 10.0.0.136 port 36015
+Mar 28 08:31:57 dbserver02 cron[2909]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.81 DST=10.0.0.40 PROTO=TCP
+Mar 28 08:32:00 webserver01 kernel[8637]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.75 DST=10.0.0.194 PROTO=TCP
+Mar 28 08:32:01 dbserver02 cron[7729]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.56 DST=10.0.0.22 PROTO=TCP
+Mar 28 08:32:03 webserver01 sshd[1397]: Accepted publickey for user62 from 10.0.0.251 port 50445
+Mar 28 08:32:04 dbserver02 sudo[9577]: sudo: user57 : TTY=pts/113 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:32:08 webserver01 sshd[5791]: Accepted publickey for user13 from 10.0.0.177 port 47663
+Mar 28 08:32:09 proxy03 kernel[2090]: sudo: user44 : TTY=pts/170 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:32:13 webserver01 sshd[797]: pam_unix(sshd:session): session opened for user79
+Mar 28 08:32:14 proxy03 systemd[6597]: CRON[36]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:32:18 webserver01 systemd[1283]: pam_unix(sshd:session): session opened for user98
+Mar 28 08:32:22 webserver01 sshd[7709]: sudo: user47 : TTY=pts/131 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:32:24 webserver01 systemd[962]: CRON[91]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:32:28 dbserver02 systemd[3552]: pam_unix(sshd:session): session opened for user53
+Mar 28 08:32:29 webserver01 kernel[2521]: Accepted publickey for user97 from 10.0.0.56 port 40624
+Mar 28 08:32:30 proxy03 cron[7909]: sudo: user49 : TTY=pts/176 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:32:33 proxy03 cron[6067]: Accepted publickey for user42 from 10.0.0.27 port 10299
+Mar 28 08:32:35 proxy03 cron[8381]: CRON[64]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:32:37 dbserver02 cron[6385]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.6 DST=10.0.0.48 PROTO=TCP
+Mar 28 08:32:38 webserver01 sshd[7793]: Accepted publickey for user84 from 10.0.0.35 port 61195
+Mar 28 08:32:39 dbserver02 sshd[2995]: Accepted publickey for user68 from 10.0.0.205 port 25324
+Mar 28 08:32:43 dbserver02 sudo[5497]: Accepted publickey for user22 from 10.0.0.241 port 18611
+Mar 28 08:32:47 dbserver02 cron[4012]: sudo: user35 : TTY=pts/92 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:32:49 dbserver02 sudo[5754]: pam_unix(sshd:session): session opened for user56
+Mar 28 08:32:51 dbserver02 systemd[2685]: pam_unix(sshd:session): session opened for user9
+Mar 28 08:32:52 webserver01 sshd[8786]: pam_unix(sshd:session): session opened for user91
+Mar 28 08:32:53 webserver01 sshd[7559]: pam_unix(sshd:session): session opened for user15
+Mar 28 08:32:42 dbserver02 kernel[9635]: sudo: user49 : TTY=pts/241 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:32:56 webserver01 cron[7321]: CRON[3]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:32:59 dbserver02 sudo[5001]: Accepted publickey for user53 from 10.0.0.124 port 32686
+Mar 28 08:33:01 webserver01 systemd[3853]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.37 DST=10.0.0.122 PROTO=TCP
+Mar 28 08:33:04 dbserver02 sshd[4828]: sudo: user29 : TTY=pts/31 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:33:08 proxy03 cron[1212]: CRON[43]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:33:11 dbserver02 kernel[5238]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.44 DST=10.0.0.126 PROTO=TCP
+Mar 28 08:33:15 proxy03 cron[5885]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.8 DST=10.0.0.205 PROTO=TCP
+Mar 28 08:33:17 proxy03 cron[9802]: sudo: user79 : TTY=pts/189 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:33:19 proxy03 cron[4593]: sudo: user42 : TTY=pts/131 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:33:21 dbserver02 kernel[7272]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.70 DST=10.0.0.98 PROTO=TCP
+Mar 28 08:33:22 webserver01 sudo[3632]: pam_unix(sshd:session): session opened for user26
+Mar 28 08:33:23 proxy03 cron[8387]: Accepted publickey for user96 from 10.0.0.171 port 19103
+Mar 28 08:33:25 proxy03 sudo[6600]: Accepted publickey for user2 from 10.0.0.176 port 12683
+Mar 28 08:33:27 dbserver02 systemd[295]: pam_unix(sshd:session): session opened for user96
+Mar 28 08:33:30 dbserver02 kernel[8958]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.21 DST=10.0.0.8 PROTO=TCP
+Mar 28 08:33:32 proxy03 kernel[8495]: sudo: user98 : TTY=pts/176 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:33:33 proxy03 cron[7034]: Accepted publickey for user12 from 10.0.0.152 port 10663
+Mar 28 08:33:37 webserver01 systemd[9370]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.12 DST=10.0.0.18 PROTO=TCP
+Mar 28 08:33:41 webserver01 systemd[1758]: sudo: user94 : TTY=pts/53 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:33:44 webserver01 sshd[4057]: Accepted publickey for user15 from 10.0.0.169 port 42193
+Mar 28 08:33:47 webserver01 sshd[900]: sudo: user69 : TTY=pts/23 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:33:48 proxy03 sshd[5152]: Accepted publickey for user82 from 10.0.0.83 port 50346
+Mar 28 08:33:50 proxy03 systemd[5158]: Accepted publickey for user27 from 10.0.0.105 port 9693
+Mar 28 08:33:51 proxy03 kernel[7488]: Accepted publickey for user89 from 10.0.0.108 port 45534
+Mar 28 08:33:55 proxy03 cron[7515]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.75 DST=10.0.0.194 PROTO=TCP
+Mar 28 08:33:59 dbserver02 sshd[1705]: sudo: user81 : TTY=pts/69 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:34:02 proxy03 cron[5008]: Accepted publickey for user59 from 10.0.0.206 port 46134
+Mar 28 08:34:05 webserver01 sshd[6249]: pam_unix(sshd:session): session opened for user63
+Mar 28 08:34:08 proxy03 cron[1758]: CRON[38]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:34:11 webserver01 sshd[616]: Accepted publickey for user21 from 10.0.0.183 port 5503
+Mar 28 08:34:12 proxy03 sshd[3465]: CRON[42]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:34:16 proxy03 sudo[2449]: sudo: user5 : TTY=pts/228 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:34:19 dbserver02 sshd[7412]: sudo: user94 : TTY=pts/175 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:34:20 proxy03 cron[5729]: pam_unix(sshd:session): session opened for user53
+Mar 28 08:34:23 proxy03 systemd[5732]: CRON[23]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:34:25 dbserver02 sudo[7312]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.78 DST=10.0.0.119 PROTO=TCP
+Mar 28 08:34:27 dbserver02 sshd[4079]: CRON[66]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:34:29 proxy03 cron[7265]: sudo: user45 : TTY=pts/91 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:34:31 webserver01 systemd[1411]: pam_unix(sshd:session): session opened for user60
+Mar 28 08:34:35 dbserver02 sudo[5623]: Accepted publickey for user1 from 10.0.0.25 port 22422
+Mar 28 08:34:36 webserver01 cron[6974]: sudo: user4 : TTY=pts/110 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:34:39 dbserver02 kernel[1659]: CRON[23]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 08:34:40 webserver01 sshd[1028]: sudo: user72 : TTY=pts/215 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:34:41 dbserver02 kernel[4782]: Accepted publickey for user61 from 10.0.0.160 port 42423
+Mar 28 08:34:43 dbserver02 sudo[2590]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.3 DST=10.0.0.94 PROTO=TCP
+Mar 28 08:34:47 proxy03 sudo[751]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.4 DST=10.0.0.177 PROTO=TCP
+Mar 28 08:34:48 dbserver02 sshd[7550]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.78 DST=10.0.0.18 PROTO=TCP
+Mar 28 08:34:50 dbserver02 systemd[4247]: sudo: user62 : TTY=pts/138 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 08:34:53 webserver01 kernel[7171]: Accepted publickey for user4 from 10.0.0.65 port 52105
+Mar 28 09:58:13 webserver01 sshd[7064]: sudo: user45 : TTY=pts/164 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 09:58:16 webserver01 cron[1599]: pam_unix(sshd:session): session opened for user47
+Mar 28 09:58:19 dbserver02 sshd[8031]: sudo: user85 : TTY=pts/154 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 09:58:23 webserver01 sudo[9550]: pam_unix(sshd:session): session opened for user93
+Mar 28 09:58:26 proxy03 sudo[1557]: pam_unix(sshd:session): session opened for user37
+Mar 28 09:58:27 proxy03 systemd[6582]: pam_unix(sshd:session): session opened for user50
+Mar 28 09:58:29 webserver01 sudo[9432]: CRON[22]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:58:31 webserver01 sshd[6032]: Accepted publickey for user98 from 10.0.0.26 port 56954
+Mar 28 09:58:33 proxy03 systemd[5957]: CRON[49]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:58:34 dbserver02 sudo[7174]: CRON[65]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:58:36 proxy03 kernel[3367]: Accepted publickey for user21 from 10.0.0.243 port 6958
+Mar 28 09:58:39 webserver01 kernel[4669]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.4 DST=10.0.0.32 PROTO=TCP
+Mar 28 09:58:43 dbserver02 cron[1449]: Accepted publickey for user56 from 10.0.0.184 port 45017
+Mar 28 09:58:47 dbserver02 sshd[3683]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.97 DST=10.0.0.85 PROTO=TCP
+Mar 28 09:58:49 webserver01 sshd[9095]: pam_unix(sshd:session): session opened for user57
+Mar 28 09:58:51 dbserver02 sudo[3349]: sudo: user71 : TTY=pts/65 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 09:58:52 webserver01 kernel[2386]: Accepted publickey for user30 from 10.0.0.126 port 16908
+Mar 28 09:58:56 proxy03 kernel[5712]: CRON[23]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:58:58 proxy03 sshd[863]: sudo: user91 : TTY=pts/245 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 09:59:02 proxy03 sshd[4178]: CRON[25]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:59:05 webserver01 systemd[9067]: pam_unix(sshd:session): session opened for user20
+Mar 28 09:59:08 webserver01 kernel[7765]: pam_unix(sshd:session): session opened for user75
+Mar 28 09:59:09 proxy03 kernel[9761]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.57 DST=10.0.0.110 PROTO=TCP
+Mar 28 09:59:10 dbserver02 sudo[1589]: CRON[44]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:59:11 webserver01 sudo[1064]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.38 DST=10.0.0.249 PROTO=TCP
+Mar 28 09:59:15 proxy03 sshd[829]: CRON[14]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:59:17 proxy03 sudo[4411]: pam_unix(sshd:session): session opened for user1
+Mar 28 09:59:20 webserver01 sshd[1908]: CRON[7]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:59:22 webserver01 systemd[9934]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.86 DST=10.0.0.249 PROTO=TCP
+Mar 28 09:59:25 proxy03 kernel[3462]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.64 DST=10.0.0.80 PROTO=TCP
+Mar 28 09:59:26 proxy03 sshd[9561]: Accepted publickey for user81 from 10.0.0.174 port 45896
+Mar 28 09:59:27 proxy03 systemd[7588]: sudo: user5 : TTY=pts/127 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 09:59:31 webserver01 sshd[6210]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.20 DST=10.0.0.51 PROTO=TCP
+Mar 28 09:59:33 dbserver02 sshd[3023]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.84 DST=10.0.0.46 PROTO=TCP
+Mar 28 09:59:37 dbserver02 kernel[2101]: CRON[22]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:59:39 dbserver02 cron[7475]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.13 DST=10.0.0.84 PROTO=TCP
+Mar 28 09:59:41 dbserver02 kernel[2138]: CRON[48]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:59:45 proxy03 sshd[5666]: CRON[58]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 09:59:48 dbserver02 kernel[8175]: pam_unix(sshd:session): session opened for user91
+Mar 28 09:59:49 webserver01 kernel[4370]: pam_unix(sshd:session): session opened for user38
+Mar 28 09:59:53 dbserver02 kernel[7005]: sudo: user32 : TTY=pts/163 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 09:59:55 proxy03 sshd[1563]: sudo: user63 : TTY=pts/47 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 09:59:59 webserver01 cron[8683]: sudo: user87 : TTY=pts/219 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:00:02 webserver01 systemd[4807]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.82 DST=10.0.0.106 PROTO=TCP
+Mar 28 10:00:04 webserver01 cron[7883]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.32 DST=10.0.0.99 PROTO=TCP
+Mar 28 10:00:07 dbserver02 cron[4265]: CRON[21]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:00:10 webserver01 sudo[859]: Accepted publickey for user38 from 10.0.0.73 port 27406
+Mar 28 10:00:11 proxy03 sshd[3661]: pam_unix(sshd:session): session opened for user53
+Mar 28 10:00:15 webserver01 systemd[8477]: sudo: user78 : TTY=pts/45 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:00:16 dbserver02 sshd[2394]: sudo: user39 : TTY=pts/61 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:00:17 dbserver02 systemd[1788]: CRON[87]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:00:20 proxy03 cron[6166]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.58 DST=10.0.0.118 PROTO=TCP
+Mar 28 10:00:21 proxy03 systemd[9368]: pam_unix(sshd:session): session opened for user11
+Mar 28 10:00:22 dbserver02 kernel[2883]: Accepted publickey for user82 from 10.0.0.36 port 23845
+Mar 28 10:00:25 webserver01 kernel[9125]: pam_unix(sshd:session): session opened for user99
+Mar 28 10:00:29 webserver01 kernel[259]: sudo: user28 : TTY=pts/123 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:00:30 dbserver02 sudo[8416]: sudo: user27 : TTY=pts/82 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:00:34 proxy03 cron[6538]: pam_unix(sshd:session): session opened for user91
+Mar 28 10:00:35 dbserver02 sudo[5003]: pam_unix(sshd:session): session opened for user9
+Mar 28 10:00:38 proxy03 systemd[3730]: CRON[29]: (root) CMD (/usr/bin/backup.sh)
+last message repeated 3 times
+Mar 28 10:00:46 proxy03 cron[5230]: pam_unix(sshd:session): session opened for user54
+Mar 28 10:00:50 proxy03 sudo[462]: CRON[82]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:00:51 dbserver02 sshd[4361]: CRON[23]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:00:52 webserver01 kernel[6468]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.98 DST=10.0.0.26 PROTO=TCP
+Mar 28 10:00:53 proxy03 sshd[4656]: pam_unix(sshd:session): session opened for user36
+Mar 28 10:00:56 dbserver02 systemd[3883]: pam_unix(sshd:session): session opened for user33
+Mar 28 10:00:59 dbserver02 sshd[9752]: CRON[32]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:01:01 webserver01 cron[5655]: CRON[39]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:01:03 proxy03 kernel[7151]: Accepted publickey for user74 from 10.0.0.46 port 7206
+Mar 28 10:01:05 proxy03 cron[7868]: Accepted publickey for user40 from 10.0.0.80 port 41999
+Mar 28 10:01:08 dbserver02 sudo[2453]: CRON[55]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:01:12 proxy03 sudo[281]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.20 DST=10.0.0.201 PROTO=TCP
+Mar 28 10:01:13 proxy03 cron[6269]: Accepted publickey for user59 from 10.0.0.186 port 17554
+Mar 28 10:01:15 webserver01 sshd[2964]: Accepted publickey for user11 from 10.0.0.189 port 12793
+Mar 28 10:01:19 dbserver02 cron[3996]: Accepted publickey for user38 from 10.0.0.118 port 47929
+Mar 28 10:01:23 dbserver02 kernel[9548]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.62 DST=10.0.0.209 PROTO=TCP
+Mar 28 10:01:24 proxy03 sshd[4931]: Accepted publickey for user57 from 10.0.0.119 port 10591
+Mar 28 10:01:27 webserver01 sshd[6067]: sudo: user44 : TTY=pts/70 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:01:31 dbserver02 cron[3829]: CRON[86]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:01:35 webserver01 sshd[6396]: pam_unix(sshd:session): session opened for user16
+Mar 28 10:01:37 proxy03 sudo[5557]: pam_unix(sshd:session): session opened for user41
+Mar 28 10:01:40 dbserver02 kernel[282]: CRON[89]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:01:44 webserver01 cron[8855]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.77 DST=10.0.0.150 PROTO=TCP
+Mar 28 10:01:46 dbserver02 systemd[8479]: pam_unix(sshd:session): session opened for user6
+Mar 28 10:01:48 proxy03 systemd[145]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.25 DST=10.0.0.135 PROTO=TCP
+Mar 28 10:01:52 webserver01 cron[5847]: CRON[61]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:01:55 dbserver02 kernel[5007]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.22 DST=10.0.0.13 PROTO=TCP
+Mar 28 10:01:58 webserver01 sudo[165]: CRON[99]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:02:02 webserver01 sshd[3616]: pam_unix(sshd:session): session opened for user14
+Mar 28 10:02:05 dbserver02 sshd[9645]: Accepted publickey for user59 from 10.0.0.208 port 3394
+Mar 28 10:02:06 webserver01 sudo[1956]: Accepted publickey for user41 from 10.0.0.78 port 28401
+Mar 28 10:02:08 webserver01 sudo[3148]: pam_unix(sshd:session): session opened for user96
+Mar 28 10:02:09 dbserver02 kernel[1065]: sudo: user61 : TTY=pts/19 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:02:11 dbserver02 kernel[6495]: CRON[62]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:02:14 webserver01 kernel[5610]: sudo: user3 : TTY=pts/172 ; PWD=/home ; USER=root ; COMMAND=/bin/ls
+Mar 28 10:02:16 webserver01 systemd[8758]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.91 DST=10.0.0.119 PROTO=TCP
+Mar 28 10:02:20 proxy03 cron[5452]: pam_unix(sshd:session): session opened for user65
+Mar 28 10:02:23 webserver01 sshd[4903]: UFW BLOCK IN=eth0 OUT= MAC SRC=10.0.0.46 DST=10.0.0.116 PROTO=TCP
+Mar 28 10:02:27 webserver01 sudo[8990]: CRON[72]: (root) CMD (/usr/bin/backup.sh)
+Mar 28 10:02:29 proxy03 sudo[8500]: Accepted publickey for user28 from 10.0.0.166 port 48837

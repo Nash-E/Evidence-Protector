@@ -1,0 +1,500 @@
+2025-03-28T08:00:04 [ERROR] scheduler: Request processed in 210ms
+2025-03-28T08:00:06 [INFO] auth: Database query took 436ms
+2025-03-28T08:00:08 [INFO] api: Request processed in 347ms
+2025-03-28T08:00:10 [ERROR] worker: Request processed in 374ms
+2025-03-28T08:00:12 [WARN] worker: Cache miss for key session:227
+2025-03-28T08:00:15 [INFO] scheduler: Request processed in 340ms
+2025-03-28T08:00:18 [DEBUG] worker: Database query took 230ms
+2025-03-28T08:00:20 [INFO] scheduler: Database query took 263ms
+2025-03-28T08:00:24 [WARN] scheduler: Cache miss for key session:248
+2025-03-28T08:00:27 [INFO] api: Database query took 122ms
+2025-03-28T08:00:31 [WARN] api: User 404 authenticated successfully
+2025-03-28T08:00:34 [INFO] auth: Request processed in 192ms
+2025-03-28T08:00:37 [INFO] api: Worker 402 started processing job 8397
+2025-03-28T08:00:39 [INFO] auth: Request processed in 488ms
+2025-03-28T08:00:43 [INFO] auth: Database query took 492ms
+2025-03-28T08:00:47 [DEBUG] worker: Request processed in 98ms
+2025-03-28T08:00:50 [INFO] api: Request processed in 151ms
+2025-03-28T08:00:54 [ERROR] scheduler: Worker 295 started processing job 2095
+2025-03-28T08:00:58 [DEBUG] api: Database query took 347ms
+2025-03-28T08:01:01 [INFO] worker: Worker 450 started processing job 5961
+2025-03-28T08:01:04 [INFO] scheduler: Database query took 340ms
+2025-03-28T08:01:07 [DEBUG] auth: Cache miss for key session:138
+2025-03-28T08:01:11 [INFO] api: User 163 authenticated successfully
+2025-03-28T08:01:12 [ERROR] worker: Worker 116 started processing job 5836
+2025-03-28T08:01:14 [INFO] api: Database query took 329ms
+2025-03-28T08:01:17 [INFO] api: Cache miss for key session:68
+2025-03-28T08:01:19 [WARN] worker: Worker 365 started processing job 4317
+2025-03-28T08:01:22 [ERROR] scheduler: Worker 222 started processing job 2629
+2025-03-28T08:01:25 [INFO] scheduler: Database query took 456ms
+null pointer exception at 0x0
+2025-03-28T08:01:30 [INFO] scheduler: Worker 371 started processing job 2728
+2025-03-28T08:01:32 [INFO] worker: Cache miss for key session:133
+2025-03-28T08:01:34 [WARN] scheduler: Worker 437 started processing job 3275
+2025-03-28T08:01:36 [INFO] worker: User 307 authenticated successfully
+2025-03-28T08:01:38 [INFO] auth: User 448 authenticated successfully
+2025-03-28T08:01:41 [INFO] scheduler: Cache miss for key session:402
+2025-03-28T08:01:45 [ERROR] scheduler: Request processed in 354ms
+2025-03-28T08:01:46 [WARN] api: User 99 authenticated successfully
+2025-03-28T08:01:50 [INFO] worker: User 71 authenticated successfully
+2025-03-28T08:01:52 [INFO] api: Request processed in 366ms
+2025-03-28T08:01:53 [WARN] worker: User 276 authenticated successfully
+2025-03-28T08:01:55 [INFO] worker: Cache miss for key session:394
+2025-03-28T08:01:56 [INFO] scheduler: User 137 authenticated successfully
+2025-03-28T08:01:59 [WARN] auth: Cache miss for key session:161
+2025-03-28T08:02:01 [INFO] scheduler: Cache miss for key session:27
+2025-03-28T08:02:03 [INFO] worker: Database query took 8ms
+2025-03-28T08:02:06 [INFO] worker: User 268 authenticated successfully
+2025-03-28T08:02:08 [DEBUG] scheduler: Cache miss for key session:286
+2025-03-28T08:02:10 [WARN] worker: Worker 156 started processing job 6345
+2025-03-28T08:02:11 [ERROR] worker: Database query took 388ms
+2025-03-28T08:02:12 [INFO] worker: User 371 authenticated successfully
+2025-03-28T08:02:15 [INFO] api: Cache miss for key session:18
+2025-03-28T08:02:18 [ERROR] api: Worker 173 started processing job 9865
+2025-03-28T08:02:20 [INFO] worker: Worker 14 started processing job 3924
+2025-03-28T08:02:22 [DEBUG] scheduler: Database query took 338ms
+2025-03-28T08:02:24 [DEBUG] api: User 311 authenticated successfully
+2025-03-28T08:02:26 [INFO] api: Cache miss for key session:344
+2025-03-28T08:02:29 [WARN] auth: Database query took 354ms
+2025-03-28T08:02:32 [DEBUG] api: Request processed in 492ms
+2025-03-28T08:02:34 [INFO] scheduler: Worker 472 started processing job 2416
+2025-03-28T08:02:38 [DEBUG] scheduler: User 480 authenticated successfully
+2025-03-28T08:02:40 [WARN] worker: Request processed in 141ms
+2025-03-28T08:02:42 [INFO] api: Database query took 61ms
+2025-03-28T08:02:44 [INFO] auth: Database query took 386ms
+2025-03-28T08:02:47 [DEBUG] api: User 292 authenticated successfully
+2025-03-28T08:02:50 [DEBUG] scheduler: Cache miss for key session:435
+2025-03-28T08:02:53 [INFO] worker: Request processed in 452ms
+2025-03-28T08:02:56 [WARN] api: Cache miss for key session:278
+2025-03-28T08:02:59 [INFO] scheduler: Cache miss for key session:11
+2025-03-28T08:03:03 [INFO] api: Request processed in 161ms
+2025-03-28T08:03:05 [INFO] scheduler: Cache miss for key session:231
+2025-03-28T08:03:09 [WARN] auth: Cache miss for key session:9
+2025-03-28T08:03:13 [DEBUG] worker: User 404 authenticated successfully
+2025-03-28T08:03:16 [ERROR] scheduler: User 391 authenticated successfully
+2025-03-28T08:03:20 [WARN] scheduler: Worker 36 started processing job 3070
+2025-03-28T08:03:22 [WARN] worker: Worker 282 started processing job 8570
+2025-03-28T08:03:24 [INFO] scheduler: User 187 authenticated successfully
+2025-03-28T08:03:26 [WARN] auth: User 12 authenticated successfully
+2025-03-28T08:03:29 [DEBUG] scheduler: Cache miss for key session:409
+2025-03-28T08:03:33 [INFO] scheduler: Request processed in 401ms
+2025-03-28T08:03:35 [INFO] auth: Cache miss for key session:133
+2025-03-28T08:03:37 [INFO] auth: User 48 authenticated successfully
+2025-03-28T08:03:41 [ERROR] worker: Cache miss for key session:93
+2025-03-28T08:03:42 [DEBUG] api: Cache miss for key session:450
+2025-03-28T08:03:45 [INFO] worker: User 291 authenticated successfully
+2025-03-28T08:03:47 [ERROR] scheduler: User 7 authenticated successfully
+2025-03-28T08:03:49 [DEBUG] api: Worker 491 started processing job 6115
+2025-03-28T08:03:52 [INFO] api: Database query took 311ms
+2025-03-28T08:03:53 [DEBUG] scheduler: Database query took 72ms
+null pointer exception at 0x0
+2025-03-28T08:03:56 [INFO] auth: Cache miss for key session:442
+2025-03-28T08:03:57 [INFO] scheduler: Worker 204 started processing job 7609
+2025-03-28T08:03:59 [WARN] auth: Worker 18 started processing job 6614
+2025-03-28T08:04:01 [INFO] api: User 144 authenticated successfully
+2025-03-28T08:04:04 [DEBUG] auth: Worker 9 started processing job 9441
+2025-03-28T08:04:07 [INFO] worker: User 176 authenticated successfully
+2025-03-28T08:04:09 [ERROR] api: Database query took 492ms
+2025-03-28T08:04:10 [ERROR] api: Worker 147 started processing job 7748
+2025-03-28T08:04:13 [WARN] api: Database query took 395ms
+2025-03-28T08:04:14 [INFO] api: Worker 2 started processing job 5155
+2025-03-28T08:04:15 [DEBUG] auth: Cache miss for key session:27
+2025-03-28T08:04:17 [DEBUG] auth: Worker 480 started processing job 4498
+2025-03-28T08:04:18 [WARN] api: Database query took 344ms
+2025-03-28T08:04:19 [DEBUG] worker: Worker 247 started processing job 5349
+2025-03-28T08:04:23 [WARN] api: Database query took 186ms
+2025-03-28T08:04:26 [WARN] api: Worker 482 started processing job 4457
+2025-03-28T08:04:28 [INFO] api: Request processed in 382ms
+2025-03-28T08:04:31 [INFO] auth: Database query took 434ms
+2025-03-28T08:04:33 [DEBUG] api: Worker 240 started processing job 6641
+2025-03-28T08:04:35 [DEBUG] worker: Database query took 211ms
+2025-03-28T08:04:38 [WARN] worker: Cache miss for key session:492
+2025-03-28T08:04:41 [DEBUG] api: User 248 authenticated successfully
+2025-03-28T08:04:43 [INFO] api: Database query took 123ms
+2025-03-28T08:04:47 [WARN] scheduler: User 49 authenticated successfully
+2025-03-28T08:04:48 [INFO] api: User 219 authenticated successfully
+2025-03-28T08:04:49 [WARN] api: Cache miss for key session:115
+2025-03-28T08:04:52 [INFO] auth: Worker 182 started processing job 5949
+2025-03-28T08:04:53 [WARN] auth: Cache miss for key session:277
+2025-03-28T08:04:55 [WARN] auth: User 321 authenticated successfully
+2025-03-28T08:06:55 [INFO] api: Worker 252 started processing job 6577
+2025-03-28T08:06:59 [ERROR] worker: User 360 authenticated successfully
+2025-03-28T08:07:01 [ERROR] auth: Database query took 161ms
+2025-03-28T08:07:03 [DEBUG] scheduler: User 188 authenticated successfully
+2025-03-28T08:07:06 [DEBUG] worker: Worker 480 started processing job 4212
+2025-03-28T08:07:07 [ERROR] api: Database query took 161ms
+2025-03-28T08:07:09 [WARN] scheduler: Cache miss for key session:139
+2025-03-28T08:07:11 [ERROR] worker: Worker 445 started processing job 8490
+2025-03-28T08:07:14 [INFO] auth: User 335 authenticated successfully
+2025-03-28T08:07:17 [DEBUG] api: Cache miss for key session:214
+2025-03-28T08:07:21 [WARN] scheduler: Request processed in 270ms
+2025-03-28T08:07:24 [ERROR] auth: Database query took 493ms
+2025-03-28T08:07:27 [WARN] api: Cache miss for key session:247
+2025-03-28T08:07:30 [INFO] auth: Worker 3 started processing job 3897
+2025-03-28T08:07:33 [INFO] auth: Database query took 373ms
+2025-03-28T08:07:35 [DEBUG] api: Database query took 141ms
+2025-03-28T08:07:38 [INFO] api: Cache miss for key session:131
+2025-03-28T08:07:41 [WARN] worker: Request processed in 157ms
+2025-03-28T08:07:43 [WARN] auth: Cache miss for key session:339
+2025-03-28T08:07:44 [INFO] worker: Request processed in 344ms
+2025-03-28T08:07:47 [ERROR] scheduler: Database query took 164ms
+2025-03-28T08:07:49 [ERROR] worker: Worker 339 started processing job 8092
+2025-03-28T08:07:50 [ERROR] worker: Cache miss for key session:11
+2025-03-28T08:07:54 [INFO] api: Cache miss for key session:155
+2025-03-28T08:07:56 [INFO] api: Database query took 220ms
+2025-03-28T08:07:59 [ERROR] worker: Cache miss for key session:206
+2025-03-28T08:08:03 [WARN] api: Database query took 444ms
+2025-03-28T08:08:04 [INFO] worker: Cache miss for key session:351
+2025-03-28T08:08:05 [DEBUG] auth: Cache miss for key session:369
+2025-03-28T08:08:07 [DEBUG] worker: Database query took 194ms
+2025-03-28T08:08:09 [WARN] api: Worker 413 started processing job 1235
+2025-03-28T08:08:13 [INFO] scheduler: Worker 219 started processing job 7799
+2025-03-28T08:08:15 [INFO] worker: User 161 authenticated successfully
+2025-03-28T08:08:18 [INFO] worker: User 262 authenticated successfully
+2025-03-28T08:08:22 [WARN] auth: Cache miss for key session:405
+2025-03-28T08:08:23 [INFO] scheduler: Cache miss for key session:449
+2025-03-28T08:08:26 [ERROR] worker: Database query took 455ms
+2025-03-28T08:08:28 [INFO] worker: Database query took 411ms
+2025-03-28T08:08:32 [INFO] worker: Worker 117 started processing job 2073
+2025-03-28T08:08:34 [INFO] api: Database query took 267ms
+2025-03-28T08:08:35 [WARN] scheduler: Database query took 67ms
+2025-03-28T08:08:39 [INFO] api: Cache miss for key session:415
+2025-03-28T08:08:42 [WARN] scheduler: Database query took 49ms
+2025-03-28T08:08:43 [INFO] api: Cache miss for key session:364
+2025-03-28T08:08:44 [WARN] api: Cache miss for key session:101
+2025-03-28T08:08:48 [WARN] auth: Request processed in 175ms
+2025-03-28T08:08:50 [INFO] auth: Database query took 126ms
+2025-03-28T08:08:51 [INFO] worker: Worker 241 started processing job 6962
+2025-03-28T08:08:54 [WARN] scheduler: Database query took 391ms
+2025-03-28T08:08:58 [DEBUG] worker: Cache miss for key session:360
+2025-03-28T08:09:02 [INFO] worker: Worker 139 started processing job 6414
+2025-03-28T08:09:04 [WARN] auth: Request processed in 83ms
+2025-03-28T08:09:05 [WARN] api: User 126 authenticated successfully
+2025-03-28T08:09:07 [INFO] scheduler: Request processed in 197ms
+2025-03-28T08:09:11 [WARN] auth: Cache miss for key session:162
+null pointer exception at 0x0
+2025-03-28T08:09:13 [DEBUG] worker: User 5 authenticated successfully
+2025-03-28T08:09:15 [WARN] scheduler: User 220 authenticated successfully
+2025-03-28T08:09:17 [DEBUG] auth: Request processed in 5ms
+2025-03-28T08:09:18 [ERROR] worker: Request processed in 135ms
+2025-03-28T08:09:21 [ERROR] worker: User 452 authenticated successfully
+2025-03-28T08:09:22 [INFO] worker: Request processed in 329ms
+2025-03-28T08:09:24 [ERROR] api: Worker 33 started processing job 2239
+2025-03-28T08:09:27 [WARN] scheduler: Request processed in 82ms
+2025-03-28T08:09:30 [WARN] scheduler: Database query took 300ms
+2025-03-28T08:09:34 [INFO] worker: Worker 232 started processing job 2957
+2025-03-28T08:09:36 [INFO] scheduler: User 215 authenticated successfully
+2025-03-28T08:09:40 [INFO] worker: Database query took 120ms
+2025-03-28T08:09:44 [INFO] worker: Worker 304 started processing job 4274
+2025-03-28T08:09:47 [INFO] api: Database query took 366ms
+2025-03-28T08:09:49 [ERROR] worker: User 445 authenticated successfully
+2025-03-28T08:09:50 [WARN] auth: Request processed in 236ms
+2025-03-28T08:09:53 [INFO] scheduler: User 13 authenticated successfully
+2025-03-28T08:09:54 [WARN] scheduler: Worker 327 started processing job 2452
+2025-03-28T08:09:55 [INFO] auth: Worker 200 started processing job 4887
+2025-03-28T08:09:59 [INFO] worker: User 68 authenticated successfully
+2025-03-28T08:10:00 [WARN] worker: Worker 274 started processing job 3836
+2025-03-28T08:10:03 [INFO] scheduler: Cache miss for key session:471
+2025-03-28T08:10:04 [INFO] auth: Cache miss for key session:172
+2025-03-28T08:10:08 [INFO] scheduler: Request processed in 303ms
+2025-03-28T08:10:09 [INFO] worker: Worker 400 started processing job 5765
+2025-03-28T08:10:12 [INFO] worker: User 57 authenticated successfully
+2025-03-28T08:10:16 [WARN] api: Cache miss for key session:437
+2025-03-28T08:10:18 [DEBUG] scheduler: User 306 authenticated successfully
+2025-03-28T08:10:19 [INFO] scheduler: Request processed in 73ms
+2025-03-28T08:10:22 [ERROR] auth: Request processed in 313ms
+2025-03-28T08:10:24 [INFO] auth: Database query took 400ms
+2025-03-28T08:10:27 [DEBUG] worker: Cache miss for key session:32
+2025-03-28T08:10:31 [INFO] worker: User 344 authenticated successfully
+2025-03-28T08:10:34 [INFO] auth: Request processed in 191ms
+2025-03-28T08:10:37 [WARN] scheduler: User 91 authenticated successfully
+2025-03-28T08:10:38 [ERROR] scheduler: Cache miss for key session:141
+2025-03-28T08:10:41 [INFO] worker: User 72 authenticated successfully
+2025-03-28T08:10:42 [WARN] scheduler: Database query took 418ms
+2025-03-28T08:10:44 [WARN] worker: Worker 127 started processing job 3171
+2025-03-28T08:10:45 [WARN] scheduler: Cache miss for key session:345
+2025-03-28T08:10:46 [INFO] worker: Cache miss for key session:362
+2025-03-28T08:10:49 [INFO] auth: User 465 authenticated successfully
+2025-03-28T08:10:53 [INFO] worker: Worker 314 started processing job 9190
+2025-03-28T08:10:56 [WARN] scheduler: Request processed in 171ms
+2025-03-28T08:10:59 [WARN] api: Worker 448 started processing job 9931
+2025-03-28T08:11:01 [INFO] api: Database query took 390ms
+2025-03-28T08:11:04 [ERROR] api: Worker 140 started processing job 6210
+2025-03-28T08:11:06 [WARN] api: Request processed in 224ms
+2025-03-28T08:11:09 [ERROR] scheduler: User 84 authenticated successfully
+2025-03-28T08:11:10 [DEBUG] worker: User 372 authenticated successfully
+2025-03-28T08:11:14 [INFO] auth: Request processed in 461ms
+2025-03-28T08:11:18 [DEBUG] auth: Database query took 119ms
+2025-03-28T08:11:22 [ERROR] worker: Request processed in 32ms
+2025-03-28T08:11:23 [INFO] scheduler: Cache miss for key session:221
+2025-03-28T08:11:25 [ERROR] worker: Worker 448 started processing job 9629
+2025-03-28T08:11:28 [ERROR] api: Database query took 74ms
+2025-03-28T08:11:30 [ERROR] auth: Cache miss for key session:273
+2025-03-28T08:11:31 [INFO] auth: Cache miss for key session:327
+2025-03-28T08:11:32 [INFO] api: Database query took 422ms
+2025-03-28T08:11:36 [ERROR] scheduler: Cache miss for key session:141
+2025-03-28T08:11:40 [ERROR] scheduler: Worker 136 started processing job 7680
+2025-03-28T08:11:41 [ERROR] auth: Cache miss for key session:487
+2025-03-28T08:11:45 [INFO] worker: Request processed in 64ms
+2025-03-28T08:11:49 [INFO] api: Request processed in 421ms
+2025-03-28T08:11:52 [DEBUG] auth: Cache miss for key session:342
+2025-03-28T08:11:54 [ERROR] worker: Cache miss for key session:303
+2025-03-28T08:11:57 [ERROR] auth: Cache miss for key session:40
+2025-03-28T08:11:58 [ERROR] worker: Request processed in 43ms
+2025-03-28T08:12:02 [WARN] worker: Database query took 231ms
+2025-03-28T08:12:04 [DEBUG] auth: Database query took 495ms
+2025-03-28T08:12:05 [WARN] api: User 445 authenticated successfully
+2025-03-28T08:12:08 [DEBUG] api: Database query took 233ms
+2025-03-28T08:12:12 [INFO] api: Database query took 99ms
+2025-03-28T08:12:15 [WARN] auth: Worker 369 started processing job 5548
+2025-03-28T08:12:16 [ERROR] api: User 489 authenticated successfully
+2025-03-28T08:12:20 [INFO] api: Worker 221 started processing job 9973
+2025-03-28T08:12:22 [DEBUG] scheduler: Request processed in 305ms
+2025-03-28T08:12:25 [INFO] worker: User 443 authenticated successfully
+2025-03-28T08:12:28 [ERROR] worker: Cache miss for key session:33
+2025-03-28T08:12:29 [INFO] scheduler: Cache miss for key session:131
+2025-03-28T08:12:32 [WARN] worker: Cache miss for key session:348
+2025-03-28T08:12:36 [INFO] scheduler: Worker 419 started processing job 8786
+2025-03-28T08:12:40 [INFO] worker: User 15 authenticated successfully
+2025-03-28T08:12:42 [INFO] api: User 351 authenticated successfully
+2025-03-28T08:12:44 [ERROR] api: Request processed in 370ms
+2025-03-28T08:12:45 [DEBUG] scheduler: User 367 authenticated successfully
+2025-03-28T08:12:49 [WARN] scheduler: User 311 authenticated successfully
+2025-03-28T08:12:51 [DEBUG] api: Database query took 395ms
+2025-03-28T08:12:53 [DEBUG] auth: User 397 authenticated successfully
+2025-03-28T08:12:56 [WARN] api: Request processed in 234ms
+2025-03-28T08:12:59 [WARN] worker: Request processed in 75ms
+2025-03-28T08:13:00 [INFO] worker: Database query took 77ms
+2025-03-28T08:13:03 [WARN] scheduler: Worker 247 started processing job 9996
+2025-03-28T08:13:06 [INFO] worker: User 303 authenticated successfully
+2025-03-28T08:13:10 [INFO] auth: User 109 authenticated successfully
+2025-03-28T08:13:12 [WARN] worker: Database query took 158ms
+2025-03-28T08:13:15 [DEBUG] auth: User 29 authenticated successfully
+2025-03-28T08:13:16 [ERROR] api: Worker 210 started processing job 7352
+2025-03-28T08:13:20 [WARN] scheduler: Database query took 220ms
+2025-03-28T08:13:24 [DEBUG] api: Database query took 500ms
+2025-03-28T08:13:28 [ERROR] api: Cache miss for key session:110
+2025-03-28T08:13:29 [DEBUG] scheduler: Database query took 336ms
+2025-03-28T08:13:31 [INFO] auth: Database query took 242ms
+2025-03-28T08:13:34 [WARN] auth: Database query took 284ms
+2025-03-28T08:30:14 [INFO] api: Request processed in 231ms
+2025-03-28T08:30:17 [ERROR] api: Database query took 37ms
+2025-03-28T08:30:21 [ERROR] scheduler: Cache miss for key session:99
+2025-03-28T08:30:22 [INFO] auth: Database query took 432ms
+2025-03-28T08:30:23 [WARN] api: Cache miss for key session:214
+2025-03-28T08:30:27 [INFO] auth: User 150 authenticated successfully
+2025-03-28T08:30:28 [WARN] scheduler: Request processed in 470ms
+2025-03-28T08:30:31 [ERROR] scheduler: Worker 196 started processing job 7717
+2025-03-28T08:30:35 [INFO] scheduler: Database query took 426ms
+2025-03-28T08:30:36 [INFO] api: Worker 117 started processing job 8421
+2025-03-28T08:30:39 [ERROR] api: Database query took 5ms
+2025-03-28T08:30:40 [WARN] auth: Database query took 244ms
+2025-03-28T08:30:43 [INFO] api: Database query took 348ms
+2025-03-28T08:30:47 [DEBUG] worker: User 167 authenticated successfully
+2025-03-28T08:30:50 [INFO] worker: Cache miss for key session:161
+2025-03-28T08:30:53 [INFO] api: Worker 209 started processing job 2953
+2025-03-28T08:30:57 [WARN] auth: Cache miss for key session:8
+2025-03-28T08:31:01 [INFO] scheduler: Request processed in 334ms
+2025-03-28T08:31:05 [WARN] worker: Database query took 317ms
+2025-03-28T08:31:09 [WARN] api: Request processed in 387ms
+2025-03-28T08:31:12 [ERROR] scheduler: User 182 authenticated successfully
+2025-03-28T08:31:13 [ERROR] api: Worker 119 started processing job 6175
+2025-03-28T08:31:14 [DEBUG] auth: Database query took 493ms
+2025-03-28T08:31:18 [INFO] scheduler: Worker 70 started processing job 9547
+2025-03-28T08:31:21 [DEBUG] worker: Worker 128 started processing job 8450
+2025-03-28T08:31:23 [INFO] worker: Request processed in 391ms
+2025-03-28T08:31:26 [DEBUG] worker: Cache miss for key session:192
+2025-03-28T08:31:29 [DEBUG] api: Cache miss for key session:3
+2025-03-28T08:31:30 [WARN] api: Worker 343 started processing job 2936
+2025-03-28T08:31:34 [WARN] auth: Cache miss for key session:186
+--- log rotation ---
+2025-03-28T08:31:39 [ERROR] scheduler: Worker 6 started processing job 8418
+2025-03-28T08:31:40 [WARN] worker: Request processed in 282ms
+2025-03-28T08:31:43 [DEBUG] api: Cache miss for key session:56
+2025-03-28T08:31:47 [ERROR] scheduler: User 301 authenticated successfully
+2025-03-28T08:31:51 [INFO] api: Cache miss for key session:272
+2025-03-28T08:31:54 [DEBUG] auth: Request processed in 230ms
+2025-03-28T08:31:56 [WARN] worker: Cache miss for key session:371
+2025-03-28T08:31:57 [ERROR] api: Database query took 357ms
+2025-03-28T08:31:58 [WARN] api: Worker 217 started processing job 4132
+2025-03-28T08:32:00 [INFO] auth: Worker 468 started processing job 2843
+2025-03-28T08:32:01 [DEBUG] auth: User 446 authenticated successfully
+2025-03-28T08:32:04 [INFO] scheduler: Request processed in 294ms
+2025-03-28T08:32:08 [INFO] worker: Database query took 72ms
+2025-03-28T08:32:10 [INFO] worker: Database query took 368ms
+2025-03-28T08:32:11 [WARN] auth: Request processed in 495ms
+2025-03-28T08:32:13 [WARN] worker: Database query took 179ms
+2025-03-28T08:32:15 [INFO] api: Request processed in 249ms
+2025-03-28T08:32:18 [ERROR] api: User 493 authenticated successfully
+2025-03-28T08:32:21 [DEBUG] auth: Database query took 91ms
+2025-03-28T08:32:22 [ERROR] auth: Cache miss for key session:430
+2025-03-28T08:32:23 [INFO] auth: Database query took 13ms
+2025-03-28T08:32:24 [ERROR] scheduler: Database query took 53ms
+2025-03-28T08:32:25 [INFO] scheduler: Request processed in 107ms
+2025-03-28T08:32:28 [INFO] scheduler: Worker 258 started processing job 2695
+2025-03-28T08:32:32 [DEBUG] worker: Cache miss for key session:471
+2025-03-28T08:32:33 [DEBUG] worker: Cache miss for key session:92
+2025-03-28T08:32:37 [INFO] auth: Database query took 246ms
+2025-03-28T08:32:40 [INFO] auth: Cache miss for key session:221
+2025-03-28T08:32:41 [ERROR] scheduler: User 364 authenticated successfully
+2025-03-28T08:32:43 [INFO] api: Cache miss for key session:362
+2025-03-28T08:32:46 [INFO] worker: User 457 authenticated successfully
+2025-03-28T08:32:50 [INFO] scheduler: Cache miss for key session:47
+2025-03-28T08:32:51 [WARN] scheduler: Database query took 288ms
+2025-03-28T08:32:53 [INFO] auth: Request processed in 114ms
+2025-03-28T08:32:56 [INFO] api: Worker 277 started processing job 4380
+2025-03-28T08:33:00 [DEBUG] api: User 199 authenticated successfully
+2025-03-28T08:33:02 [WARN] worker: Database query took 250ms
+2025-03-28T08:33:05 [DEBUG] scheduler: Worker 201 started processing job 2620
+2025-03-28T08:33:09 [WARN] scheduler: Worker 242 started processing job 1197
+2025-03-28T08:32:58 [WARN] worker: Worker 406 started processing job 4357
+2025-03-28T08:33:17 [DEBUG] scheduler: Cache miss for key session:26
+2025-03-28T08:33:20 [INFO] api: Database query took 393ms
+2025-03-28T08:33:21 [WARN] scheduler: Cache miss for key session:140
+2025-03-28T08:33:23 [WARN] auth: Request processed in 40ms
+2025-03-28T08:33:26 [WARN] auth: Request processed in 367ms
+2025-03-28T08:33:27 [DEBUG] api: Cache miss for key session:262
+2025-03-28T08:33:31 [WARN] worker: Database query took 297ms
+2025-03-28T08:33:32 [ERROR] api: Request processed in 203ms
+2025-03-28T08:33:35 [INFO] api: Request processed in 195ms
+2025-03-28T08:33:39 [ERROR] auth: User 67 authenticated successfully
+2025-03-28T08:33:41 [INFO] auth: Cache miss for key session:446
+2025-03-28T08:33:44 [INFO] scheduler: Database query took 375ms
+2025-03-28T08:33:48 [INFO] scheduler: Database query took 249ms
+2025-03-28T08:33:52 [WARN] scheduler: Worker 139 started processing job 4035
+2025-03-28T08:33:55 [DEBUG] api: Cache miss for key session:34
+2025-03-28T08:33:59 [WARN] api: User 350 authenticated successfully
+2025-03-28T08:34:02 [WARN] auth: Request processed in 457ms
+2025-03-28T08:34:06 [INFO] api: Cache miss for key session:346
+2025-03-28T08:34:09 [INFO] api: User 456 authenticated successfully
+2025-03-28T08:34:11 [INFO] auth: Request processed in 334ms
+2025-03-28T08:34:14 [INFO] worker: Request processed in 47ms
+2025-03-28T08:34:16 [INFO] api: User 1 authenticated successfully
+2025-03-28T08:34:18 [INFO] worker: Worker 123 started processing job 9400
+2025-03-28T08:34:20 [INFO] worker: User 263 authenticated successfully
+2025-03-28T08:34:23 [INFO] api: Worker 299 started processing job 1132
+2025-03-28T08:34:24 [INFO] auth: Worker 446 started processing job 5061
+2025-03-28T08:34:28 [INFO] auth: Worker 492 started processing job 4911
+2025-03-28T08:34:31 [DEBUG] worker: Database query took 74ms
+2025-03-28T08:34:33 [WARN] scheduler: Request processed in 319ms
+2025-03-28T08:34:35 [INFO] auth: Worker 78 started processing job 5253
+2025-03-28T08:34:39 [INFO] auth: Request processed in 109ms
+2025-03-28T08:34:41 [WARN] scheduler: Request processed in 228ms
+2025-03-28T08:34:45 [INFO] scheduler: Worker 163 started processing job 7314
+2025-03-28T08:34:46 [DEBUG] auth: Worker 68 started processing job 2739
+2025-03-28T08:34:48 [INFO] scheduler: Worker 6 started processing job 7768
+2025-03-28T08:34:52 [INFO] auth: Cache miss for key session:95
+2025-03-28T08:34:56 [ERROR] worker: User 136 authenticated successfully
+2025-03-28T08:34:59 [INFO] auth: Request processed in 288ms
+2025-03-28T08:35:02 [INFO] worker: Database query took 117ms
+2025-03-28T08:35:05 [INFO] worker: Request processed in 298ms
+2025-03-28T08:35:06 [ERROR] auth: User 287 authenticated successfully
+2025-03-28T08:35:09 [ERROR] api: Request processed in 342ms
+2025-03-28T08:35:10 [INFO] worker: User 349 authenticated successfully
+2025-03-28T08:35:12 [ERROR] api: Database query took 144ms
+2025-03-28T08:35:15 [INFO] api: Database query took 463ms
+2025-03-28T08:35:17 [WARN] worker: Cache miss for key session:493
+2025-03-28T08:35:21 [DEBUG] worker: Database query took 96ms
+2025-03-28T08:35:25 [INFO] auth: Worker 356 started processing job 1845
+2025-03-28T08:35:26 [INFO] worker: Cache miss for key session:442
+2025-03-28T09:58:46 [ERROR] auth: Cache miss for key session:200
+2025-03-28T09:58:48 [WARN] auth: Request processed in 489ms
+2025-03-28T09:58:50 [INFO] auth: Database query took 31ms
+2025-03-28T09:58:53 [INFO] scheduler: Cache miss for key session:54
+2025-03-28T09:58:57 [ERROR] api: User 67 authenticated successfully
+2025-03-28T09:58:58 [ERROR] auth: Request processed in 189ms
+2025-03-28T09:59:00 [INFO] scheduler: Cache miss for key session:239
+2025-03-28T09:59:03 [WARN] scheduler: Request processed in 3ms
+2025-03-28T09:59:05 [INFO] auth: Request processed in 367ms
+2025-03-28T09:59:07 [WARN] api: Database query took 60ms
+2025-03-28T09:59:10 [INFO] worker: User 331 authenticated successfully
+2025-03-28T09:59:13 [INFO] api: Worker 345 started processing job 3777
+2025-03-28T09:59:17 [ERROR] api: User 31 authenticated successfully
+2025-03-28T09:59:18 [ERROR] auth: Database query took 269ms
+2025-03-28T09:59:19 [INFO] auth: Request processed in 151ms
+2025-03-28T09:59:22 [DEBUG] scheduler: User 107 authenticated successfully
+2025-03-28T09:59:23 [WARN] auth: Worker 186 started processing job 3077
+2025-03-28T09:59:25 [INFO] scheduler: Worker 9 started processing job 4383
+2025-03-28T09:59:27 [DEBUG] api: Request processed in 239ms
+2025-03-28T09:59:30 [DEBUG] scheduler: Request processed in 93ms
+2025-03-28T09:59:31 [DEBUG] worker: Worker 32 started processing job 9999
+2025-03-28T09:59:34 [INFO] auth: Request processed in 26ms
+2025-03-28T09:59:35 [WARN] auth: User 151 authenticated successfully
+2025-03-28T09:59:36 [INFO] api: Database query took 267ms
+2025-03-28T09:59:40 [INFO] worker: Database query took 131ms
+2025-03-28T09:59:43 [DEBUG] scheduler: User 402 authenticated successfully
+2025-03-28T09:59:46 [WARN] auth: Worker 266 started processing job 9662
+2025-03-28T09:59:50 [WARN] worker: Cache miss for key session:81
+2025-03-28T09:59:52 [DEBUG] worker: Cache miss for key session:45
+2025-03-28T09:59:54 [INFO] scheduler: Worker 50 started processing job 8039
+2025-03-28T09:59:56 [INFO] auth: Cache miss for key session:432
+2025-03-28T10:00:00 [DEBUG] api: Worker 344 started processing job 7665
+2025-03-28T10:00:02 [INFO] worker: Request processed in 368ms
+2025-03-28T10:00:04 [INFO] api: Request processed in 124ms
+2025-03-28T10:00:05 [DEBUG] worker: Request processed in 52ms
+2025-03-28T10:00:09 [INFO] api: Request processed in 289ms
+2025-03-28T10:00:13 [INFO] auth: Cache miss for key session:301
+2025-03-28T10:00:16 [INFO] worker: User 339 authenticated successfully
+2025-03-28T10:00:17 [INFO] auth: Cache miss for key session:183
+2025-03-28T10:00:18 [INFO] api: User 477 authenticated successfully
+2025-03-28T10:00:22 [INFO] worker: Worker 391 started processing job 2901
+2025-03-28T10:00:23 [INFO] api: Database query took 448ms
+2025-03-28T10:00:26 [INFO] scheduler: Cache miss for key session:81
+2025-03-28T10:00:30 [INFO] scheduler: Worker 427 started processing job 6578
+2025-03-28T10:00:32 [INFO] api: Cache miss for key session:72
+2025-03-28T10:00:36 [INFO] worker: Request processed in 67ms
+2025-03-28T10:00:37 [DEBUG] worker: Database query took 304ms
+2025-03-28T10:00:41 [DEBUG] scheduler: User 71 authenticated successfully
+2025-03-28T10:00:44 [ERROR] worker: User 71 authenticated successfully
+2025-03-28T10:00:48 [INFO] auth: Worker 353 started processing job 6959
+2025-03-28T10:00:50 [ERROR] scheduler: Request processed in 3ms
+2025-03-28T10:00:53 [DEBUG] worker: Request processed in 468ms
+2025-03-28T10:00:54 [DEBUG] worker: Worker 173 started processing job 9979
+2025-03-28T10:00:55 [ERROR] api: Database query took 214ms
+2025-03-28T10:00:57 [INFO] api: Worker 206 started processing job 1905
+2025-03-28T10:01:01 [DEBUG] auth: Cache miss for key session:68
+2025-03-28T10:01:05 [WARN] worker: Database query took 335ms
+2025-03-28T10:01:09 [INFO] auth: Cache miss for key session:413
+2025-03-28T10:01:13 [DEBUG] api: Request processed in 454ms
+2025-03-28T10:01:15 [INFO] api: Cache miss for key session:130
+null pointer exception at 0x0
+2025-03-28T10:01:21 [INFO] api: Cache miss for key session:446
+2025-03-28T10:01:23 [ERROR] api: Cache miss for key session:344
+2025-03-28T10:01:25 [WARN] scheduler: User 174 authenticated successfully
+2025-03-28T10:01:26 [ERROR] scheduler: Database query took 154ms
+2025-03-28T10:01:29 [INFO] worker: User 125 authenticated successfully
+2025-03-28T10:01:33 [INFO] worker: Cache miss for key session:196
+2025-03-28T10:01:34 [INFO] auth: Cache miss for key session:185
+2025-03-28T10:01:37 [INFO] worker: Request processed in 60ms
+2025-03-28T10:01:41 [INFO] worker: Request processed in 229ms
+2025-03-28T10:01:45 [DEBUG] worker: Cache miss for key session:225
+2025-03-28T10:01:48 [ERROR] api: Request processed in 425ms
+2025-03-28T10:01:50 [ERROR] auth: Worker 284 started processing job 7122
+2025-03-28T10:01:53 [DEBUG] scheduler: Request processed in 100ms
+2025-03-28T10:01:57 [ERROR] api: Worker 294 started processing job 5371
+2025-03-28T10:01:58 [INFO] scheduler: User 162 authenticated successfully
+2025-03-28T10:01:59 [WARN] worker: Worker 419 started processing job 8184
+2025-03-28T10:02:03 [WARN] api: Cache miss for key session:261
+2025-03-28T10:02:05 [INFO] auth: Database query took 188ms
+2025-03-28T10:02:07 [INFO] scheduler: Request processed in 103ms
+2025-03-28T10:02:10 [DEBUG] worker: Worker 447 started processing job 7968
+2025-03-28T10:02:12 [ERROR] api: Worker 409 started processing job 4552
+2025-03-28T10:02:13 [INFO] api: Worker 105 started processing job 2189
+2025-03-28T10:02:16 [ERROR] scheduler: User 242 authenticated successfully
+2025-03-28T10:02:19 [WARN] scheduler: Cache miss for key session:258
+2025-03-28T10:02:21 [ERROR] api: Worker 79 started processing job 7174
+2025-03-28T10:02:24 [WARN] scheduler: User 413 authenticated successfully
+2025-03-28T10:02:28 [ERROR] auth: Cache miss for key session:85
+2025-03-28T10:02:31 [ERROR] scheduler: Cache miss for key session:55
+2025-03-28T10:02:32 [ERROR] worker: User 368 authenticated successfully
+2025-03-28T10:02:33 [INFO] scheduler: User 385 authenticated successfully
+2025-03-28T10:02:35 [ERROR] worker: Worker 495 started processing job 2977
+2025-03-28T10:02:37 [DEBUG] scheduler: Request processed in 63ms
+2025-03-28T10:02:38 [INFO] worker: User 16 authenticated successfully
+2025-03-28T10:02:42 [INFO] api: Request processed in 304ms
+2025-03-28T10:02:44 [INFO] scheduler: User 302 authenticated successfully
+2025-03-28T10:02:48 [ERROR] api: Database query took 70ms
+2025-03-28T10:02:50 [INFO] auth: User 290 authenticated successfully
+2025-03-28T10:02:52 [INFO] auth: Worker 297 started processing job 1435
+2025-03-28T10:02:56 [DEBUG] worker: Request processed in 233ms
+2025-03-28T10:02:58 [INFO] worker: Database query took 178ms

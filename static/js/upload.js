@@ -1,5 +1,3 @@
-// upload.js — Handles drag-and-drop and file input upload
-
 let currentFileId = null;
 
 function initUpload() {
@@ -7,7 +5,6 @@ function initUpload() {
   const fileInput = document.getElementById('file-input');
   const analyzeBtn = document.getElementById('analyze-btn');
 
-  // Drag events
   ['dragenter', 'dragover'].forEach(evt => {
     dropzone.addEventListener(evt, e => {
       e.preventDefault();
@@ -36,7 +33,6 @@ function initUpload() {
     if (currentFileId) runAnalysis(currentFileId);
   });
 
-  // Sensitivity slider
   const slider     = document.getElementById('sensitivity-slider');
   const valDisplay = document.getElementById('sensitivity-value');
   const bubble     = document.getElementById('slider-bubble');
@@ -56,7 +52,6 @@ function initUpload() {
     valDisplay.textContent = v.toFixed(1);
     bubbleVal.textContent  = v.toFixed(1);
     bubbleLbl.textContent  = sensitivityLabel(v);
-    // Position bubble over thumb
     const pct = (v - parseFloat(slider.min)) / (parseFloat(slider.max) - parseFloat(slider.min));
     const thumbX = pct * slider.offsetWidth;
     bubble.style.left = thumbX + 'px';
@@ -94,7 +89,6 @@ function uploadFile(file) {
       currentFileId = res.file_id;
       analyzeBtn.disabled = false;
 
-      // Update dropzone to show filename
       document.querySelector('.dropzone-text').textContent = '\u2713 ' + res.filename;
       document.querySelector('.dropzone-sub').textContent =
         formatBytes(res.size_bytes) + ' \u2014 ready to analyze';

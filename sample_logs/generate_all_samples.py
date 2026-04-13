@@ -1,13 +1,3 @@
-"""
-Generate sample log files in every format supported by Evidence Protector.
-Each file has:
-  - ~500 lines
-  - 3 injected gaps (LOW, HIGH, CRITICAL)
-  - 5 malformed lines
-  - 1 out-of-order timestamp
-Run: python sample_logs/generate_all_samples.py
-"""
-
 import random
 import os
 from datetime import datetime, timedelta
@@ -15,11 +5,9 @@ from datetime import datetime, timedelta
 random.seed(99)
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# ── Shared gap/malform injection config ─────────────────────────────────────
-
-GAP_1_LINE   = 120   # ~120s  → LOW
-GAP_2_LINE   = 280   # ~1000s → HIGH
-GAP_3_LINE   = 400   # ~5000s → CRITICAL
+GAP_1_LINE   = 120
+GAP_2_LINE   = 280
+GAP_3_LINE   = 400
 OOT_LINE     = 350
 MALFORM_LINES = {30, 90, 175, 310, 460}
 TOTAL_LINES  = 500
@@ -35,8 +23,6 @@ def next_ts(ts, line_num):
         return ts + timedelta(seconds=5000)
     return ts + timedelta(seconds=random.randint(1, 4))
 
-
-# ── 1. HDFS format ──────────────────────────────────────────────────────────
 
 def gen_hdfs():
     components = ['dfs.DataNode', 'dfs.FSNamesystem', 'hdfs.StateChange']
@@ -71,8 +57,6 @@ def gen_hdfs():
     _write('hdfs_sample.log', lines)
 
 
-# ── 2. ISO 8601 (T separator) ────────────────────────────────────────────────
-
 def gen_iso8601():
     services = ['auth', 'api', 'worker', 'scheduler']
     levels   = ['INFO', 'INFO', 'WARN', 'ERROR', 'DEBUG']
@@ -104,8 +88,6 @@ def gen_iso8601():
     _write('iso8601_sample.log', lines)
 
 
-# ── 3. ISO 8601 with space separator ────────────────────────────────────────
-
 def gen_iso_space():
     lines = []
     ts = START_TIME
@@ -124,8 +106,6 @@ def gen_iso_space():
 
     _write('iso_space_sample.log', lines)
 
-
-# ── 4. Apache / Nginx access log ─────────────────────────────────────────────
 
 def gen_apache():
     ips     = [f'192.168.1.{i}' for i in range(1, 20)]
@@ -155,8 +135,6 @@ def gen_apache():
     _write('apache_sample.log', lines)
 
 
-# ── 5. Syslog ────────────────────────────────────────────────────────────────
-
 def gen_syslog():
     hosts    = ['webserver01', 'dbserver02', 'proxy03']
     procs    = ['sshd', 'cron', 'kernel', 'systemd', 'sudo']
@@ -177,7 +155,6 @@ def gen_syslog():
             continue
         if i == OOT_LINE:
             oot = ts - timedelta(seconds=12)
-            # Syslog format: "Mar 15 08:03:45" — no year
             ts_str = oot.strftime('%b %d %H:%M:%S')
         else:
             ts_str = ts.strftime('%b %d %H:%M:%S')
@@ -191,8 +168,6 @@ def gen_syslog():
 
     _write('syslog_sample.log', lines)
 
-
-# ── helpers ──────────────────────────────────────────────────────────────────
 
 def _write(filename, lines):
     path = os.path.join(OUT_DIR, filename)

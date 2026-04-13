@@ -43,21 +43,14 @@ def format_duration(seconds: float) -> str:
 
 
 def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dict[str, Any]:
-    """
-    Full streaming analysis of a log file.
-    Returns a dict ready to be JSON-serialized.
-    """
     t_start = time.time()
 
-    # Step 0: Auto-detect format
     log_format = detect_format(filepath)
     compiled_rx = re.compile(log_format.pattern)
 
-    # Step 1: Single streaming pass — collect all intervals and timestamps
     intervals: List[Tuple[float, int, int, datetime, datetime]] = []
-    # (delta_seconds, from_line, to_line, from_ts, to_ts)
 
-    all_timestamps: List[datetime] = []   # for density calculation
+    all_timestamps: List[datetime] = []
     out_of_order: List[dict] = []
 
     prev_time: Optional[datetime] = None
@@ -104,7 +97,6 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
         prev_time = curr_time
         prev_line_num = line_num
 
-    # Step 2: Compute MAD statistics
     if len(intervals) < 2:
         gaps = []
         mad_stats = {'median': 0, 'mad': 0, 'mad_scaled': 1.0}
@@ -128,17 +120,14 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
             if first_timestamp and last_timestamp else 0.0
         )
 
-        # Step 3: Classify gaps (first pass — identify which intervals are gaps)
         raw_gaps = []
         for delta, from_line, to_line, from_ts, to_ts in intervals:
             modified_z = 0.6745 * (delta - median) / mad_scaled
             if modified_z > sensitivity and delta >= MIN_GAP_ABSOLUTE_SECONDS:
                 raw_gaps.append((delta, from_line, to_line, from_ts, to_ts, modified_z))
 
-        # Collect all gap start times for clustering (passed to scorer)
         all_gap_starts = [g[3] for g in raw_gaps]
 
-        # Step 4: Score each gap with full context
         gaps: List[GapRecord] = []
         for gap_id, (delta, from_line, to_line, from_ts, to_ts, modified_z) in enumerate(raw_gaps, 1):
             result = compute_severity_score(
@@ -167,7 +156,6 @@ def run_analysis(filepath: str, sensitivity: float = DEFAULT_SENSITIVITY) -> Dic
                 risk_factors=factors,
             ))
 
-    # Sort gaps by severity score descending
     gaps.sort(key=lambda g: g.severity_score, reverse=True)
 
     processing_time_ms = int((time.time() - t_start) * 1000)

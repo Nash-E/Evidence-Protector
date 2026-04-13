@@ -1,21 +1,3 @@
-"""
-Generate a log specifically designed to demonstrate the sensitivity slider.
-
-Normal interval: 20-40s  →  median ~30s, MAD ~5s, MAD_scaled ~7.4
-
-Injected gaps (z-scores calculated from above baseline):
-  Line 100 →  75s gap  → z ≈ 4.1  → visible at sensitivity ≤4, gone at 5
-  Line 250 →  96s gap  → z ≈ 6.0  → visible at sensitivity ≤6, gone at 7
-  Line 400 → 1800s gap → z ≈ 163  → always caught (CRITICAL)
-
-Demo flow:
-  Sensitivity 3  → 3 gaps shown
-  Sensitivity 5  → 2 gaps (first borderline gap disappears)
-  Sensitivity 7  → 1 gap  (second gap disappears, only CRITICAL remains)
-
-Run: python sample_logs/generate_sensitivity_demo.py
-"""
-
 import random
 import os
 from datetime import datetime, timedelta
@@ -26,9 +8,9 @@ TOTAL      = 500
 START_TIME = datetime(2025, 3, 28, 8, 0, 0)
 
 GAPS = {
-    100: 75,    # z ≈ 4.1  — borderline LOW
-    250: 96,    # z ≈ 6.0  — borderline MEDIUM
-    400: 1800,  # z ≈ 163  — always CRITICAL
+    100: 75,
+    250: 96,
+    400: 1800,
 }
 
 MALFORM_LINES = {40, 130, 220, 320, 470}

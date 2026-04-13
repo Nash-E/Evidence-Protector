@@ -1,13 +1,3 @@
-"""
-Generate a large Apache access log for demo purposes.
-  - 500,000 lines (~35-40 MB)
-  - 8 injected gaps of varying severity
-  - 3 out-of-order timestamps (insertion attack)
-  - 50 malformed lines
-
-Run: python sample_logs/generate_large_demo.py
-"""
-
 import random
 import os
 from datetime import datetime, timedelta
@@ -23,9 +13,9 @@ GAPS = [
     (80000,   450,   "MEDIUM"),
     (120000,  1200,  "HIGH"),
     (180000,  320,   "MEDIUM"),
-    (240000,  7200,  "CRITICAL"),   # 2-hour blackout
+    (240000,  7200,  "CRITICAL"),
     (310000,  600,   "HIGH"),
-    (400000,  14400, "CRITICAL"),   # 4-hour blackout
+    (400000,  14400, "CRITICAL"),
     (460000,  90,    "LOW"),
 ]
 GAP_LINES = {g[0]: g[1] for g in GAPS}

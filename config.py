@@ -1,22 +1,13 @@
-"""
-config.py — Loads settings from config.toml (if present) and exposes
-            flat constants used throughout the app and CLI.
-
-Priority:  config.toml  >  built-in defaults below
-"""
-
 import os
-import tomllib  # stdlib since Python 3.11
+import tomllib
 
-# ── Built-in defaults ────────────────────────────────────────────────────────
 APP_VERSION               = '1.0.0'
-DEFAULT_SENSITIVITY       = 5.0   # MAD z-score threshold
-MIN_GAP_ABSOLUTE_SECONDS  = 30    # hard floor — never flag shorter gaps
+DEFAULT_SENSITIVITY       = 5.0
+MIN_GAP_ABSOLUTE_SECONDS  = 30
 SERVER_PORT               = 5000
 SERVER_DEBUG              = False
 UPLOAD_FOLDER             = 'uploads'
 
-# ── Load config.toml if it exists ────────────────────────────────────────────
 _CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.toml')
 
 def _load_toml(path: str) -> dict:
@@ -30,7 +21,6 @@ def _load_toml(path: str) -> dict:
         return {}
 
 def load_config(path: str = _CONFIG_PATH) -> None:
-    """Re-read a TOML file and update module-level constants in-place."""
     global DEFAULT_SENSITIVITY, MIN_GAP_ABSOLUTE_SECONDS
     global SERVER_PORT, SERVER_DEBUG, UPLOAD_FOLDER
 
@@ -45,5 +35,4 @@ def load_config(path: str = _CONFIG_PATH) -> None:
     SERVER_DEBUG             = bool(server.get('debug',                   SERVER_DEBUG))
     UPLOAD_FOLDER            = str(server.get('upload_folder',            UPLOAD_FOLDER))
 
-# Apply config.toml on import (if it exists next to this file)
 load_config()

@@ -9,7 +9,6 @@ class LogFormat(NamedTuple):
     display_name: str
 
 def _safe(fn):
-    """Wrap a parse function so it never raises."""
     def wrapper(raw: str) -> Optional[datetime]:
         try:
             return fn(raw)
@@ -23,9 +22,7 @@ def _parse_hdfs(raw: str) -> Optional[datetime]:
 
 @_safe
 def _parse_iso8601(raw: str) -> Optional[datetime]:
-    # Normalize: strip timezone, replace T with space
     s = raw.split('+')[0].split('Z')[0].replace('T', ' ')
-    # Strip fractional seconds if present
     if '.' in s:
         s = s[:s.index('.')]
     return datetime.strptime(s, '%Y-%m-%d %H:%M:%S')
@@ -36,9 +33,7 @@ def _parse_apache(raw: str) -> Optional[datetime]:
 
 @_safe
 def _parse_syslog(raw: str) -> Optional[datetime]:
-    # Syslog has no year — inject current year
     year = datetime.now().year
-    # Normalize double spaces: "Nov  9" -> "Nov  9"
     normalized = ' '.join(raw.split())
     dt = datetime.strptime(f"{year} {normalized}", '%Y %b %d %H:%M:%S')
     return dt
@@ -49,7 +44,6 @@ def _parse_epoch(raw: str) -> Optional[datetime]:
 
 @_safe
 def _parse_iso_date_space(raw: str) -> Optional[datetime]:
-    # "2008-11-09 20:36:17" style
     s = raw
     if '.' in s:
         s = s[:s.index('.')]
@@ -57,7 +51,6 @@ def _parse_iso_date_space(raw: str) -> Optional[datetime]:
 
 @_safe
 def _parse_common_log(raw: str) -> Optional[datetime]:
-    # Common log format without timezone: "09/Nov/2008:20:36:17"
     return datetime.strptime(raw, '%d/%b/%Y:%H:%M:%S')
 
 FORMATS: List[LogFormat] = [
@@ -72,7 +65,6 @@ FORMATS: List[LogFormat] = [
 PROBE_LINES = 100
 
 def detect_format(filepath: str) -> LogFormat:
-    """Try all formats on first PROBE_LINES lines, return best match."""
     scores = {fmt.name: 0 for fmt in FORMATS}
     compiled = [(fmt, re.compile(fmt.pattern)) for fmt in FORMATS]
 

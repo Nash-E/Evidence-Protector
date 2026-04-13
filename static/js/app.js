@@ -1,19 +1,14 @@
-// app.js — Main orchestrator for Evidence Protector UI (Hirelytics-style redesign)
-
 'use strict';
 
 let currentAnalysisFileId = null;
 
-// ============================================================
-// calcIntegrityScore — 0–100 score measuring log file intactness
-// ============================================================
 function calcIntegrityScore(gaps, metadata) {
     if (!gaps || gaps.length === 0) return 100;
     const totalSec = metadata.total_log_seconds;
     if (!totalSec || totalSec === 0) return 100;
 
     const gapTimeSec = gaps.reduce((s, g) => s + g.duration_seconds, 0);
-    const timeRatio = Math.min(gapTimeSec / totalSec, 1.0);  // 0–1
+    const timeRatio = Math.min(gapTimeSec / totalSec, 1.0);
 
     const criticalCount = gaps.filter(g => g.severity_label === 'CRITICAL').length;
     const highCount     = gaps.filter(g => g.severity_label === 'HIGH').length;
@@ -23,9 +18,6 @@ function calcIntegrityScore(gaps, metadata) {
     return Math.max(0, Math.round(100 - penalty));
 }
 
-// ============================================================
-// renderGauge — SVG semicircular gauge for the integrity score
-// ============================================================
 function renderGauge(score) {
     const color = score >= 90 ? '#10b981'
                 : score >= 70 ? '#4f46e5'
@@ -37,18 +29,15 @@ function renderGauge(score) {
                 : score >= 40 ? 'Suspicious'
                 : 'Compromised';
 
-    // Semicircle gauge: 180 degrees = full arc
     const cx = 120, cy = 110, r = 80;
     const strokeWidth = 16;
 
-    // Convert score to an arc end-point
-    const angle = (score / 100) * 180;   // 0–180 degrees
+    const angle = (score / 100) * 180;
     const rad   = (angle - 180) * Math.PI / 180;
     const x = cx + r * Math.cos(rad);
     const y = cy + r * Math.sin(rad);
     const largeArc = angle > 180 ? 1 : 0;
 
-    // Build score arc path — only draw if score > 0
     const scorePath = score === 0
         ? ''
         : `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 ${largeArc} 1 ${x} ${y}"
@@ -57,17 +46,13 @@ function renderGauge(score) {
 
     const svg = `
 <svg viewBox="0 0 240 130" width="240" height="130" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background track (full semicircle) -->
   <path d="M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${cx + r} ${cy}"
         fill="none" stroke="#e5e7eb" stroke-width="${strokeWidth}" stroke-linecap="round"/>
-  <!-- Score arc -->
   ${scorePath}
-  <!-- Center percentage text -->
   <text x="${cx}" y="${cy - 10}" text-anchor="middle"
         font-size="30" font-weight="800"
         fill="${color}"
         font-family="Inter, system-ui, sans-serif">${score}%</text>
-  <!-- Label text -->
   <text x="${cx}" y="${cy + 12}" text-anchor="middle"
         font-size="12" font-weight="600"
         fill="#6b7280"
@@ -79,7 +64,6 @@ function renderGauge(score) {
         container.innerHTML = svg;
     }
 
-    // Update the integrity label below gauge
     const labelEl = document.getElementById('integrity-label');
     if (labelEl) {
         labelEl.innerHTML = `
@@ -92,9 +76,6 @@ function renderGauge(score) {
     }
 }
 
-// ============================================================
-// renderStatCard — icon + big number + label
-// ============================================================
 function renderStatCard(id, icon, number, label) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -105,9 +86,6 @@ function renderStatCard(id, icon, number, label) {
     `;
 }
 
-// ============================================================
-// renderSeverityPills
-// ============================================================
 function renderSeverityPills(gaps) {
     const container = document.getElementById('severity-pills');
     if (!container) return;
@@ -144,9 +122,6 @@ function renderSeverityPills(gaps) {
         `).join('');
 }
 
-// ============================================================
-// renderGapCard — single gap entry with left border + score bar
-// ============================================================
 function renderGapCard(gap, index) {
     const colors   = { CRITICAL: '#ef4444', HIGH: '#f97316', MEDIUM: '#f59e0b', LOW: '#0891b2' };
     const bgColors = { CRITICAL: '#fee2e2', HIGH: '#ffedd5', MEDIUM: '#fef9c3', LOW: '#cffafe' };
@@ -194,9 +169,6 @@ function renderGapCard(gap, index) {
 </div>`;
 }
 
-// ============================================================
-// formatTimeRange — short human-readable "start → end"
-// ============================================================
 function formatTimeRange(metadata) {
     const first = metadata.first_timestamp;
     const last  = metadata.last_timestamp;
@@ -205,7 +177,6 @@ function formatTimeRange(metadata) {
     const totalSec = metadata.total_log_seconds || 0;
     if (totalSec > 0) return humanDuration(totalSec);
 
-    // Fallback: show dates
     try {
         const d1 = new Date(first);
         const d2 = new Date(last);
@@ -217,9 +188,6 @@ function formatTimeRange(metadata) {
     }
 }
 
-// ============================================================
-// runAnalysis — POST to /api/analyze, show spinner, render
-// ============================================================
 function runAnalysis(fileId) {
     const slider      = document.getElementById('sensitivity-slider');
     const sensitivity = parseFloat(slider.value);
@@ -249,9 +217,6 @@ function runAnalysis(fileId) {
         });
 }
 
-// ============================================================
-// renderResults — Top-level renderer
-// ============================================================
 function renderResults(data) {
     const resultsEl = document.getElementById('results');
     if (resultsEl) resultsEl.classList.remove('hidden');
@@ -261,11 +226,9 @@ function renderResults(data) {
     const fmt    = data.format_detected || 'Unknown';
     const fileId = currentAnalysisFileId;
 
-    // 1. Integrity gauge
     const score = calcIntegrityScore(gaps, meta);
     renderGauge(score);
 
-    // 2. Stat cards
     const criticalCount = gaps.filter(g => g.severity_label === 'CRITICAL').length;
     const totalGaps     = gaps.length;
     const gapsLabel     = totalGaps === 0 ? '0' : (criticalCount > 0 ? criticalCount + ' crit' : totalGaps + ' found');
@@ -279,7 +242,6 @@ function renderResults(data) {
     renderStatCard('stat-format', '📋', fmt,
                    'Format Detected');
 
-    // Colour the gaps stat number based on severity
     const gapsNum = document.querySelector('#stat-gaps .stat-number');
     if (gapsNum) {
         if (totalGaps === 0)       gapsNum.style.color = '#10b981';
@@ -287,10 +249,8 @@ function renderResults(data) {
         else                        gapsNum.style.color = '#f59e0b';
     }
 
-    // 3. Severity pills
     renderSeverityPills(gaps);
 
-    // 4. Timeline badge
     const timelineBadge = document.getElementById('timeline-badge');
     if (timelineBadge) {
         timelineBadge.textContent = gaps.length + ' gaps';
@@ -300,10 +260,8 @@ function renderResults(data) {
         }
     }
 
-    // 5. Timeline
     renderTimeline(gaps, meta, 'timeline-container');
 
-    // 6. Gap list
     const gapListEl = document.getElementById('gap-list');
     if (gapListEl) {
         if (gaps.length === 0) {
@@ -319,10 +277,8 @@ function renderResults(data) {
         }
     }
 
-    // 7. Stats grid
     renderStatsGrid(meta, data);
 
-    // 8. Out-of-order warnings
     const ootCard  = document.getElementById('oot-card');
     const ootList  = document.getElementById('oot-list');
     const ootItems = meta.out_of_order || [];
@@ -349,7 +305,6 @@ function renderResults(data) {
         }
     }
 
-    // 9. Wire export buttons
     const btnCsv  = document.getElementById('btn-export-csv');
     const btnJson = document.getElementById('btn-export-json');
     const btnHtml = document.getElementById('btn-export-html');
@@ -359,13 +314,9 @@ function renderResults(data) {
         if (btnHtml) btnHtml.onclick = () => { window.location.href = '/api/export/' + fileId + '/html'; };
     }
 
-    // 10. Scroll to results
     if (resultsEl) resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ============================================================
-// renderStatsGrid — Analysis details card
-// ============================================================
 function renderStatsGrid(metadata, data) {
     const container = document.getElementById('stats-grid');
     if (!container) return;
@@ -393,9 +344,6 @@ function renderStatsGrid(metadata, data) {
     `).join('');
 }
 
-// ============================================================
-// Utility helpers
-// ============================================================
 function humanDuration(seconds) {
     const s = Math.round(seconds);
     if (s < 60)    return s + 's';
@@ -437,9 +385,6 @@ function formatShortDate(isoStr) {
     }
 }
 
-// ============================================================
-// UI state helpers
-// ============================================================
 function showLoading(visible) {
     const el = document.getElementById('loading');
     if (el) el.classList.toggle('hidden', !visible);

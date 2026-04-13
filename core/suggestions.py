@@ -1,8 +1,3 @@
-"""
-Overall assessment engine.
-Generates an integrity verdict and key findings based on gap patterns and metadata.
-"""
-
 from typing import List, Dict, Any
 
 
@@ -20,7 +15,6 @@ def overall_assessment(gaps: List[dict], metadata: dict) -> Dict[str, Any]:
     total_gap_seconds = sum(g['duration_seconds'] for g in gaps)
     gap_pct = round((total_gap_seconds / total_secs * 100), 1) if total_secs > 0 else 0
 
-    # Integrity score (mirrors JS formula)
     if not gaps:
         integrity = 100
     else:

@@ -1,14 +1,14 @@
 # Evidence Protector
 
-A forensic log analysis tool that detects temporal gaps in server logs — the most reliable indicator of log tampering. Available as a web app and a command-line tool.
+A forensic log analysis tool that detects temporal gaps in server logs. Available as a web app and a command-line tool.
 
----
+
 
 ## Overview
 
-When a hacker breaks into a system, one of their first actions is to delete log entries that reveal their activity. Removing entries from a continuous log creates a **temporal gap** — a jump in time. Evidence Protector detects these gaps using **Median Absolute Deviation (MAD) z-score** analysis, a statistically robust method that self-calibrates to each log file's natural rhythm.
+When a hacker breaks into a system, one of their first actions is to delete log entries that reveal their activity. Removing entries from a continuous log creates a **temporal gap** , a jump in time. Evidence Protector detects these gaps using **Median Absolute Deviation (MAD) z-score** analysis, a statistically robust method that self-calibrates to each log file's natural rhythm.
 
----
+
 
 ## Features
 
@@ -32,7 +32,7 @@ When a hacker breaks into a system, one of their first actions is to delete log 
 - **Config file support** — `config.toml` controls default sensitivity, port, upload folder, and more
 - **CLI tool** — run analysis directly from the terminal with `--sensitivity` and `--config` flags
 
----
+
 
 ## Requirements
 
@@ -43,7 +43,7 @@ When a hacker breaks into a system, one of their first actions is to delete log 
 pip install -r requirements.txt
 ```
 
----
+
 
 ## Installation
 
@@ -56,7 +56,7 @@ venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 ```
 
----
+
 
 ## Running the Web App
 
@@ -72,7 +72,7 @@ Open `http://localhost:5000` in your browser.
 4. Review flagged gaps, risk factor tags, and the integrity score
 5. Export the report as HTML, CSV, or JSON
 
----
+
 
 ## Running the CLI
 
@@ -95,7 +95,6 @@ python cli.py /path/to/server.log --config my_settings.toml
 
 **Short flags:** `-s` for `--sensitivity`, `-c` for `--config`
 
----
 
 ## Configuration
 
@@ -114,7 +113,7 @@ upload_folder = "uploads"
 
 Settings in `config.toml` are loaded at startup. The CLI `--sensitivity` flag always overrides the config file value.
 
----
+
 
 ## How It Works
 
@@ -127,35 +126,7 @@ Settings in `config.toml` are loaded at startup. The CLI `--sensitivity` flag al
 7. Each gap receives a composite severity score (0–100) using 8 contextual signals
 8. Results are returned as JSON and rendered in the UI or printed to the terminal
 
----
 
-## Project Structure
-
-```
-Evidence-Protector/
-├── api/
-│   ├── upload.py           # File upload endpoint
-│   ├── analyze.py          # Analysis API route
-│   └── export.py           # HTML / CSV / JSON export
-├── core/
-│   ├── detector.py         # Main analysis engine (streaming pass + gap classification)
-│   ├── scorer.py           # Composite severity scoring (8 signals)
-│   ├── parser.py           # Line-by-line timestamp extraction
-│   ├── formats.py          # Log format definitions and auto-detection
-│   └── suggestions.py      # Findings text and integrity score
-├── sample_logs/            # Example log files for testing
-├── static/                 # CSS and JavaScript
-├── templates/
-│   └── index.html          # Web interface
-├── app.py                  # Flask app factory and entry point
-├── cli.py                  # Command-line interface
-├── config.py               # Loads config.toml and exposes constants
-├── config.toml             # User-editable settings (git-ignored)
-├── config.toml.example     # Template for config.toml
-└── requirements.txt
-```
-
----
 
 ## Sample Logs
 
@@ -169,8 +140,3 @@ The `sample_logs/` directory includes ready-to-use test files:
 | `iso8601_sample.log` | ISO 8601 | Standard timestamp testing |
 | `sensitivity_demo.log` | Apache | Demonstrates the sensitivity slider — gaps at z≈4 and z≈6 disappear as threshold increases |
 
----
-
-## License
-
-This project does not currently specify a license. Please contact the repository owner before using it in production or redistributing it.

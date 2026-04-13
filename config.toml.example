@@ -1,20 +1,11 @@
-# Evidence Protector — Configuration File
-# Edit these values to customize the tool's behaviour.
-# All settings are optional; missing keys fall back to built-in defaults.
-
 [analysis]
-# MAD z-score threshold for flagging gaps (2 = very sensitive, 15 = extreme only)
 default_sensitivity   = 5.0
 
-# Minimum gap in seconds that can ever be flagged (hard floor, regardless of z-score)
 min_gap_seconds       = 30
 
 [server]
-# Port the web app listens on
 port                  = 5000
 
-# Enable Flask debug mode (set false in any shared/production environment)
 debug                 = false
 
-# Folder where uploaded log files are stored (relative to the app root, or absolute)
 upload_folder         = "uploads"

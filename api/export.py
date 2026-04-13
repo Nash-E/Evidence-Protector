@@ -7,9 +7,6 @@ from flask import Blueprint, current_app, jsonify, Response
 
 export_bp = Blueprint('export', __name__)
 
-
-# ── helpers ──────────────────────────────────────────────────────────────────
-
 def _load_result(file_id: str):
     folder = current_app.config['UPLOAD_FOLDER']
     cache_path = os.path.join(folder, file_id + '.result.json')
@@ -37,10 +34,6 @@ def _integrity_color(score):
     if score >= 70: return '#4f46e5'
     if score >= 40: return '#d97706'
     return '#dc2626'
-
-
-# ── JSON export ───────────────────────────────────────────────────────────────
-
 @export_bp.route('/api/export/<file_id>/json', methods=['GET'])
 def export_json(file_id):
     result = _load_result(file_id)
@@ -53,10 +46,6 @@ def export_json(file_id):
         mimetype='application/json',
         headers={'Content-Disposition': f'attachment; filename=evidence_report_{file_id[:8]}.json'},
     )
-
-
-# ── CSV export ────────────────────────────────────────────────────────────────
-
 @export_bp.route('/api/export/<file_id>/csv', methods=['GET'])
 def export_csv(file_id):
     result = _load_result(file_id)
@@ -71,21 +60,18 @@ def export_csv(file_id):
     buf = io.StringIO()
     w = csv.writer(buf)
 
-    # ── File header ──
     w.writerow(['EVIDENCE PROTECTOR — FORENSIC LOG INTEGRITY REPORT'])
     w.writerow(['Generated', now])
     w.writerow(['Log Format', result.get('format_detected', 'Unknown')])
     w.writerow(['Sensitivity (MAD z-score)', result.get('sensitivity_used', 5.0)])
     w.writerow([])
 
-    # ── Integrity verdict ──
     w.writerow(['INTEGRITY VERDICT'])
     w.writerow(['Score', f"{assessment.get('integrity_score', 'N/A')}%"])
     w.writerow(['Verdict', assessment.get('verdict', 'N/A')])
     w.writerow(['Detail', assessment.get('verdict_detail', '')])
     w.writerow([])
 
-    # ── File stats ──
     w.writerow(['LOG FILE STATISTICS'])
     w.writerow(['Total Lines', meta.get('total_lines', 0)])
     w.writerow(['Valid Lines', meta.get('valid_lines', 0)])
@@ -99,13 +85,11 @@ def export_csv(file_id):
     w.writerow(['Processing Time', f"{meta.get('processing_time_ms', 0)}ms"])
     w.writerow([])
 
-    # ── Summary findings ──
     w.writerow(['KEY FINDINGS'])
     for i, finding in enumerate(assessment.get('findings', []), 1):
         w.writerow([f'Finding {i}', finding])
     w.writerow([])
 
-    # ── Severity breakdown ──
     counts = assessment.get('severity_counts', {})
     w.writerow(['SEVERITY BREAKDOWN'])
     w.writerow(['CRITICAL', counts.get('CRITICAL', 0)])
@@ -114,7 +98,6 @@ def export_csv(file_id):
     w.writerow(['LOW', counts.get('LOW', 0)])
     w.writerow([])
 
-    # ── Gap detail table ──
     w.writerow(['DETECTED GAPS — DETAILED'])
     w.writerow([
         'Gap #', 'Severity', 'Score /100', 'Z-Score',
@@ -140,10 +123,6 @@ def export_csv(file_id):
         mimetype='text/csv',
         headers={'Content-Disposition': f'attachment; filename=evidence_report_{file_id[:8]}.csv'},
     )
-
-
-# ── HTML report ───────────────────────────────────────────────────────────────
-
 @export_bp.route('/api/export/<file_id>/html', methods=['GET'])
 def export_html(file_id):
     result = _load_result(file_id)
@@ -160,7 +139,6 @@ def export_html(file_id):
     mad = meta.get('mad_stats', {})
     counts = assessment.get('severity_counts', {})
 
-    # Build gap rows
     gap_rows_html = ''
     for g in gaps:
         sc = _severity_color_hex(g['severity_label'])
@@ -187,10 +165,8 @@ def export_html(file_id):
           </div>
         </div>"""
 
-    # Findings
     findings_html = ''.join(f'<li>{f}</li>' for f in assessment.get('findings', []))
 
-    # Severity pill counts
     pills_html = ''
     for label, color, bg in [
         ('CRITICAL', '#dc2626', '#fee2e2'),
@@ -202,7 +178,6 @@ def export_html(file_id):
         if n > 0:
             pills_html += f'<span class="pill" style="background:{bg};color:{color}">{n} {label}</span>'
 
-    # OOT section
     oot_html = ''
     if meta.get('out_of_order_count', 0) > 0:
         oot_items = ''.join(
@@ -229,20 +204,17 @@ def export_html(file_id):
   body {{ font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f6fa; color: #111827; font-size: 14px; }}
   a {{ color: #4f46e5; }}
 
-  /* Header */
   .report-header {{ background: linear-gradient(135deg,#4f46e5,#7c3aed); color: white; padding: 32px 48px; }}
   .report-header h1 {{ font-size: 26px; font-weight: 800; margin-bottom: 4px; }}
   .report-header p {{ opacity: 0.85; font-size: 13px; }}
   .report-meta {{ display: flex; gap: 32px; margin-top: 16px; font-size: 12px; opacity: 0.9; }}
   .report-meta span b {{ display: block; font-size: 13px; }}
 
-  /* Layout */
   .container {{ max-width: 960px; margin: 0 auto; padding: 32px 24px; }}
   .card {{ background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 24px; margin-bottom: 20px; }}
   .card-title {{ font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 16px; }}
   .warn-card {{ background: #fffbeb; border: 1px solid #fde68a; }}
 
-  /* Verdict */
   .verdict-row {{ display: flex; align-items: center; gap: 32px; }}
   .gauge-box {{ text-align: center; }}
   .integrity-num {{ font-size: 52px; font-weight: 800; line-height: 1; }}
@@ -250,17 +222,14 @@ def export_html(file_id):
   .verdict-text h2 {{ font-size: 20px; font-weight: 700; margin-bottom: 8px; }}
   .verdict-text p {{ color: #4b5563; line-height: 1.6; }}
 
-  /* Stats grid */
   .stats-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }}
   .stat {{ background: #f9fafb; border-radius: 10px; padding: 14px 16px; text-align: center; }}
   .stat-num {{ font-size: 24px; font-weight: 800; color: #4f46e5; }}
   .stat-lbl {{ font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }}
 
-  /* Pills */
   .pills {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }}
   .pill {{ padding: 5px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; }}
 
-  /* Findings / actions */
   .findings-list, .actions-list {{ padding-left: 0; list-style: none; }}
   .findings-list li {{ padding: 9px 0; border-bottom: 1px solid #f3f4f6; color: #374151; line-height: 1.5; }}
   .findings-list li:last-child {{ border-bottom: none; }}
@@ -268,7 +237,6 @@ def export_html(file_id):
   .actions-list li:last-child {{ border-bottom: none; }}
   .action-num {{ background: #4f46e5; color: white; border-radius: 50%; width: 22px; height: 22px; min-width: 22px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }}
 
-  /* Gap cards */
   .gap-card {{ background: #f9fafb; border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; }}
   .gap-card-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }}
   .gap-left {{ display: flex; align-items: center; gap: 10px; }}
@@ -283,16 +251,13 @@ def export_html(file_id):
   .suggestions-title {{ font-size: 12px; font-weight: 700; color: #374151; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }}
   .suggestions ul {{ padding-left: 18px; color: #374151; line-height: 1.7; font-size: 13px; }}
 
-  /* OOT */
   .oot-list {{ padding-left: 18px; color: #92400e; line-height: 1.8; font-size: 13px; }}
 
-  /* MAD table */
   .meta-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
   .meta-table td {{ padding: 8px 12px; border-bottom: 1px solid #f3f4f6; }}
   .meta-table td:first-child {{ color: #6b7280; width: 220px; }}
   .meta-table td:last-child {{ font-weight: 600; color: #111827; }}
 
-  /* Footer */
   .report-footer {{ text-align: center; color: #9ca3af; font-size: 12px; padding: 24px; margin-top: 8px; }}
 
   @media print {{
@@ -316,7 +281,6 @@ def export_html(file_id):
 
 <div class="container">
 
-  <!-- Integrity Verdict -->
   <div class="card">
     <div class="card-title">Log Integrity Verdict</div>
     <div class="verdict-row">
@@ -335,7 +299,6 @@ def export_html(file_id):
     </div>
   </div>
 
-  <!-- Stats row -->
   <div class="stats-grid" style="margin-bottom:20px">
     <div class="stat">
       <div class="stat-num">{len(gaps)}</div>
@@ -355,25 +318,20 @@ def export_html(file_id):
     </div>
   </div>
 
-  <!-- Severity pills -->
   <div class="pills">{pills_html if pills_html else '<span style="color:#6b7280;font-size:13px">No gaps detected</span>'}</div>
 
-  <!-- Key Findings -->
   <div class="card">
     <div class="card-title">Key Findings</div>
     <ul class="findings-list">{findings_html}</ul>
   </div>
 
-  <!-- Out-of-order -->
   {oot_html}
 
-  <!-- Gap Detail -->
   <div class="card">
     <div class="card-title">Detected Gaps — Detail & Analyst Notes</div>
     {gap_rows_html if gap_rows_html else '<p style="color:#6b7280">No suspicious gaps detected at the current sensitivity threshold.</p>'}
   </div>
 
-  <!-- Technical Stats -->
   <div class="card">
     <div class="card-title">Technical Analysis Parameters</div>
     <table class="meta-table">

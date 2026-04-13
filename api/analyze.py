@@ -28,7 +28,6 @@ def analyze():
     except Exception as e:
         return jsonify({'error': f'Analysis failed: {e}'}), 500
 
-    # Cache result for export
     cache_path = path + '.result.json'
     with open(cache_path, 'w', encoding='utf-8') as f:
         json.dump(result, f)
